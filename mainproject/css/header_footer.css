@@ -1,0 +1,219 @@
+/*---------- HEADER --------------*/
+#header{
+	position: fixed;
+	width: 100vw;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	display: block;
+	border-bottom: solid 1px #6F2232;
+}
+
+header .container-sizer{
+	width: 100%;
+	display: block;
+
+	background-color: #0B0C10;
+}
+
+header .container-header{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100px;
+}
+
+header .logo{
+	flex:1;
+
+	display: block;
+	/* text-align: center; */
+	padding: 0px 30px 0px 30px;
+
+	text-shadow: 0px 0px 2px black, 0 0 10px red;
+	font-size: 60px;
+	text-decoration: none;
+	color: #C3073F;
+	font-weight: 900;
+}
+
+header .menu-content{
+	flex:1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* width: 50%; */
+}
+
+header .menu-icons{
+	padding: 0px 10px 0px 10px;
+	flex:1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+header .menu{
+
+	display: block;
+	min-width: 100px;
+	font-size: 24px;
+	text-decoration: none;
+	color: #C5C6C7;
+	text-align: center;
+	padding: 0px 20px 0px 20px;
+	font-weight: bold;
+	font-family: 'Montserrat',Arial,sans-serif;
+	
+	/* border-right: 1px solid #6F2232; */
+	line-height: 50px;
+	/* font-weight: bold; */
+
+}
+header .menu.menu-end{
+	border-right: none;
+}
+header .menu:hover{
+	/* color: #C3073F; */
+	border-bottom: #C3073F 3px solid;
+}
+
+header .main{
+
+	display: block;
+	min-width: 150px;
+	width: 10vw;
+	font-size: 24px;
+	text-decoration: none;
+	color: #C5C6C7;
+	text-align: center;
+	padding: 0px 20px 0px 20px;
+	font-weight: bold;
+	
+	border-right: 1px solid #6F2232;
+	line-height: 50px;
+	/* font-weight: bold; */
+
+}
+header .main:hover{
+	color: #C3073F;
+
+}
+
+header .shop-cart{
+
+	display: block;
+
+	width: 90px;
+	height: 50px;
+	padding: 35px 10px 10px 0px;
+	
+	background-image: url(../images/korzina.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40px 40px;
+
+	/* border-right: 1px solid #6F2232; */
+
+	box-sizing: border-box;
+
+	color: #C5C6C7;
+	text-decoration: none;
+	text-align: right;
+	float: right;
+	font-size: 16px;
+	letter-spacing: -2px;
+
+	
+}
+header .shop-cart:hover{
+	background-image: url(../images/korzina-hover.png);
+	color: #C3073F;
+}
+
+header .user{
+
+	display: block;
+	width: 60px;
+	height: 50px;
+	padding: 0px 10px 0px 10px;
+	
+	/* background-color: #45A29E; */
+	background-image: url(../images/user.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 45px 45px;
+}
+header .user:hover{
+	background-image: url(../images/user-hover.png);
+}
+
+/* HEADER END */
+/* FOOTER */
+#footer{
+	/* display: flex;
+	align-items: center; */
+
+	min-height: 200px;
+	width: 100%;
+	padding: 20px;
+	margin-top: 200px;
+
+	box-sizing: border-box;
+
+	background-color: #0B0C10;
+
+	color:#C5C6C7;
+}
+
+footer .phone-num{
+	width: 100%;
+	text-align: center;
+}
+
+footer .contacts{
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+footer .mes-cont{
+	display: block;
+	width: 70px;
+	height: 70px;
+
+	padding: 10px;
+	/* background-color: #1A1A1D; */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 70px;
+
+	/* box-sizing: border-box; */
+
+}
+
+footer hr{
+	color: #6F2232;
+	border-color: #6F2232;
+}
+
+footer .mes-cont.vk{
+	background-image: url(../images/vk-logo.png);
+}
+footer .mes-cont.inst{
+	background-image: url(../images/insta-logo.png);
+}
+footer .mes-cont.whp{
+	background-image: url(../images/whatsup-logo.png);
+}
+footer .mes-cont.fb{
+	background-image: url(../images/facebook-logo.png);
+}
+
+footer .created-by{
+	width: 100%;
+	text-align: right;
+}

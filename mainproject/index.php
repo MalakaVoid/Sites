@@ -5,6 +5,7 @@
     <title>Trainings</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/header_footer.css'>
 </head>
 <body>
     <?php

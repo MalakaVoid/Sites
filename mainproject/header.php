@@ -7,8 +7,8 @@
                 <div class="menu-content">
                     <!-- <a href="/" class="main">Главная</a> -->
                     <a href="/menu.php" class="menu">Меню</a>
-                    <a href="/menu.php" class="menu">Доставка</a>
-                    <a href="/menu.php" class="menu">Акции</a>
+                    <a href="/delivery.php" class="menu">Доставка</a>
+                    <a href="/sales.php" class="menu">Акции</a>
                     <a href="/menu.php" class="menu menu-end">Контакты</a>
                 </div>
                 <div class="menu-icons">
