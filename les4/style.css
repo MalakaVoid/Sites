@@ -1,0 +1,19 @@
+.tab{
+	width: 300px;
+	font-size: 32px;
+	font-weight: bold;
+	border-color: black;
+	border-style: solid;
+	border-width: 3px;
+	border-collapse: collapse;
+}
+.red-block{
+	background-color: red;
+}
+
+.green-block{
+	background-color: green;
+}
+td{
+	min-width: 40px;
+}

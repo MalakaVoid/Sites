@@ -1,0 +1,215 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	
+	font-family: 'Courier New', Courier, monospace;
+}
+.products-table{
+	font-size: 24px;
+	border: solid 3px black;
+	border-collapse: collapse;
+}
+td {
+	padding: 10px;
+}
+
+.products-table a{
+	text-decoration: none;
+}
+
+.main-content{
+	padding-top: 20px;
+}
+
+
+
+.form-sort {
+	font-size: 24px;
+	padding: 10px;
+	border: solid 3px black;
+	width: 110px;
+}
+.btn-sub{
+	padding: 5px;
+	margin-top: 10px;
+	border: solid 2px black;
+	align-self: center;
+
+}
+
+.form-title{
+	font-weight: bold;
+	font-size: 26px;
+}
+
+.inp-text{
+	font-size: 22px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 100px;
+}
+
+.add_pr_form{
+	border: solid 3px black;
+	width: 280px;
+	font-size: 24px;
+	padding: 10px;
+}
+
+.add-inp-text{
+	font-size: 22px;
+}
+
+.btn-sub-add{
+	padding: 5px;
+	font-size: 24px;
+	margin-top: 10px;
+}
+
+.error-msg{
+	color: red;
+}
+
+
+
+
+.header{
+	margin: 0px;
+	padding: 0px;
+	
+
+	background-color: #C3073F;
+
+	vertical-align: top;
+
+	white-space: nowrap;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+
+	border-radius: 0px;
+	border-width: 0px;
+}
+
+.header .head-item{
+	display: inline-block;
+	width: 15%;
+	height: 100%;
+	min-width: 120px;
+
+	padding: 12px;
+	margin: 0px;
+
+
+	border-style: solid;
+	border-width: 3px;
+	border-color: #1A1A1D;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+
+	background-color: #C3073F;
+
+	font-size: 28px;
+	text-align: center;
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+.header .head-item.first{
+	border-radius: 0px 0px 0px 0px;
+	border-left: 3px solid #1A1A1D;
+
+}
+
+.header .head-item:hover{
+	color: whitesmoke;
+	background-color: #6F2232;
+}
+
+.head-item.active{
+	/*background-color: #4E4E50;*/
+	color: #1A1A1D;
+	font-weight: bold;
+
+}
+.head-item.active:hover{
+	color: #1A1A1D;
+	
+}
+
+/* .main-content-auth{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */
+
+.authorization-form{
+	width: 400px;
+	height: 250px;
+	border: solid 3px black;
+	padding: 10px;
+	position: fixed;
+ 	top: calc(45% - 300px/2);
+ 	left: calc(50% - 400px/2);
+	font-size: 24px;
+}
+.registration-form{
+	width: 400px;
+	height: 300px;
+	border: solid 3px black;
+	padding: 10px;
+	position: fixed;
+ 	top: calc(45% - 300px/2);
+ 	left: calc(50% - 400px/2);
+	font-size: 24px;
+}
+
+.btn-sub-auth{
+	padding: 10px;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: 'Courier New';
+}
+
+.title-auth{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.inp-text-auth{
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+.error-msg-auth{
+	height: 30px;
+	margin-top: 10px;
+	color: red;
+	margin-bottom: 10px;
+}
+
+.exit-acc-btn{
+	display: block;
+	padding: 10px;
+	border: solid 3px black;
+	background-color: gray;
+	width: 250px;
+	font-size: 24px;
+	text-decoration: none;
+	color: black;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.exit-acc-btn:hover{
+	background-color: aliceblue;
+}
+
+.user-card{
+	max-width: calc(100% - 30vw);
+	min-height: 100%;
+
+	font-size: 20px;	
+
+	padding: 0vw 15vw 0vw 15vw;
+}

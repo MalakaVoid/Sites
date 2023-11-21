@@ -1,0 +1,52 @@
+.header{
+	margin: 0px;
+	padding: 0px;
+	font-size: 24px;
+	font-weight: bold;
+	vertical-align: top;
+	min-height: 60px;
+	height: 60px;
+	max-height: 60px;
+	background-color: gray;
+
+}
+.header-cont{
+	width: 15%;
+	margin: 2px;
+	max-width: 15%;
+	max-height: 100%;
+	text-align: center;
+	background-color: black;
+	color: whitesmoke;
+	display: inline-block;
+	padding: 10px;
+	border-color: black;
+	border-style: solid;
+	border-width: 3px;
+
+}
+.header-cont:hover{
+	background-color: whitesmoke;
+	color: black;
+}
+.header-cont:hover a{
+	color: black;
+	text-decoration: none;
+}
+
+.header-cont a{
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+.active{
+	background-color: darkred;
+}
+
+body{
+	padding: 0px;
+	margin: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 1920px;
+}
