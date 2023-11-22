@@ -232,33 +232,37 @@ main .sepparator{
 
 /* DELIVERY PAGE */
 
-main .title-page{
+#container-delivery .title-page{
 	color:#C5C6C7;
 	font-size: 36px;
-	letter-spacing: 2px;
+	letter-spacing: 2.5px;
 }
-main .title-page-container{
+#container-delivery .title-page-container{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 50px;
+	margin-bottom: 50px;
 }
-main .delifery-main-container{
+#container-delivery .delifery-main-container{
 	display: flex;
 	justify-content: flex-start;
 	width: 100%;
 	box-sizing: border-box;
 	flex-wrap: wrap;
-	padding-top: 20px;
+	/* padding-top: 20px; */
+
+	margin: 0 auto;
 }
 
-main .first-block{
+#container-delivery .first-block{
 	display: flex;
 	flex-direction: column;
 	width: 400px;
 	box-sizing: border-box;
+	margin: 0 auto;
 }
-main .work-info-block{
+#container-delivery .work-info-block{
 	width: 400px;
 	box-sizing: border-box;
 	padding: 20px;
@@ -266,7 +270,7 @@ main .work-info-block{
 	border-radius: 15px;
 	margin-bottom: 20px;
 }
-main .attention-block{
+#container-delivery .attention-block{
 	/* color: #1A1A1D; */
 	width: 400px;
 	box-sizing: border-box;
@@ -275,40 +279,72 @@ main .attention-block{
 	border-radius: 15px;
 	margin-bottom: 20px;
 }
-main .security-block{
+#container-delivery .security-block{
 	width: 400px;
 	box-sizing: border-box;
 	padding: 15px;
 	padding-top: 0px;
+	margin: 0 auto;
 }
 
-main .delivery-block{
+#container-delivery .delivery-block{
 	width: 400px;
 	box-sizing: border-box;
 	padding: 15px;
 	padding-top: 0px;
+	margin: 0 auto;
 }
-main .time-block{
+#container-delivery .time-block{
 	width: 400px;
 	box-sizing: border-box;
 	padding: 15px;
 	padding-top: 0px;
+	margin: 0 auto;
 }
-main .take-out-block{
+#container-delivery .take-out-block{
 	width: 400px;
 	box-sizing: border-box;
 	padding: 15px;
 	padding-top: 0px;
+	margin: 0 auto;
 }
 
-.use-info-block{
+#container-delivery .use-info-block{
 	display: flex;
 	justify-content: flex-start;
 	box-sizing: border-box;
 	width: 800px;
 	flex-wrap: wrap;
+	margin: 0 auto;
 }
 
-.use-info-block h1{
+#container-delivery .use-info-block h1{
 	margin-bottom: 5px;
+}
+
+/* CONTACTS PAGE */
+#container-contacts{
+	min-height: 600px;
+	display: flex;
+}
+.container-content-contacts{
+	display: flex;
+	flex-direction: column;
+	margin:auto;
+	box-sizing: content-box;
+}
+.title-page{
+	margin: auto;
+	font-size: 42px;
+	letter-spacing: 2.5px;
+	padding: 10px;
+}
+#container-contacts .phone-num{
+	margin: auto;
+	padding: 10px;
+	font-size: 42px;
+	color: #C3073F;
+}
+.description-phone{
+	margin: auto;
 }

@@ -1,9 +1,9 @@
 <?php
     $menu_items = array(
 		'Меню' => '/menu.php',
-		'Доставка' => '/delivery.php',
 		'Акции' => '/sales.php',
-		'Контакты' => '/menu.php',
+		'Доставка' => '/delivery.php',
+		'Контакты' => '/contacts.php',
 	);
 ?>
 

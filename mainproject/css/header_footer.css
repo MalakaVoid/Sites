@@ -191,14 +191,14 @@ footer .contacts{
 
 footer .mes-cont{
 	display: block;
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 
 	padding: 10px;
 	/* background-color: #1A1A1D; */
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 70px 70px;
+	background-size: 60px 60px;
 
 	/* box-sizing: border-box; */
 
