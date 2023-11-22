@@ -1,15 +1,28 @@
-
+<?php
+    $menu_items = array(
+		'Меню' => '/menu.php',
+		'Доставка' => '/delivery.php',
+		'Акции' => '/sales.php',
+		'Контакты' => '/menu.php',
+	);
+?>
 
 <header id="header">
         <div class="container-sizer">
             <div class="container-header">
                 <a href="/" class="logo">BGCLUB</a>
                 <div class="menu-content">
-                    <!-- <a href="/" class="main">Главная</a> -->
-                    <a href="/menu.php" class="menu">Меню</a>
-                    <a href="/delivery.php" class="menu">Доставка</a>
-                    <a href="/sales.php" class="menu">Акции</a>
-                    <a href="/menu.php" class="menu menu-end">Контакты</a>
+                    
+                    <?php
+                        foreach ($menu_items as $title => $url) {
+                            if ($_SERVER['REQUEST_URI'] == $url) {
+                                echo "<a href='{$url}' class='menu active'>{$title}</a>";
+                            }
+                            else {
+                                echo "<a href='{$url}' class='menu'>{$title}</a>";
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="menu-icons">
                     <a href="/" class="shop-cart">1</a>

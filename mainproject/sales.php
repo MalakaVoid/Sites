@@ -18,9 +18,7 @@
     </article>
     <main id="container-menu">
         <?php
-            $link = mysqli_connect("localhost", "root", "root");
-            mysqli_select_db($link, "db1");
-            mysqli_set_charset($link, "utf8");
+            include("database_conn.php");
 
             $querry = "SELECT * FROM items WHERE sale = 1";
             $result_query_items = mysqli_query($link,$querry);

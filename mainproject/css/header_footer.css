@@ -69,6 +69,7 @@ header .menu{
 	/* border-right: 1px solid #6F2232; */
 	line-height: 50px;
 	/* font-weight: bold; */
+	/* box-sizing: border-box; */
 
 }
 header .menu.menu-end{
@@ -76,6 +77,14 @@ header .menu.menu-end{
 }
 header .menu:hover{
 	/* color: #C3073F; */
+	border-bottom: #C3073F 3px solid;
+}
+
+header .menu.active{
+	border-bottom: #6F2232 3px solid;
+}
+
+header .menu.active:hover{
 	border-bottom: #C3073F 3px solid;
 }
 
