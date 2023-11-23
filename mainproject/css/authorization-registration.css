@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+	font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+	background-color: #1A1A1D;
+	/* letter-spacing: -1px; */
+	word-spacing: -5px;
+}
+
+main{
+    /* max-width: 1200px; */
+    width: 100%;
+	color: #C5C6C7;
+}
+
+.authorization-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 500px;
+    box-sizing: content-box;
+    border: solid 4px #6F2232;
+    background-color: #0B0C10;
+    border-radius: 10px;
+    /* padding: 20px; */
+    /* border-radius: 5px; */
+}
+
+.container-links{
+    display: flex;
+    justify-content: center;
+}
+
+.container-links a{
+    display: block;
+    padding: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #C3073F;
+}
+.container-links a.active{
+    color: #6F2232;
+}
+.container-links a:hover{
+    color: #C3073F;
+}
+
+.inp-text-auth{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 80%;
+    font-size: 24px;
+    margin-top: 20px;
+    background-color: #1A1A1D;
+    border: none;
+    /* border: solid 1px #C5C6C7; */
+    /* border-radius: 3px; */
+    padding: 5px 10px 5px 10px;
+    color:#C5C6C7;
+}
+
+.inp-text-auth:focus{
+    outline: none;
+}
+
+.btn-sub-auth{
+    background-color: #0B0C10;
+    border: solid 3px #C5C6C7;
+    color: #C5C6C7;
+    width: 80%;
+    font-size: 24px;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 20px 0px 20px 0px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-sub-auth:hover{
+    background-color: #C5C6C7;
+    color: #0B0C10;
+}

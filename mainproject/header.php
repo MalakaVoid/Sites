@@ -26,7 +26,7 @@
                 </div>
                 <div class="menu-icons">
                     <a href="/" class="shop-cart">1</a>
-                    <a href="/" class="user"></a>
+                    <a href="/authorization.php" class="user"></a>
                 </div>  
             </div>
         </div>
