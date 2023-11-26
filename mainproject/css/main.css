@@ -65,6 +65,8 @@ main{
 main .container-inf{
 	display: flex;
 	justify-content: center;
+	flex-direction: row;
+	gap: 20px;
 	width: 100%;
 	/* height: 500px; */
 	align-items: center;
@@ -73,29 +75,23 @@ main .container-inf{
 	margin-bottom: 100px;
 
 	box-sizing: border-box;
-
+	padding: 20px;
 	flex-wrap: wrap;
 	/* padding: 20px; */
 
 }
 
 main .container-inf .block-img{
-	/* flex: 1; */
-	display: block;
-	width: 50%;
-	height: auto;
-	min-width: 400px;
+	flex: 1;
+	max-width: 565px;
 	box-sizing: border-box;
 	border-radius: 50px;
-	padding: 20px;
 }
 
 main .container-inf .block-text{
-	padding: 20px;
-	/* flex: 1; */
 	font-size: 24px;
-	width: 50%;
 	min-width: 200px;
+	max-width: 565px;
 	box-sizing: border-box;
 
 	text-align: center;
@@ -106,11 +102,14 @@ main .container-inf .block-text h2{
 	flex: 1;
 	font-size: 36px;
 	text-align: center;
-	/* color: #C3073F; */
 	color: #C5C6C7;
 	border-bottom: solid 2px #C3073F;
-	margin-bottom: 20px;
 	
+}
+main .container-inf .block-text p{
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
 }
 /* MENU  */
 #container-menu{
@@ -190,7 +189,8 @@ main .item-card .image-card{
 .item-card .title{
 	display: block;
 	font-weight: bold;
-	color: #C3073F;
+	/* color: #C3073F; */
+	color: #C5C6C7;
 }
 
 .item-card .price{
