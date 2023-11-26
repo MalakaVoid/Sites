@@ -22,7 +22,7 @@
 
                 <div class="error-msg-auth">
                     <?php 
-                        echo $errors;
+                        // echo $errors;
                     ?>
                 </div>
                 <input type="submit" value="Регистрация" class="btn-sub-auth">

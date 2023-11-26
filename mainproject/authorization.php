@@ -4,9 +4,13 @@
     <meta charset='utf-8'>
     <title>Menu</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/header_footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/authorization-registration.css'>
 </head>
 <body>
+<?php
+        include("header.php");
+    ?>
     <main>
         <!-- <div class="authorization-container"> -->
             <form method="post" action="/menu">
@@ -20,7 +24,7 @@
 
                 <div class="error-msg-auth">
                     <?php 
-                        echo $errors;
+                        // echo $errors;
                     ?>
                 </div>
                 <input type="submit" value="Войти" class="btn-sub-auth">
