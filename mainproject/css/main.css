@@ -222,7 +222,10 @@ main .item-card .image-card{
 	font-family: 'Courier New', Courier, monospace;
 }
 .item-card .add-product:hover{
-	background-color: #6F2232;
+	/* background-color: #6F2232; */
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 main .sepparator{

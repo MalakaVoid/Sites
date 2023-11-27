@@ -8,11 +8,10 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/authorization-registration.css'>
 </head>
 <body>
-<?php
+    <?php
         include("header.php");
     ?>
     <main>
-        <!-- <div class="authorization-container"> -->
             <form method="post" action="/menu">
             <div class="authorization-container">
                 <div class="container-links">
@@ -22,15 +21,9 @@
                 <input type="text" name="login" class="inp-text-auth" required placeholder="Логин">
                 <input type="password" name="password" class="inp-text-auth" required placeholder="Пароль">
 
-                <div class="error-msg-auth">
-                    <?php 
-                        // echo $errors;
-                    ?>
-                </div>
                 <input type="submit" value="Войти" class="btn-sub-auth">
             </div>
             </form>
-        <!-- </div> -->
     </main>
 </body>
 </html>
