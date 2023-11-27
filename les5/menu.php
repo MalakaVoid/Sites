@@ -4,7 +4,8 @@
 		'Главная' => '/',
         'Таблица' => '/table.php',
 		'Добавить' => '/add_product.php',
-        'Аккаунт' => '/account.php'
+        'Аккаунт' => '/account.php',
+		'Таблица2' => '/table2.php'
 	);
 ?>
 <div class='header' align='center'>
