@@ -1,3 +1,10 @@
+<?php
+    $message_error = "";
+    if (isset($_POST['login']) && isset($_POST['password'])){
+        $login = $_POST['login'];
+        $password = $_POST['password'];
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,11 +19,14 @@
         include("header.php");
     ?>
     <main>
-            <form method="post" action="/menu">
+            <form method="post" action="/authorization.php">
             <div class="authorization-container">
                 <div class="container-links">
                     <a href="/authorization.php">ВХОД</a>
                     <a href="/registration.php" class='active'>РЕГИСТРАЦИЯ</a>
+                </div>
+                <div class="errors">
+                    <?php echo $message_error;?>
                 </div>
                 <input type="text" name="login" class="inp-text-auth" required placeholder="Логин">
                 <input type="password" name="password" class="inp-text-auth" required placeholder="Пароль">

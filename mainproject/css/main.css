@@ -155,6 +155,7 @@ main .menu-content{
 	/* justify-content: space-between; */
 	/* width: 100%; */
 	flex-direction: row;
+	/* column-gap: 30px; */
 	margin-left: auto;
 	margin-right: auto;
 
@@ -226,6 +227,7 @@ main .item-card .image-card{
 	-webkit-transform: scale(1.05);
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
+	cursor: pointer;
 }
 
 main .sepparator{
