@@ -5,6 +5,14 @@
 		'Доставка' => '/delivery.php',
 		'Контакты' => '/contacts.php',
 	);
+
+    session_start();
+    if (isset($_SESSION["user"]) && $_SESSION["shop_cart_count"] != 0){
+        $shop_cart = $_SESSION["shop_cart_count"];
+    }
+    else{
+        $shop_cart = "";
+    }
 ?>
 
 <header id="header">
@@ -25,7 +33,7 @@
                     ?>
                 </div>
                 <div class="menu-icons">
-                    <a href="/" class="shop-cart">1</a>
+                    <a href="/" class="shop-cart"><?php echo $shop_cart;?></a>
                     <a href="/authorization.php" class="user"></a>
                 </div>
             </div>

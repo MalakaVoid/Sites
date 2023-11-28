@@ -121,6 +121,8 @@ main .container-inf .block-text p{
 #container-menu h1{
 	/* color:#C3073F; */
 	color: #C5C6C7;
+	/* text-decoration: underline #C3073F; */
+	text-decoration: underline #6F2232;
 
 	text-align: center;
 	/* color: #C5C6C7; */
@@ -214,6 +216,7 @@ main .item-card .image-card{
 
 .item-card .add-product{
 	bottom: 0;
+	width: 100%;
 	color: #C5C6C7;
 	background-color: #C3073F;
 	font-size: 24px;

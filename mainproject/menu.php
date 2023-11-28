@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_SESSION["user"]) && isset($_GET['item_id'])){
+        $_SESSION["shop_cart_count"] +=1;
+        $_SESSION["shop_cart"][]=$_GET['item_id'];
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>

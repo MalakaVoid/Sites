@@ -24,9 +24,11 @@
                     <div class='price'>
                         {$item['price']} P
                     </div>
-                    <button class='add-product'>
+                    <form>
+                    <button class='add-product' formmethod='POST' formaction='/menu.php?item_id={$item['item_id']}'>
                         Добавить
                     </button>
+                    </form>
                 </div>
                 </div>";
             

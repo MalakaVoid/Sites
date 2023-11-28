@@ -26,6 +26,7 @@
                 $user_add["login"] = $user['login'];
                 $user_add["email"] = $user['email'];
                 $_SESSION["user"] = $user_add;
+                $_SESSION["shop_cart_count"] = 0;
                 header("Location: /user_page.php");
                 exit;
             } 

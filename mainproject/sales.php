@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (isset($_SESSION["user"]) && isset($_GET['item_id'])){
+        $_SESSION["shop_cart_count"] +=1;
+        $_SESSION["shop_cart"][]=$_GET['item_id'];
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,9 +46,11 @@
                             <div class='price'>
                                 {$item['price']} P
                             </div>
-                            <button class='add-product'>
+                            <form>
+                            <button class='add-product' formmethod='POST' formaction='/sales.php?item_id={$item['item_id']}'>
                                 Добавить
                             </button>
+                            </form>
                         </div>
                     </div>";
                     
