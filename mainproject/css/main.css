@@ -34,6 +34,7 @@ main{
 	/* margin-top: 100px; */
 	color: #C5C6C7;
 	padding-top: 100px;
+	min-height: 500px;
 }
 
 /* MAIN IMAGE */
@@ -343,6 +344,7 @@ main .sepparator{
 	font-size: 42px;
 	letter-spacing: 2.5px;
 	padding: 10px;
+	text-decoration: underline #C3073F;
 }
 #container-contacts .phone-num{
 	margin: auto;
@@ -352,4 +354,72 @@ main .sepparator{
 }
 .description-phone{
 	margin: auto;
+}
+
+#container-user-page{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#container-user-page > div{
+	width: 400px;
+	display: flex;
+	/* align-items: center; */
+	flex-direction: column;
+	font-size: 24px;
+	gap: 10px;
+	font-weight: bold;
+	color: #C3073F;
+	padding: 10px;
+	margin: 10px;
+	margin-top: 20px;
+}
+
+.title-page-acc{
+	text-align: center;
+	font-size: 42px;
+	letter-spacing: 2.5px;
+	padding: 10px;
+	text-decoration: underline #C3073F;
+	color: #C5C6C7;
+}
+#container-user-page .user{
+	align-self: flex-end;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #C5C6C7;
+}
+
+#container-user-page input[type='submit']{
+	width: 40%;
+	font-size: 24px;
+	background-color: #1A1A1D;
+
+}
+
+#container-user-page > div > form{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px 0px;
+}
+
+#container-user-page input[type='submit']{
+    background-color: #0B0C10;
+    border: solid 3px #C5C6C7;
+    color: #C5C6C7;
+    width: 70%;
+    font-size: 24px;
+    padding: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#container-user-page input[type='submit']:hover{
+    background-color: #C5C6C7;
+    color: #0B0C10;
 }

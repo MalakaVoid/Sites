@@ -63,7 +63,7 @@ main{
 
 .inp-text-auth{
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    /* font-weight: bold; */
     width: 80%;
     font-size: 24px;
     margin-top: 20px;
@@ -95,4 +95,10 @@ main{
 .btn-sub-auth:hover{
     background-color: #C5C6C7;
     color: #0B0C10;
+}
+.authorization-container .errors{
+    text-decoration: underline #C3073F;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
 }
