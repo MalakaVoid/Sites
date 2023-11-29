@@ -4,6 +4,9 @@
         $_SESSION["shop_cart_count"] +=1;
         $_SESSION["shop_cart"][]=$_GET['item_id'];
     }
+    else if (isset($_GET['item_id'])){
+        header('Location: /authorization.php');
+    }
 ?>
 <!DOCTYPE html>
 <html>

@@ -426,3 +426,50 @@ main .sepparator{
     background-color: #C5C6C7;
     color: #0B0C10;
 }
+
+#shop-cart-page .shop-cart-container h1{
+	text-align: center;
+	font-size: 42px;
+	letter-spacing: 2.5px;
+	padding: 10px;
+	text-decoration: underline #C3073F;
+	color: #C5C6C7;
+}
+
+#shop-cart-page .shop-cart-content{
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	gap: 10px;
+}
+#shop-cart-page .shop-cart-container .card{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+#shop-cart-page .shop-cart-container .card img{
+	max-width: 200px;
+	margin: auto 0;
+}
+
+#shop-cart-page .shop-cart-container .card .info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 24px;
+	text-decoration: none;
+}
+#shop-cart-page .shop-cart-container .card .price{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 32px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#shop-cart-page .shop-cart-container .card >div {
+	display: flex;
+	flex-direction: row;
+}

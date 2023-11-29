@@ -33,7 +33,7 @@
                     ?>
                 </div>
                 <div class="menu-icons">
-                    <a href="/" class="shop-cart"><?php echo $shop_cart;?></a>
+                    <a href="/shop_cart.php" class="shop-cart"><?php echo $shop_cart;?></a>
                     <a href="/authorization.php" class="user"></a>
                 </div>
             </div>
