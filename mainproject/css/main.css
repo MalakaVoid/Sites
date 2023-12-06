@@ -21,6 +21,7 @@
 
 body{
     margin: 0;
+	min-width: 400px;
 	font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
 	background-color: #1A1A1D;
@@ -114,8 +115,13 @@ main .container-inf .block-text p{
 }
 /* MENU  */
 #container-menu{
-	padding-top: 50px;
+	padding-top: 100px;
 
+}
+#container-menu .title-page{
+	padding: 20px 10px 20px 10px;
+	font-size: 42px;
+	text-decoration: underline #C3073F;
 }
 
 #container-menu h1{
@@ -126,7 +132,7 @@ main .container-inf .block-text p{
 
 	text-align: center;
 	/* color: #C5C6C7; */
-	font-size: 36px;
+	font-size: 32px;
 	letter-spacing: 2.5px;
 
 	/* padding-top: -100px; */
@@ -232,6 +238,7 @@ main .item-card .image-card{
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
 	cursor: pointer;
+	transition: 0.3s;
 }
 
 main .sepparator{
@@ -243,7 +250,7 @@ main .sepparator{
 
 #container-delivery .title-page{
 	color:#C5C6C7;
-	font-size: 36px;
+	font-size: 42px;
 	letter-spacing: 2.5px;
 }
 #container-delivery .title-page-container{
@@ -442,34 +449,130 @@ main .sepparator{
 	/* align-items: center; */
 	gap: 10px;
 }
-#shop-cart-page .shop-cart-container .card{
+#shop-cart-page .shop-cart-content .card{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	max-height: 200px;
 
 }
-#shop-cart-page .shop-cart-container .card img{
+#shop-cart-page .shop-cart-content .card img{
 	max-width: 200px;
 	margin: auto 0;
 }
 
-#shop-cart-page .shop-cart-container .card .info{
+#shop-cart-page .shop-cart-content .card .info{
+	padding-top: 20px;
+	height: 90%;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	font-size: 24px;
+	font-size: 20px;
 	text-decoration: none;
+	text-wrap: wrap;
+	overflow: hidden;
 }
-#shop-cart-page .shop-cart-container .card .price{
+#shop-cart-page .shop-cart-content .card h2{
+	font-size: 32px;
+}
+#shop-cart-page .shop-cart-content .card .price{
+	/* margin-top: auto; */
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: center;
 	font-size: 32px;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-#shop-cart-page .shop-cart-container .card >div {
+#shop-cart-page .shop-cart-content .card .right-side{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#shop-cart-page .shop-cart-content .card .amount{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
+	font-weight: bold;
+}
+#shop-cart-page .shop-cart-content .card .left-side{
 	display: flex;
 	flex-direction: row;
+	width: 50%;
+}
+#shop-cart-page .left-side .add_dell_el{
+	/* margin-top: auto; */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#shop-cart-page .shop-cart-content .add_dell_el button{
+	border-radius: 5px;
+	font-size: 24px;
+	color: #C5C6C7;
+	border: solid 2px #C3073F;
+	background-color: #1A1A1D;
+	width: 40px;
+	height: 40px;
+	max-width: 40px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+#shop-cart-page .shop-cart-content .add_dell_el button:hover{
+	background-color: #C3073F;
+}
+.shop-cart-content .empty{
+	font-size: 46px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#shop-cart-page .shop-cart-summ{
+	margin-top: 20px;
+	display: flex;
+	/* justify-content: space-between; */
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+	gap: 20px;
+
+}
+#shop-cart-page .shop-cart-summ .summ{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	font-size: 32px;
+	font-weight: bold;
+}
+#shop-cart-page .shop-cart-summ .order_btn{
+	padding: 6px 25px 6px 25px;
+	font-size: 32px;
+	color: #C5C6C7;
+	background-color: #1A1A1D;
+	border: solid 3px #C3073F;
+	border-radius: 10px;
+	font-weight: bold;
+
+}
+#shop-cart-page .shop-cart-summ .order_btn:hover{
+	background-color: #C3073F;
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	cursor: pointer;
+	transition: 0.3s;
+
+}
+#shop-cart-page hr{
+	background-color: #C3073F;
+	border-color: #C3073F;
+}
+#shop-cart-page .shop-cart-summ .btn-container{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }

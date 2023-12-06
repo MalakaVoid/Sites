@@ -2,7 +2,11 @@
     session_start();
     if (isset($_SESSION["user"]) && isset($_GET['item_id'])){
         $_SESSION["shop_cart_count"] +=1;
-        $_SESSION["shop_cart"][]=$_GET['item_id'];
+        if (isset($_SESSION["shop_cart"][$_GET['item_id']])){
+            $_SESSION["shop_cart"][$_GET['item_id']]+=1;
+        } else{
+            $_SESSION["shop_cart"][$_GET['item_id']]=1;
+        }
     }
     else if (isset($_GET['item_id'])){
         header('Location: /authorization.php');
@@ -21,12 +25,15 @@
     <?php
         include("header.php");
     ?>
-    <article>
+    <!-- <article>
         <div class="main-container-image">
             <img src="images/banner-menu.png" class="main-image" alt="Burger image">  
         </div>
-    </article>
+    </article> -->
     <main id="container-menu">
+        <div class='title-page-container'>
+            <h1 class="title-page">МЕНЮ</h1>
+        </div>
         <?php
             include("menu_creation.php");
         ?>

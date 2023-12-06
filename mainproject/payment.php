@@ -114,8 +114,9 @@
                 </div>
                 <div class='btn-container'>
                     <form>
+                        Адрес:
                         <input type='text' name='addres'>
-                        <button class='order_btn'>Заказать</button>
+                        <button class='order_btn'>Оплатить</button>
                     </form>
                 </div>
             </div>
