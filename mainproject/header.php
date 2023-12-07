@@ -4,6 +4,7 @@
 		'Акции' => '/sales.php',
 		'Доставка' => '/delivery.php',
 		'Контакты' => '/contacts.php',
+        'Заказы' => '/orders.php',
 	);
 
     session_start();

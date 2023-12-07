@@ -5,8 +5,6 @@
     }
     if (isset($_POST['add_item'])){
         $added_item = $_POST['add_item'];
-        // echo $_POST['add_item'];
-        // unset($_POST['add_item']);
         $_SESSION['shop_cart'][$added_item]+=1;
         $_SESSION["shop_cart_count"]+=1;
     }
@@ -36,6 +34,11 @@
                     'price'=> $item['price'],                    
                 ) ;
             }
+        }
+
+        $sum_price = 0;
+        foreach ($cart_items as $item_id => $info){
+            $sum_price += $info["price"]*$info['count'];
         }
     }
     else{
@@ -96,6 +99,8 @@
                     }
                 ?>
             </div>
+            <?PHP if (!$empty_flag){
+            echo"        
             <hr>
             <div class='shop-cart-summ'>
                 <div class='summ'>
@@ -103,22 +108,17 @@
                         CУММА ЗАКАЗА: 
                     </div>
                     <div>
-                        <?php
-                            $sum_price = 0;
-                            foreach ($cart_items as $item_id => $info){
-                                $sum_price += $info["price"]*$info['count'];
-                            }
-                            echo $sum_price." P";
-                        ?>
+                        {$sum_price}
                     </div>
                 </div>
+                <form method='POST' action='/payment.php'>
                 <div class='btn-container'>
-                    <form>
-                        <input type='text' name='addres'>
-                        <button class='order_btn'>Заказать</button>
-                    </form>
+                    <input type='text' name='addres' placeholder='Введите адресс доставки' required>
+                    <button class='order_btn' type='submit' value='1'>Заказать</button>
                 </div>
+                </form>
             </div>
+                ";}?>
         </div>
     </main>
     <?php

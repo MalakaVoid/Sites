@@ -1,129 +1,48 @@
 <?php
-    session_start();
-    if (!isset($_SESSION["user"])){
-        header("Location: /authorization.php");
-    }
-    if (isset($_POST['add_item'])){
-        $added_item = $_POST['add_item'];
-        // echo $_POST['add_item'];
-        // unset($_POST['add_item']);
-        $_SESSION['shop_cart'][$added_item]+=1;
-        $_SESSION["shop_cart_count"]+=1;
-    }
-    if (isset($_POST['del_item'])){
-        $deleted_item = $_POST['del_item'];
-        if ($_SESSION['shop_cart'][$deleted_item]==1){
-            unset($_SESSION['shop_cart'][$deleted_item]);
-        } else{
-            $_SESSION['shop_cart'][$deleted_item]-=1;
-        }
-        $_SESSION["shop_cart_count"]-=1;
-    }
     include("database_conn.php");
+    session_start();
 
-    if (isset($_SESSION['shop_cart']) && count($_SESSION['shop_cart'])>0){
-        $empty_flag = false;  
-        $cart_items = [];
-        foreach ($_SESSION['shop_cart'] as $key => $value){
-            $querry = "SELECT * FROM items WHERE item_id = {$key}";
-            $result_query_item = mysqli_query($link,$querry);
-            $item = mysqli_fetch_array($result_query_item);
-            if ($item != null){
-                $cart_items[$item['item_id']] =array(
-                    'count'=> $value,
-                    'title'=> $item['title'],
-                    'desc'=> $item['description'],
-                    'price'=> $item['price'],                    
-                ) ;
-            }
-        }
+    if (!isset($_POST["addres"])) {
+        header("Location: /shop_cart.php");
+        exit;
     }
-    else{
-        $empty_flag = true;
-        $empty_text = "<h2 class='empty'>Тут пусто</h2>";
+    // var_dump($_SESSION);
+    if (isset($_SESSION['shop_cart']) && count($_SESSION['shop_cart'])>0){
+        $cart_items = [];
+        $sum_price = 0;
+        foreach ($_SESSION['shop_cart'] as $item_id => $amount){
+            $querry = "SELECT price FROM items WHERE item_id = {$item_id}";
+            $result_query_item = mysqli_query($link,$querry);
+            $item = mysqli_fetch_array($result_query_item)['price'];
+            $sum_price += $item*$amount;
+            echo $item*$amount;
+        }        
+
+        $now = new DateTime('now');
+        $creation_date = date_format($now,'Y-m-d H:i:s');
+        $hour = date_modify($now, "+1 hour");
+        $arrival_date = date_format($hour,'Y-m-d H:i:s');
+        $query = "INSERT INTO orders(user_id, order_creation_date, order_arrival_date, price, addres)
+                  VALUES ({$_SESSION['user']['user_id']}, '{$creation_date}', '{$arrival_date}', {$sum_price}, '{$_POST["addres"]}')";
+        $result_query = mysqli_query($link,$query);
+        echo $result_query;
+
+
+        $query = "SELECT order_id FROM orders WHERE user_id={$_SESSION['user']['user_id']} ORDER BY order_id DESC";
+        $result_query = mysqli_query($link,$query);
+        $order_id = mysqli_fetch_array($result_query)['order_id'];
+
+        foreach ($_SESSION['shop_cart'] as $item_id => $amount){
+            $querry = "INSERT INTO order_items(order_id, item_id, amount) VALUES ({$order_id}, {$item_id}, {$amount})";
+            $result_query_item = mysqli_query($link,$querry);
+        }
+        unset($_SESSION['shop_cart']);
+        $_SESSION['shop_cart_count'] = 0;
+        header('Location: /orders.php');
+        exit;
+
+    } else{
+        header('Location: /shop_cart.php');
+        exit;
     }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <title>Menu</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/header_footer.css'>
-</head>
-<body>
-    <?php
-        include("header.php");
-    ?>
-    <main id="shop-cart-page">
-        <div class='shop-cart-container'>
-            <h1>КОРЗИНА</h1>
-            <div class='shop-cart-content'>
-                <?php
-                    if ($empty_flag){
-                        echo $empty_text;
-                    }
-                    else{
-                        foreach ($cart_items as $item_id => $info){
-                            echo "
-                            <div class='card'>
-                                <div class='left-side'>
-                                    <img src='images/burger1.png' alt='Burger1'>
-                                    <div class='info'>
-                                        <h2>{$info['title']}</h2>
-                                        {$info['desc']}
-                                    </div>
-                                    
-                                </div>
-                                <div class='amount'>
-                                    {$info['count']}
-                                </div>
-                                <div class='right-side'>
-                                    <div class='price'>
-                                        {$info['price']} P
-                                    </div>
-                                    <div class='add_dell_el'>
-                                        <form method='POST' action='/shop_cart.php'>
-                                            <button type='submit' name='add_item' value='{$item_id}'>+</button>
-                                            <button type='submit' name='del_item' value='{$item_id}'>&ndash;</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            ";
-                        }
-                    }
-                ?>
-            </div>
-            <hr>
-            <div class='shop-cart-summ'>
-                <div class='summ'>
-                    <div>
-                        CУММА ЗАКАЗА: 
-                    </div>
-                    <div>
-                        <?php
-                            $sum_price = 0;
-                            foreach ($cart_items as $item_id => $info){
-                                $sum_price += $info["price"]*$info['count'];
-                            }
-                            echo $sum_price." P";
-                        ?>
-                    </div>
-                </div>
-                <div class='btn-container'>
-                    <form>
-                        Адрес:
-                        <input type='text' name='addres'>
-                        <button class='order_btn'>Оплатить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
-    <?php
-        include("footer.php");
-    ?>
-</body>
-</html>
