@@ -13,7 +13,7 @@
         echo "<div class='menu-content'>";
         while ($item = mysqli_fetch_array($result_query_items)){
             echo "<div class='item-card'>
-                <img src='images/burger1.png' alt='Burger1' class='image-card'>
+                <img src='{$item['img']}' alt='{$item['title']}' class='image-card'>
                 <div class='info-container'>
                     <div class='title'>
                         {$item['title']}

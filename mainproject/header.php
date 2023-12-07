@@ -19,7 +19,7 @@
 <header id="header">
         <div class="container-sizer">
             <div class="container-header">
-                <a href="/" class="logo">BGCLUB</a>
+                <a href="/" class="logo">BDCLUB</a>
                 <div class="menu-content">
                     
                     <?php

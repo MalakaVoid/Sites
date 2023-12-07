@@ -44,51 +44,34 @@
         <div class='orders-container'>
             <h1>ЗАКАЗЫ</h1>
             <?php
-
                 foreach ($output_order as $order_id => $info) {
                     echo "<div class='order-container'>
-                          <div class='items'>";
+                          Товары:";
+                          echo "<div>";
                     foreach ($info['items'] as $item_id => $item_info) {
                         echo "{$item_info['title']} x{$item_info['amount']}<br>";
                     }
-                    echo "</div>";
-                    echo "<div class='price'>
-                        Цена:<br>
+                    echo "</div>
+                        Цена:
+                        <div>
                         {$info['price']} P
-                    </div>
-                    <div class='dates'>
-                        Создан:<br> 
-                        {$info['order_creation_date']}<br>
-                        Время доставки:<br>
+                        </div>
+                        Создан:
+                        <div>
+                        {$info['order_creation_date']}
+                        </div>
+                        Время доставки:
+                        <div>
                         {$info['order_arrival_date']}
-                    </div>
+                        </div>
+                        Адрес:
+                        <div>
+                        {$info['addres']}
+                        </div>
                     </div>";
                 }
 
             ?>
-
-
-
-
-            <!-- <div class='order-container'>
-                <div class='items'>
-                    Товары:<br>
-                    ITEM 1<br>
-                    ITEM 2<br>
-                    ITEM 3<br>
-                </div>
-                <div class='price'>
-                    Цена:<br>
-                    123131 P
-                </div>
-                <div class='dates'>
-                    Создан:<br> 
-                    creation<br>
-                    Время доставки:<br>
-                     arrival
-                </div>
-            </div> -->
-            
         </div>
     </main>
     <?php

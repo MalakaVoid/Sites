@@ -17,7 +17,8 @@
             <img src="images/preview-2-min.png" class="main-image" alt="Burger image">  
         </div>
     </article>
-    <main>
+    <main id='main-page'>
+        <h1 class='title-page'>ГЛАВНАЯ</h1>
         <div class="container-inf">
             <div class="block-text">
                 <h2>Интерьер</h2>

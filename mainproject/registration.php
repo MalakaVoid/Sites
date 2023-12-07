@@ -19,7 +19,7 @@
                 $message_error = "Данный логин уже занят";
             }
             else {
-                $query = "INSERT INTO users (`login`, `password`, `first_name`, `last_name`, `email`) VALUES ('{$login}', '{$password}', '{$first_name}', '{$last_name}', '{$email}')";
+                $query = "INSERT INTO users (`login`, `password`, `first_name`, `last_name`, `email`, is_admin) VALUES ('{$login}', '{$password}', '{$first_name}', '{$last_name}', '{$email}', 0)";
                 $result_query = mysqli_query($link, $query);
                 if ($result_query){
                     session_start();
@@ -34,6 +34,7 @@
                     $user_add["last_name"] = $user['last_name'];
                     $user_add["login"] = $user['login'];
                     $user_add["email"] = $user['email'];
+                    $user_add["is_admin"] = $user['is_admin'];
                     $_SESSION["user"] = $user_add;
                     $_SESSION["shop_cart_count"] = 0;
                     header("Location: /user_page.php");

@@ -59,6 +59,7 @@ main{
 }
 .container-links a:hover{
     color: #C3073F;
+    transition: 0.3s;
 }
 
 .inp-text-auth{
@@ -95,6 +96,7 @@ main{
 .btn-sub-auth:hover{
     background-color: #C5C6C7;
     color: #0B0C10;
+    transition: 0.3s;
 }
 .authorization-container .errors{
     text-decoration: underline #C3073F;

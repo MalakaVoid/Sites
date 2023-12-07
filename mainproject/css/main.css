@@ -432,6 +432,7 @@ main .sepparator{
 #container-user-page input[type='submit']:hover{
     background-color: #C5C6C7;
     color: #0B0C10;
+	transition: 0.3s;
 }
 
 #shop-cart-page .shop-cart-container h1{
@@ -524,6 +525,7 @@ main .sepparator{
 
 #shop-cart-page .shop-cart-content .add_dell_el button:hover{
 	background-color: #C3073F;
+	transition: 0.3s;
 }
 .shop-cart-content .empty{
 	font-size: 46px;
@@ -623,16 +625,32 @@ main .sepparator{
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	width: 50%;
+	min-width: 300px;
+	margin: 0 auto;
+	/* box-sizing: border-box; */
+
 }
 #orders-page .order-container{
+	border: solid 3px #C3073F;
+	border-radius: 10px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
 	font-size: 24px;
+	box-sizing: border-box;
+	padding: 20px 30px 20px 30px;
 
 }
+#orders-page .order-container>div{
+	text-align: right;
+	font-weight: bold;
+}
 
-#orders-page .order-container .price{
-
+#main-page{
+	margin-top: 0;
+	padding-top: 0;
+}
+#main-page .title-page{
+	text-align: center;
+	padding: 20px 0px 20px 0px;
 }

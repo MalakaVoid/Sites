@@ -25,10 +25,17 @@
                 $user_add["last_name"] = $user['last_name'];
                 $user_add["login"] = $user['login'];
                 $user_add["email"] = $user['email'];
+                $user_add["is_admin"] = $user['is_admin'];
                 $_SESSION["user"] = $user_add;
                 $_SESSION["shop_cart_count"] = 0;
-                header("Location: /user_page.php");
-                exit;
+                if ($user["is_admin"] == 0){
+                    header("Location: /user_page.php");
+                    exit;
+                }
+                else{
+                    header("Location: /admin/start_page.php");
+                    exit;
+                }
             } 
             else {
                 $message_error = "Пароль неверный";

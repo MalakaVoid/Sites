@@ -31,7 +31,8 @@
                     'count'=> $value,
                     'title'=> $item['title'],
                     'desc'=> $item['description'],
-                    'price'=> $item['price'],                    
+                    'price'=> $item['price'],    
+                    'img' => $item['img']                
                 ) ;
             }
         }
@@ -72,7 +73,7 @@
                             echo "
                             <div class='card'>
                                 <div class='left-side'>
-                                    <img src='images/burger1.png' alt='Burger1'>
+                                    <img src='{$info['img']}' alt='Burger1'>
                                     <div class='info'>
                                         <h2>{$info['title']}</h2>
                                         {$info['desc']}
