@@ -25,7 +25,7 @@
         unset($_POST['item_id']);
     }
 
-    $query = "SELECT item_id, title, description, price, sale, c.name as category FROM items as i INNER JOIN category as c ON i.category = c.category_id";
+    $query = "SELECT item_id, title, description, price, sale, img, c.name as category FROM items as i INNER JOIN category as c ON i.category = c.category_id";
     $result = mysqli_query($link,$query);
 
     $items_arr = [];
@@ -66,6 +66,7 @@
                     <td>Цена</td>
                     <td>Тип</td>
                     <td>Акция</td>
+                    <td>Путь до картинки</td>
                 </tr>
 
                 <?php
@@ -76,6 +77,7 @@
                         <td>&nbsp;{$item['price']}&nbsp;</td>
                         <td>{$item['category']}</td>
                         <td>{$item['sale']}</td>
+                        <td>{$item['img']}</td>
                         <td><form action='/admin/edit_item.php' method='POST'><button type='submit' name='item_id' value='{$item_id}'>Edit</button></form></td>
                         <td><form action='/admin/products.php' method='POST'><button type='submit' name='item_id' value='{$item_id}'>Delete</button></form></td>
                     </tr>";

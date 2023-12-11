@@ -50,7 +50,7 @@
                                 {$item['price']} P
                             </div>
                             <form>
-                            <button class='add-product' formmethod='POST' formaction='/sales.php?item_id={$item['item_id']}'>
+                            <button class='add-product' formmethod='POST' formaction='/menu.php?item_id={$item['item_id']}'>
                                 Добавить
                             </button>
                             </form>

@@ -11,11 +11,22 @@
         exit;
     }
     include('../database_conn.php');
+
     $errors = "";
+
+    if (isset($_POST['order_id'])){
+        $query = "DELETE FROM orders WHERE order_id = {$_POST['order_id']}";
+        $result = mysqli_query($link, $query);
+        if ($result){
+            $errors = "Произошла ошибка при удалении.";
+        }else{
+            $errors = "Запись успешно удалена.";
+        }
+    }
+
     $query = "SELECT order_id, u.login as user, order_creation_date, order_arrival_date, price, addres
               FROM orders as o INNER JOIN users as u ON o.user_id = u.user_id";
     $result = mysqli_query($link,$query);
-
     $orders_arr = [];
 
     while ($order = mysqli_fetch_array($result)) {
@@ -55,6 +66,7 @@
                         <td>{$order['order_arrival_date']}</td>
                         <td>{$order['price']}</td>
                         <td>{$order['addres']}</td>
+                        <td><form action='/admin/orders.php' method='POST'><button type='submit' name='order_id' value='{$order_id}'>Delete</button></form></td>
                     </tr>";
                     }
                 ?>

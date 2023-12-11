@@ -17,6 +17,7 @@
     $price = "";
     $category = "";
     $sale = "";
+    $img = "";
     if (isset($_POST["item_id"])){
         $item_id = $_POST["item_id"];
 
@@ -29,6 +30,7 @@
         $price = $item['price'];
         $category = $item['category'];
         $sale = $item['sale'];
+        $img = $item['img'];
     }
     else{
         header("Location: /admin/products.php");   
@@ -40,11 +42,12 @@
         $price = $_POST['price'];
         $category = $_POST['category'];
         $sale = 0;
+        $img = $_POST['img'];
         if (isset($_POST['sale'])){
             $sale = 1;
         }
         
-        $query = "UPDATE items SET title='{$title_item}', description = '{$description}', price={$price}, category={$category}, sale={$sale} WHERE item_id={$item_id}";
+        $query = "UPDATE items SET title='{$title_item}', description = '{$description}', price={$price}, category={$category}, sale={$sale}, img='{$img}' WHERE item_id={$item_id}";
         $result = mysqli_query($link, $query);
         if ($result){
             $errors = 'Запись успешно изменена.';
@@ -96,6 +99,7 @@
                         }
                     }
                     echo" </select>
+                    <input type='text' name='img' placeholder='Путь до фото' required value='{$img}'>
                     <div>
                         <input type='checkbox' name='sale' {$checked}> Акция
                     </div>

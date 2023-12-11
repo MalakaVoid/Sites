@@ -17,18 +17,20 @@
     $price = "";
     $category = "";
     $sale = "";
+    $img = "";
     if (isset($_POST['title'])){
         $title_item = $_POST['title'];
         $description = $_POST['description'];
         $price = $_POST['price'];
         $category = $_POST['category'];
+        $img = $_POST['img'];
         $sale = 0;
         if (isset($_POST['sale'])){
             $sale = 1;
         }
 
-        $query = "INSERT INTO items (title, description, price, category, sale)
-                  VALUES ('{$title_item}', '{$description}', {$price}, {$category}, {$sale})";
+        $query = "INSERT INTO items (title, description, price, category, sale, img)
+                  VALUES ('{$title_item}', '{$description}', {$price}, {$category}, {$sale}, '{$img}')";
         // echo $query;
         $result_query = mysqli_query($link, $query);
         // echo $result_query;
@@ -39,6 +41,7 @@
             $price = "";
             $category = "";
             $sale = "";
+            $img = "";
         }
         else{
             $errors = "Что-то пошло не так! Попробуйте еще раз.";
@@ -79,6 +82,7 @@
                         echo "<option value='{$cat['category_id']}'>{$cat['name']}</option>";
                     }
                     echo" </select>
+                    <input type='text' name='img' placeholder='Путь до фото' required value='{$img}'>
                     <div>
                         <input type='checkbox' name='sale'> Акция
                     </div>

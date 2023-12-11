@@ -44,6 +44,9 @@
         <div class='orders-container'>
             <h1>ЗАКАЗЫ</h1>
             <?php
+                if ($output_order == null){
+                    echo "<div class='none-text'>У вас нет заказов.</div>";
+                }
                 foreach ($output_order as $order_id => $info) {
                     echo "<div class='order-container'>
                           Товары:";

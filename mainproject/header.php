@@ -8,6 +8,13 @@
 	);
 
     session_start();
+    if (isset($_SESSION['user'])) {
+        if ($_SESSION['user']['is_admin']==1){
+            $menu_items['Администратор'] = '/admin/start_page.php';
+        }
+    }
+
+
     if (isset($_SESSION["user"]) && $_SESSION["shop_cart_count"] != 0){
         $shop_cart = $_SESSION["shop_cart_count"];
     }
@@ -19,7 +26,7 @@
 <header id="header">
         <div class="container-sizer">
             <div class="container-header">
-                <a href="/" class="logo">BDCLUB</a>
+                <a href="/" class="logo">BGCLUB</a>
                 <div class="menu-content">
                     
                     <?php

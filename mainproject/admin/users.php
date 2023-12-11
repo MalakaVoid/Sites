@@ -61,12 +61,12 @@
             <table>
                 <tr class='col_names'>
                     <td>id</td>
-                    <td>login</td>
-                    <td>password</td>
-                    <td>first_name</td>
-                    <td>last_name</td>
-                    <td>email</td>
-                    <td>admin</td>
+                    <td>Логин</td>
+                    <td>Пароль</td>
+                    <td>Имя</td>
+                    <td>Фамилия</td>
+                    <td>Email</td>
+                    <td>админ</td>
                 </tr>
 
                 <?php

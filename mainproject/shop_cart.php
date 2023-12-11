@@ -109,7 +109,7 @@
                         CУММА ЗАКАЗА: 
                     </div>
                     <div>
-                        {$sum_price}
+                        {$sum_price} P
                     </div>
                 </div>
                 <form method='POST' action='/payment.php'>
