@@ -66,7 +66,7 @@
                     <td>Цена</td>
                     <td>Тип</td>
                     <td>Акция</td>
-                    <td>Путь до картинки</td>
+                    <td>Картинка</td>
                 </tr>
 
                 <?php
@@ -75,9 +75,13 @@
                         <td>{$item_id}</td>
                         <td>{$item['title']}</td>
                         <td>&nbsp;{$item['price']}&nbsp;</td>
-                        <td>{$item['category']}</td>
-                        <td>{$item['sale']}</td>
-                        <td>{$item['img']}</td>
+                        <td>{$item['category']}</td>";
+                        if ($item["sale"] == 1) {
+                            echo "<td>да</td>";
+                        } else{
+                            echo "<td>нет</td>";
+                        }
+                        echo "<td><img src='../{$item['img']}' width='250'></td>
                         <td><form action='/admin/edit_item.php' method='POST'><button type='submit' name='item_id' value='{$item_id}'>Edit</button></form></td>
                         <td><form action='/admin/products.php' method='POST'><button type='submit' name='item_id' value='{$item_id}'>Delete</button></form></td>
                     </tr>";

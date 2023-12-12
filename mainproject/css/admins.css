@@ -55,6 +55,7 @@ main{
     margin: 0 auto;
 	padding-top: 100px;
 	min-height: 500px;
+    padding-bottom: 100px;
 }
 
 
@@ -110,6 +111,7 @@ main li{
 .main-content td{
     padding: 10px 0px 5px 0px;
     text-align: center;
+    vertical-align: middle;
     box-sizing: border-box;
     max-width: 350px;
     min-width: 40px;
@@ -180,6 +182,36 @@ main li{
     box-sizing: border-box;
 }
 
+.container-form .img-file{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.container-form .img-label{
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    transition: all 0.18s ease-in-out;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+.container-form .preview{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-form .preview img{
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.container-form .img-label:hover {
+    color: white;
+    background: black;
+}
 .container-form button{
     border: black 1px solid;
     font-family: 'Courier New', Courier, monospace;

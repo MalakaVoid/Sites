@@ -641,6 +641,11 @@ main .sepparator{
 	padding: 20px 30px 20px 30px;
 
 }
+.order-container .order-main{
+	font-size: 32px;
+	text-align: center;
+	font-weight: bold;
+}
 #orders-page .order-container>div{
 	text-align: right;
 	font-weight: bold;

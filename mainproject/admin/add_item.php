@@ -23,28 +23,46 @@
         $description = $_POST['description'];
         $price = $_POST['price'];
         $category = $_POST['category'];
-        $img = $_POST['img'];
         $sale = 0;
         if (isset($_POST['sale'])){
             $sale = 1;
         }
 
-        $query = "INSERT INTO items (title, description, price, category, sale, img)
-                  VALUES ('{$title_item}', '{$description}', {$price}, {$category}, {$sale}, '{$img}')";
-        // echo $query;
-        $result_query = mysqli_query($link, $query);
-        // echo $result_query;
-        if ($result_query){
-            $errors = "Новый товар успешно добавлен";
-            $title_item = "";
-            $description = "";
-            $price = "";
-            $category = "";
-            $sale = "";
-            $img = "";
-        }
-        else{
-            $errors = "Что-то пошло не так! Попробуйте еще раз.";
+        if(isset($_FILES['img']) && $_FILES['img']['name']!= '') {
+            $getMime = explode('.', $file['name']);
+            $mime = strtolower(end($getMime));
+            if ($mime == 'png') {
+                $target_dir = "../images/products/";
+                $file = $_FILES["img"];
+
+                $name_f = mt_rand(0, 10000) . $file['name'];
+                copy($file['tmp_name'], "../images/products/" . $name_f);
+                
+                $img =  "/images/products/".$name_f;
+
+                $query = "INSERT INTO items (title, description, price, category, sale, img)
+                        VALUES ('{$title_item}', '{$description}', {$price}, {$category}, {$sale}, '{$img}')";
+                // echo $query;
+                $result_query = mysqli_query($link, $query);
+                // echo $result_query;
+                if ($result_query){
+                    $errors = "Новый товар успешно добавлен";
+                    $title_item = "";
+                    $description = "";
+                    $price = "";
+                    $category = "";
+                    $sale = "";
+                    $img = "";
+                }
+                else{
+                    $errors = "Что-то пошло не так! Попробуйте еще раз.";
+                }
+            }
+            else{
+                $errors = "Выберите картинку с расширением PNG!";
+            }
+        } else{
+            $errors = "Добавьте картинку!";
         }
         
     }
@@ -62,7 +80,7 @@
         include("header.php");
     ?>   
     <main id='items-add-page'>
-        <form action='/admin/add_item.php' method='POST'>
+        <form action='/admin/add_item.php' method='POST' enctype="multipart/form-data">
             <div class='container-form'>
                 <h1>Добавить товар</h1>
                 <?php
@@ -82,7 +100,16 @@
                         echo "<option value='{$cat['category_id']}'>{$cat['name']}</option>";
                     }
                     echo" </select>
-                    <input type='text' name='img' placeholder='Путь до фото' required value='{$img}'>
+
+                    <div>
+                        <label for='img' class='img-label'>Выберите картинку</label>
+                        <input type='file' id='img' class='img-file' name='img'>
+                    </div>
+                    <div class='preview'>
+                        
+                    </div>
+
+
                     <div>
                         <input type='checkbox' name='sale'> Акция
                     </div>
@@ -90,6 +117,7 @@
                 ?>
             </div>
         </form>
+        <script src="test.js"></script>
     </main>
 </body>
 </html>

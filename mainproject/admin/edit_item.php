@@ -42,7 +42,26 @@
         $price = $_POST['price'];
         $category = $_POST['category'];
         $sale = 0;
-        $img = $_POST['img'];
+
+        if(isset($_FILES['img']) && $_FILES['img']['name']!= '') {
+            $getMime = explode('.', $file['name']);
+            $mime = strtolower(end($getMime));
+
+            if ($mime == 'png'){
+                $target_dir = "../images/products/";
+                $file = $_FILES["img"];
+
+                $name_f = mt_rand(0, 10000) . $file['name'];
+                copy($file['tmp_name'], "../images/products/" . $name_f);
+                
+                $img =  "/images/products/".$name_f;
+                $error_type_img = false;
+            }
+            else{
+                $error_type_img = true;
+            }
+        }
+
         if (isset($_POST['sale'])){
             $sale = 1;
         }
@@ -50,7 +69,11 @@
         $query = "UPDATE items SET title='{$title_item}', description = '{$description}', price={$price}, category={$category}, sale={$sale}, img='{$img}' WHERE item_id={$item_id}";
         $result = mysqli_query($link, $query);
         if ($result){
-            $errors = 'Запись успешно изменена.';
+            if ($error_type_img){
+                $errors = "Выберите картинку с расширением PNG!";
+            } else{
+                $errors = 'Запись успешно изменена.';
+            }
         }
         else{
             $errors = 'Что-то пошло не так.';
@@ -74,7 +97,7 @@
         include("header.php");
     ?>   
     <main id='edit-user-page'>
-        <form action='/admin/edit_item.php' method='POST'>
+        <form action='/admin/edit_item.php' method='POST' enctype="multipart/form-data">
             <div class='container-form'>
                 <h1>Изменить пользователя</h1>
                 <?php
@@ -99,7 +122,15 @@
                         }
                     }
                     echo" </select>
-                    <input type='text' name='img' placeholder='Путь до фото' required value='{$img}'>
+                    <div>
+                        <label for='img' class='img-label'>Выберите картинку</label>
+                        <input type='file' id='img' class='img-file' name='img'>
+                    </div>
+                    <div class='preview'>
+                        <img src='../{$img}'>
+                    </div>
+
+
                     <div>
                         <input type='checkbox' name='sale' {$checked}> Акция
                     </div>
@@ -109,5 +140,6 @@
             </div>
         </form>
     </main>
+    <script src="test.js"></script>
 </body>
 </html>

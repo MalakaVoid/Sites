@@ -48,7 +48,20 @@
                     echo "<div class='none-text'>У вас нет заказов.</div>";
                 }
                 foreach ($output_order as $order_id => $info) {
+                    $date_arrival = strtotime($info["order_arrival_date"]);
+                    $now = date_timestamp_get(new DateTime('now'));
+                    $interval = $date_arrival - $now;
+                    if ($interval >0) {
+                        $min = intdiv($interval, 60);
+                        $main_text = "Ваш заказ прибудет через {$min} мин.";
+                    }
+                    else{
+                        $main_text = "Заказ доставлен";
+                    }
+
+
                     echo "<div class='order-container'>
+                          <span class='order-main'>{$main_text}</span>
                           Товары:";
                           echo "<div>";
                     foreach ($info['items'] as $item_id => $item_info) {
