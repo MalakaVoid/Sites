@@ -401,3 +401,62 @@ header .logo{
   width: 18px;
   height: 17px;
 }
+
+footer{
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+footer .content-container{
+  padding: 100px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  
+}
+footer .logos{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .logos img{
+  width: 224px;
+  height: 46px;
+}
+
+footer .logos .social-media-logos{
+  display: flex;
+  gap: 10px;
+}
+footer .logos .social-media-logos img{
+  width: 24px;
+}
+
+footer .pages{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .pages a{
+  display: block;
+
+}
+footer .info-block{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .info-block a{
+  display: block;
+
+}
+footer .music-logos{
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  flex-shrink: none;
+}
+footer .music-logos > a > img{
+  width: 24px;
+  height: 24px;
+}
