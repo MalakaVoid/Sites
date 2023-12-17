@@ -301,3 +301,17 @@ main li{
     font-size:23px;
     color:white;
   }
+::-webkit-scrollbar{
+	width: 10px;
+	height: 1720px;
+}
+::-webkit-scrollbar-track{
+	background-color: #0B0C10;
+	/* border-left: 1px solid #C3073F; */
+	/* border-radius: 10px; */
+}
+::-webkit-scrollbar-thumb{
+	/* background-color: #C5C6C7; */
+	background-color: #6F2232;
+	border-radius: 10px;
+}
