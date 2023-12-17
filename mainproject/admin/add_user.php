@@ -81,7 +81,10 @@
                     <input type='text' name='last_name' placeholder='Фамилия' required value='{$last_name}'>
                     <input type='email' name='email' placeholder='Email' required value='{$email}'>
                     <div>
-                        <input type='checkbox' name='is_admin'> Администратор
+                        <label>
+                            <input type='checkbox' name='is_admin'> <span></span>
+                            Администратор
+                        </label>
                     </div>
                     <button type='submit'>Добавить</button>";
                 ?>

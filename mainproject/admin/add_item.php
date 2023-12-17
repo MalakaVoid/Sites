@@ -29,6 +29,7 @@
         }
 
         if(isset($_FILES['img']) && $_FILES['img']['name']!= '') {
+            $file = $_FILES["img"];
             $getMime = explode('.', $file['name']);
             $mime = strtolower(end($getMime));
             if ($mime == 'png') {
@@ -111,7 +112,10 @@
 
 
                     <div>
-                        <input type='checkbox' name='sale'> Акция
+                        <label>
+                            <input type='checkbox' name='sale'> <span></span>
+                            Акция
+                        </label>
                     </div>
                     <button type='submit'>Добавить</button>";
                 ?>

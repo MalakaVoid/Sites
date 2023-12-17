@@ -44,6 +44,7 @@
         $sale = 0;
 
         if(isset($_FILES['img']) && $_FILES['img']['name']!= '') {
+            $file = $_FILES["img"];
             $getMime = explode('.', $file['name']);
             $mime = strtolower(end($getMime));
 
@@ -99,7 +100,7 @@
     <main id='edit-user-page'>
         <form action='/admin/edit_item.php' method='POST' enctype="multipart/form-data">
             <div class='container-form'>
-                <h1>Изменить пользователя</h1>
+                <h1>Изменить товар</h1>
                 <?php
                     if ($errors != ""){
                         echo "<div class='errors'>
@@ -132,7 +133,10 @@
 
 
                     <div>
-                        <input type='checkbox' name='sale' {$checked}> Акция
+                        <label>
+                        <input type='checkbox' name='sale' {$checked}> <span></span>
+                        Акция
+                        </label>
                     </div>
                     <input type='hidden' name='item_id' value='{$item_id}'>
                     <button type='submit'>Изменить</button>";

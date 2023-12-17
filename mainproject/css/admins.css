@@ -5,7 +5,7 @@
 	top: 0;
 	left: 0;
 	display: block;
-	border-bottom: solid 1px black;
+	border-bottom: solid 1px #0B0C10;
 }
 
 header .container-sizer{
@@ -48,6 +48,8 @@ body{
 	font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
 	word-spacing: -5px;
+    background-color: #1A1A1D;
+    color: white;
 }
 
 main{
@@ -62,7 +64,7 @@ main{
 main .title-page{
     padding: 20px 0px 20px 0px;
     font-size: 42px;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -87,7 +89,8 @@ main li{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     border: solid 3px #C3073F;
-    background-color: white;
+    background-color: #1A1A1D;
+    color: white;
     border-radius: 5px;
 }
 #start-page button:hover{
@@ -106,7 +109,7 @@ main li{
     width: 100%;
 }
 .main-content tr{
-    border-bottom: black solid 2px;
+    border-bottom: #6F2232 solid 2px;
 }
 .main-content td{
     padding: 10px 0px 5px 0px;
@@ -121,11 +124,12 @@ main li{
 }
 .main-content td button{
     padding: 5px;
-    border: black 1px solid;
+    border: #C3073F 1px solid;
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     border-radius: 5px;
-    background-color: white;
+    background-color: #1A1A1D;
+    color: white;
 }
 .main-content td button:hover{
     background-color: #C3073F;
@@ -148,18 +152,19 @@ main li{
 }
 
 .main-content .add_btn_container button{
-    width: 50%;
-    border: black 1px solid;
+    width: 40%;
+    border: #C3073F 1px solid;
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     border-radius: 5px;
-    background-color: white;
+    background-color: #1A1A1D;
+    color: white;
     padding: 10px 0px 10px 0px;
     font-weight: bold;
 }
 .main-content .add_btn_container button:hover{
     color: white;
-    background-color: black;
+    background-color: #C3073F;
     transition: 0.3s;
 }
 
@@ -176,10 +181,18 @@ main li{
 }
 .container-form input[type='text'], input[type='email'], input[type='number']{
     font-size: 24px;
-    padding: 5px 10px 5px 10px;
-    font-family: 'Courier New', Courier, monospace;
     width: 40%;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    background-color: #0B0C10;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    color:white;
+    border-radius: 3px;
+}
+.container-form input[type='text']:focus, input[type='email']:focus, input[type='number']:focus{
+    outline: none;
 }
 
 .container-form .img-file{
@@ -196,35 +209,38 @@ main li{
     cursor: pointer;
     display: block;
     transition: all 0.18s ease-in-out;
-    border: 1px solid black;
+    border: 1px solid #0B0C10;
     padding: 5px 10px;
 }
 .container-form .preview{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .container-form .preview img{
-    border: 1px solid black;
+    border: 1px solid #0B0C10;
     border-radius: 4px;
+    width: 70%;
+    background-color: #0B0C10;
 }
 .container-form .img-label:hover {
     color: white;
-    background: black;
+    background: #0B0C10;
 }
 .container-form button{
-    border: black 1px solid;
+    border: #C3073F 1px solid;
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     border-radius: 5px;
-    background-color: white;
+    background-color: #1A1A1D;
+    color: white;
     padding: 10px 20px 10px 20px;
     font-weight: bold;
 }
 
 .container-form button:hover{
-    color: white;
-    background-color: black;
+    background-color: #C3073F;
     transition: 0.3s;
 }
 
@@ -238,20 +254,50 @@ main li{
 
 .container-form textarea{
     font-size: 24px;
-    padding: 5px 10px 5px 10px;
     font-family: 'Courier New', Courier, monospace;
     width: 40%;
     box-sizing: border-box;
+    background-color: #0B0C10;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    color:white;
+    border-radius: 3px;
+}
+.container-form textarea:focus{
+    outline: none;
 }
 .container-form select{
     font-size: 24px;
     padding: 5px 10px 5px 10px;
     font-family: 'Courier New', Courier, monospace;
     width: 40%;
+    background-color: #0B0C10;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    color:white;
+    border-radius: 3px;
 }
-
-.container-form input[type='checkbox']{
-    transform: scale(1.3);
-    opacity: 0.9;
-    cursor: pointer;
+.container-form select{
+    outline: none;
 }
+.container-form label input[type='checkbox'] {
+    display: none;
+  }
+.container-form label span {
+    height: 12px;
+    width: 12px;
+    border: 1px solid white;
+    display: inline-block;
+    position: relative;
+    background-color:#0B0C10;
+    border-radius:2px;
+    padding:3px;
+  }
+  .container-form [type=checkbox]:checked + span:before {
+    content: '\2714';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    font-size:23px;
+    color:white;
+  }

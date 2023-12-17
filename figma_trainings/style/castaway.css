@@ -239,6 +239,7 @@ header .logo{
 #third .content-container img{
   width: 650px;
   height: 743px;
+  border-radius: 12px;
 }
 #third .content-container .text-content{
   padding-bottom: 18px;
