@@ -75,7 +75,15 @@ main{
     padding: 5px 10px 5px 10px;
     color:#C5C6C7;
 }
-
+.inp-text-auth:-webkit-autofill,
+.inp-text-auth:-webkit-autofill:hover, 
+.inp-text-auth:-webkit-autofill:focus, 
+.inp-text-auth:-webkit-autofill:active
+{
+    -webkit-box-shadow: 0 0 0 30px #1A1A1D inset !important;
+    -webkit-text-fill-color: #C5C6C7 !important;
+    font-size: 24px;
+}
 .inp-text-auth:focus{
     outline: none;
 }
