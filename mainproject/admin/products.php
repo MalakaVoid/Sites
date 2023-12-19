@@ -82,8 +82,8 @@
                             echo "<td>нет</td>";
                         }
                         echo "<td><img src='../{$item['img']}' width='250'></td>
-                        <td><form action='/admin/edit_item.php' method='POST'><button type='submit' name='item_id' value='{$item_id}'>Edit</button></form></td>
-                        <td><form action='/admin/products.php' method='POST'><button type='submit' name='item_id' value='{$item_id}'>Delete</button></form></td>
+                        <td><form action='/admin/edit_item.php' method='POST'><button type='submit' name='item_id' value='{$item_id}'><img src='../images/edit.png'></button></form></td>
+                        <td><form action='/admin/products.php' method='POST'><button type='submit' name='item_id' value='{$item_id}'><img src='../images/bin.png'></button></form></td>
                     </tr>";
                     }
                 ?>

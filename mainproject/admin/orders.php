@@ -66,7 +66,7 @@
                         <td>{$order['order_arrival_date']}</td>
                         <td>{$order['price']}</td>
                         <td>{$order['addres']}</td>
-                        <td><form action='/admin/orders.php' method='POST'><button type='submit' name='order_id' value='{$order_id}'>Delete</button></form></td>
+                        <td><form action='/admin/orders.php' method='POST'><button type='submit' name='order_id' value='{$order_id}'><img src='../images/bin.png'></button></form></td>
                     </tr>";
                     }
                 ?>

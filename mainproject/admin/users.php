@@ -79,8 +79,8 @@
                         <td>{$user['last_name']}</td>
                         <td>{$user['email']}</td>
                         <td>{$user['is_admin']}</td>
-                        <td><form action='/admin/edit_user.php' method='POST'><button type='submit' name='user_id' value='{$user_id}'>Edit</button></form></td>
-                        <td><form action='/admin/users.php' method='POST'><button type='submit' name='user_id' value='{$user_id}'>Delete</button></form></td>
+                        <td><form action='/admin/edit_user.php' method='POST'><button type='submit' name='user_id' value='{$user_id}'><img src='../images/edit.png'></button></form></td>
+                        <td><form action='/admin/users.php' method='POST'><button type='submit' name='user_id' value='{$user_id}'><img src='../images/bin.png'></button></form></td>
                     </tr>";
                     }
                 ?>
