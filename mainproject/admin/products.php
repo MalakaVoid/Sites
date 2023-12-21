@@ -25,7 +25,7 @@
         unset($_POST['item_id']);
     }
 
-    $query = "SELECT item_id, title, description, price, sale, img, c.name as category FROM items as i INNER JOIN category as c ON i.category = c.category_id";
+    $query = "SELECT item_id, title, description,is_visible, price, sale, img, c.name as category FROM items as i INNER JOIN category as c ON i.category = c.category_id";
     $result = mysqli_query($link,$query);
 
     $items_arr = [];
@@ -66,6 +66,7 @@
                     <td>Цена</td>
                     <td>Тип</td>
                     <td>Акция</td>
+                    <td>Видимость</td>
                     <td>Картинка</td>
                 </tr>
 
@@ -77,6 +78,11 @@
                         <td>&nbsp;{$item['price']}&nbsp;</td>
                         <td>{$item['category']}</td>";
                         if ($item["sale"] == 1) {
+                            echo "<td>да</td>";
+                        } else{
+                            echo "<td>нет</td>";
+                        }
+                        if ($item["is_visible"] == 0) {
                             echo "<td>да</td>";
                         } else{
                             echo "<td>нет</td>";

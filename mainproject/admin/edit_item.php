@@ -18,6 +18,7 @@
     $category = "";
     $sale = "";
     $img = "";
+    $is_visible = "";
     if (isset($_POST["item_id"])){
         $item_id = $_POST["item_id"];
 
@@ -31,6 +32,7 @@
         $category = $item['category'];
         $sale = $item['sale'];
         $img = $item['img'];
+        $is_visible = $item['is_visible'];
     }
     else{
         header("Location: /admin/products.php");   
@@ -41,6 +43,8 @@
         $description = $_POST['description'];
         $price = $_POST['price'];
         $category = $_POST['category'];
+        $is_visible = $_POST['is_visible'];
+        echo $is_visible;
         $sale = 0;
 
         if(isset($_FILES['img']) && $_FILES['img']['name']!= '') {
@@ -67,7 +71,7 @@
             $sale = 1;
         }
         
-        $query = "UPDATE items SET title='{$title_item}', description = '{$description}', price={$price}, category={$category}, sale={$sale}, img='{$img}' WHERE item_id={$item_id}";
+        $query = "UPDATE items SET is_visible = {$is_visible}, title='{$title_item}', description = '{$description}', price={$price}, category={$category}, sale={$sale}, img='{$img}' WHERE item_id={$item_id}";
         $result = mysqli_query($link, $query);
         if ($result){
             if ($error_type_img){
@@ -112,6 +116,7 @@
                     echo "<input type='text' name='title' placeholder='Название' required value='{$title_item}'>
                     <textarea placeholder='Описание' rows='10' cols='45' name='description'>{$description}</textarea>
                     <input type='number' name='price' placeholder='Цена' required value='{$price}'>
+                    <input type='number' name='is_visible' placeholder='Видимость' required value='{$is_visible}'>
                     <select name='category' required>
                     <option></option>";
                     while ($cat = mysqli_fetch_array($result_query)){

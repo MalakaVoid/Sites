@@ -18,11 +18,13 @@
     $category = "";
     $sale = "";
     $img = "";
+    $is_visible = "";
     if (isset($_POST['title'])){
         $title_item = $_POST['title'];
         $description = $_POST['description'];
         $price = $_POST['price'];
         $category = $_POST['category'];
+        $is_visible = $_POST['is_visible'];
         $sale = 0;
         if (isset($_POST['sale'])){
             $sale = 1;
@@ -41,8 +43,8 @@
                 
                 $img =  "/images/products/".$name_f;
 
-                $query = "INSERT INTO items (title, description, price, category, sale, img)
-                        VALUES ('{$title_item}', '{$description}', {$price}, {$category}, {$sale}, '{$img}')";
+                $query = "INSERT INTO items (title, description, price, category, sale, img, is_visible)
+                        VALUES ('{$title_item}', '{$description}', {$price}, {$category}, {$sale}, '{$img}', {$is_visible})";
                 // echo $query;
                 $result_query = mysqli_query($link, $query);
                 // echo $result_query;
@@ -54,6 +56,7 @@
                     $category = "";
                     $sale = "";
                     $img = "";
+                    $is_visible = "";
                 }
                 else{
                     $errors = "Что-то пошло не так! Попробуйте еще раз.";
@@ -95,6 +98,7 @@
                     echo "<input type='text' name='title' placeholder='Название' required value='{$title_item}'>
                     <textarea placeholder='Описание' rows='10' cols='45' name='description'>{$description}</textarea>
                     <input type='number' name='price' placeholder='Цена' required value='{$price}'>
+                    <input type='number' name='is_visible' placeholder='Видимость' required value='{$is_visible}'>
                     <select name='category' required>
                     <option></option>";
                     while ($cat = mysqli_fetch_array($result_query)){
