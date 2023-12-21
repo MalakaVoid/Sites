@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "Archangelsk"; 
+    src: url("../fonts/Archangelsk.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
+@font-face {
+    font-family: "Roboto"; 
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+/* FOR BIG SCREEN */
+@media screen and (min-width: 1024px){
+    body{
+        max-width: 1920px;
+        overflow-x: hidden;
+    }
+    header{
+        max-width: 1920px;
+        position: absolute;
+        z-index: 10;
+        padding: 0px 320px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    header .header-content{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px 0px;
+    }
+    header #logo{
+        width: 296px;
+    }
+    header .mini-icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 40px;
+
+    }
+    header .mini-icons a{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    header .mini-icons a img{
+        width: 100%;
+    }
+    .sepparator{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .preview-img{
+        position: absolute;
+        left:50%;
+        transform:translate(-50%,0);
+        object-fit:cover;
+        width: 1920px;
+        height: 1000px;
+        overflow: hidden;
+        z-index: -1;
+    }
+    .first-block{
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0px 36px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        box-sizing: content-box;
+        width: 100%;
+        height: 1000px;
+    }
+    .first-block .yellow-card{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 70px;
+        width: 624px;
+        box-sizing: border-box;
+        height: 369px;
+        background-image: url("../images/first-block/yel.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .first-block .yellow-card p{
+        color: #000;
+        font-family: Archangelsk;
+        font-size: 62px;
+        font-weight: 400;
+    }
+    .first-block .yellow-card a{
+        display: block;
+        width: 272px;
+        height: 78px;
+        background-color: #000;
+        padding: 19px 50px;
+        color: #F8F200;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 40px;
+        box-sizing: border-box;
+    }
+    .second-block{
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 70px 36px;
+        box-sizing: content-box;
+    }
+    .second-block .title{
+        color: #000;
+        font-family: Archangelsk;
+        font-size: 62px;
+        font-weight: 400;
+    }
+    .second-block .text{
+        margin-top: 25px;
+        width: 952px;
+        color: #777;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 34px;
+    }
+    .second-block .text span{
+        color: #52BEDC;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 34px;
+    }
+    .second-block .photos{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+    .second-block .photos .two-photos{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .third-block{
+        margin: 0;
+        background-color: #000;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .third-block .content{
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 15px 36px;
+        box-sizing: content-box;
+    }
+    .third-block .title-content{
+        display: flex;
+        gap: 32px;
+    }
+    .third-block .title-content .sale{
+        width: 132px;
+        height: 132px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-image: url("../images/third-block/sales.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .third-block .title-content .sale p{
+        color: #F8F200;
+        font-family: Archangelsk;
+        font-size: 30px;
+        font-weight: 400;
+        rotate: -45deg;
+    }
+    .third-block .title-content .title{
+        margin-top: 55px;
+        color: #FFF;
+        font-family: Archangelsk;
+        font-size: 62px;
+        font-weight: 400;
+    }
+    .third-block .text{
+        width: 952px;
+        margin-top: 25px;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 34px;
+    }
+    .third-block .text span{
+        color: #52BEDC;
+    }
+}
