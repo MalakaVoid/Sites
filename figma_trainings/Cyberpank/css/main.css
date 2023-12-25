@@ -25,24 +25,69 @@
     }
     header{
         max-width: 1280px;
+        padding: 0 36px;
+
+    }
+    header .header-content{
+        flex-direction: row;
+    }
+    header #logo{
+        width: 296px;
+    }
+    header .mini-icons{
+        gap: 40px;
+        justify-content: flex-end;
+    }
+    header .mini-icons a{
+        width: 30px;
+        height: 30px;
+    }
+    .preview-img{
+        height: 1000px;
     }
     .first-block{
+        padding: 0 36px;
+        height: 1000px;
         max-width: 1280px;
         box-sizing: content-box;
         /* box-sizing: border-box; */
     }
+    .first-block .yellow-card{
+        padding: 70px;
+        width: 624px;
+        height: 369px;
+        background-size: contain;
+    }
+    .first-block .yellow-card p{
+        font-size: 62px;
+    }
+    .first-block .yellow-card a{
+        width: 272px;
+        height: 78px;
+        font-size: 24px;
+        padding: 19px 50px;
+    }
     .second-block{
         max-width: 1280px;
+        padding: 70px 36px;
         box-sizing: content-box;
+    }
+    .second-block .title{
+        font-size: 62px;
     }
     .second-block .text{
         width: 952px;
+        font-size: 18px;
+
     }
     .second-block .photos{
         flex-direction: row;
     }
     .second-block .photos .two-photos{
         flex-direction: column;
+    }
+    .second-block .photos .two-photos img{
+        width: 460px;
     }
     .second-block .photos .one-photo img{
         width: 788px;
@@ -52,6 +97,7 @@
     .third-block .content{
         max-width: 1280px;
         box-sizing: content-box;
+        padding: 15px 36px 70px 36px;
     }
     .third-block .title-content{
         gap: 32px;
@@ -62,8 +108,17 @@
     .third-block .text{
         width: 952px;
     }
+    .third-block  .xbox{
+        top: 288px;
+        left: 528px;
+    }
+    .third-block .playstation{
+        top: 288px;
+        left: 848px;
+    }
     .fourth-block .content{
         max-width: 1280px;
+        padding: 70px 36px;
         box-sizing: content-box;
     }
     .fourth-block .photos .main{
@@ -83,20 +138,62 @@
         box-sizing: content-box;
     }
 }
-@media (max-width: 1280px) and (min-width: 320px){
+@media (max-width: 1280px) and (min-width: 700px){
+    header{
+        padding: 0 36px;
+    }
+    header .header-content{
+        flex-direction: row;
+    }
+    header #logo{
+        width: 296px;
+    }
+    header .mini-icons{
+        gap: 40px;
+        justify-content: flex-end;
+    }
+    header .mini-icons a{
+        width: 30px;
+        height: 30px;
+    }
     body{
         max-width: 1280px;
         overflow-x: hidden;
         margin: 0 auto;
     }
+    .preview-img{
+        height: 1000px;
+    }
     .first-block{
+        height: 1000px;
+        padding: 0px 36px;
         box-sizing: border-box;
+    }
+    .first-block .yellow-card{
+        padding: 70px;
+        width: 624px;
+        height: 369px;
+        background-size: contain;
+    }
+    .first-block .yellow-card p{
+        font-size: 62px;
+    }
+    .first-block .yellow-card a{
+        width: 272px;
+        height: 78px;
+        font-size: 24px;
+        padding: 19px 50px;
     }
     .second-block{
         box-sizing: border-box;
+        padding: 70px 36px;
+    }
+    .second-block .title{
+        font-size: 62px;
     }
     .second-block .text{
         width: 788px;
+        font-size: 18px;
     }
     .second-block .photos{
         flex-direction: column;
@@ -107,6 +204,9 @@
         gap: 32px;
         width: 100%;
     }
+    .second-block .photos .two-photos img{
+        width: 460px;
+    }
     .second-block .photos .one-photo img{
         width: 952px;
         height: 424px;
@@ -115,6 +215,7 @@
     .third-block .content{
         max-width: 1280px;
         box-sizing: border-box;
+        padding: 15px 36px 70px 36px;
     }
     .third-block .title-content{
         flex-direction: column;
@@ -126,10 +227,19 @@
     .third-block .text{
         width: 460px;
     }
+    .third-block  .xbox{
+        top: 95px;
+        left: 528px;
+    }
+    .third-block .playstation{
+        top: 497px;
+        left: 528px;
+    }
     .third-block .console-photos .playstation{
         display: none;
     }
     .fourth-block .content{
+        padding: 70px 36px;
         box-sizing: border-box;
     }
     .fourth-block .photos .main{
@@ -153,7 +263,84 @@
         box-sizing: border-box;
     }
 }
+@media (max-width: 700px) and (min-width: 300px){
+    body{
+        max-width: 700px;
+        overflow-x: hidden;
+        margin: 0 auto;
+    }
+    header{
+        max-width: 700px;
+        padding: 0 12px;
 
+    }
+    header .header-content{
+        flex-direction: column;
+        gap: 10px;
+    }
+    header #logo{
+        width: 200px;
+    }
+    header .mini-icons{
+        width: 100%;
+        max-width: 320px;
+        justify-content: space-between;
+    }
+    header .mini-icons a{
+        width: 25px;
+        height: 25px;
+    }
+    .preview-img{
+        height: 713px;
+    }
+    .first-block{
+        padding: 0;
+        height: 763px;
+    }
+    .first-block .yellow-card{
+        padding: 0 30px;
+        width: 100%;
+        height: 207px;
+        background-size: 100% 207px;
+        justify-content: center;
+        align-items: center;
+    }
+    .first-block .yellow-card p{
+        font-size: 32px;
+        text-align: center;
+    }
+    .first-block .yellow-card a{
+        width: 244px;
+        height: 60px;
+        font-size: 20px;
+        padding: 10px 50px;
+    }
+    .second-block{
+        padding: 70px 0;
+    }
+    .second-block .title{
+        font-size: 30px;
+        padding: 0 12px;
+    }
+    .second-block .text{
+        font-size: 16px;
+        padding: 0 12px;
+    }
+    .second-block .photos{
+        flex-direction: column;
+    }
+    .second-block .photos .two-photos{
+        flex-direction: column;
+    }
+    .second-block .photos .one-photo img{
+        width: 100%;
+        height: 424px;
+    
+    }
+    .second-block .photos .two-photos img{
+        width: 100%;
+    }
+}
 header{
     position: absolute;
     top: 0;
@@ -162,32 +349,22 @@ header{
     /* bottom: 0; */
     margin: 0 auto;
     z-index: 10;
-    padding: 0 36px;
-
     box-sizing: content-box;
 }
 header .header-content{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     padding: 20px 0px;
 }
-header #logo{
-    width: 296px;
-}
 header .mini-icons{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    gap: 40px;
 
 }
 header .mini-icons a{
     display: block;
-    width: 30px;
-    height: 30px;
 }
 header .mini-icons a img{
     width: 100%;
@@ -204,69 +381,53 @@ header .mini-icons a img{
     transform:translate(-50%,0);
     object-fit:cover;
     width: 1920px;
-    height: 1000px;
     overflow: hidden;
     z-index: -1;
 }
 .first-block{
     margin: 0 auto;
-    padding: 0px 36px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
-    height: 1000px;
 }
 .first-block .yellow-card{
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 70px;
-    width: 624px;
     box-sizing: border-box;
-    height: 369px;
     background-image: url("../images/first-block/yel.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
 }
 .first-block .yellow-card p{
     color: #000;
     font-family: Archangelsk;
-    font-size: 62px;
     font-weight: 400;
 }
 .first-block .yellow-card a{
     display: block;
-    width: 272px;
-    height: 78px;
     background-color: #000;
-    padding: 19px 50px;
     color: #F8F200;
     text-align: center;
     font-family: Roboto;
-    font-size: 24px;
     font-weight: 700;
     line-height: 40px;
     box-sizing: border-box;
 }
 
-/* ZABIL HER */
 .second-block{
     margin: 0 auto;
-    padding: 70px 36px;
 }
 .second-block .title{
     color: #000;
     font-family: Archangelsk;
-    font-size: 62px;
     font-weight: 400;
 }
 .second-block .text{
     margin-top: 25px;
     color: #777;
     font-family: Roboto;
-    font-size: 18px;
     font-weight: 400;
     line-height: 34px;
 }
@@ -284,13 +445,16 @@ header .mini-icons a img{
 }
 .second-block .photos .two-photos{
     display: flex;
+    /* justify-content: center; */
     gap: 32px;
 }
 .second-block .photos .two-photos img{
-    width: 460px;
     height: 196px;
 }
-
+.second-block .photos .one-photo{
+    display: flex;
+    /* justify-content: center; */
+}
 
 .third-block{
     margin: 0;
@@ -300,7 +464,7 @@ header .mini-icons a img{
 }
 .third-block .content{
     margin: 0 auto;
-    padding: 15px 36px 70px 36px;
+    position: relative;
 }
 .third-block .title-content{
     display: flex;
@@ -344,6 +508,7 @@ header .mini-icons a img{
 }
 .third-block .form-photos{
     margin-top: 25px;
+    width: 460px;
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -436,40 +601,31 @@ header .mini-icons a img{
     font-size:12px;
     color:#F8F200;
 }
-.third-block .console-photos{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-.third-block .console-photos .xbox{
+
+.third-block  .xbox{
     padding: 25px 0 80px 164px;
     background-image: url("../images/third-block/background\ yellow.png");
     background-size: cover;  
     background-position: bottom;
     z-index: 3; 
     position: absolute;
-    top: 0;
-    left: 0;
 }
-.third-block .console-photos .xbox img{
+.third-block .xbox img{
     width: 296px;
 
 }
-.third-block .console-photos .playstation{
+.third-block .playstation{
     padding: 25px 0 80px 164px;
     background-image: url("../images/third-block/Layer\ 6.png");
     background-size: cover;
     background-position: bottom;
     z-index: 2; 
     position: absolute;
-    top: 0;
-    left: 328px;
 }
-.third-block .console-photos .playstation img{
+.third-block .playstation img{
     width: 296px;
 
 }
-/* ZABIL HER */
 
 .fourth-block{
     margin: 0;
@@ -479,7 +635,6 @@ header .mini-icons a img{
 }
 .fourth-block .content{
     margin: 0 auto;
-    padding: 70px 36px;
     display: flex;
     flex-direction: row;
     gap: 32px;
