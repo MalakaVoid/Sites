@@ -11,7 +11,12 @@ function get_users(){
     }
 
     $users = get_users();
-    while ($user = mysqli_fetch_array($users)){
-        echo $user['password'];
-    }
+    // while ($user = mysqli_fetch_array($users)){
+    //     echo $user['password'];
+    // }
 ?>
+
+<?php while ($user = mysqli_fetch_array($users)): ?>
+
+<h1> <?php echo $user['last_name']; ?></h1>
+<?php endwhile;?>

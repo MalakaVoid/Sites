@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/gothamnarrssm_medium.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/gothamssm_bold.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold; 
+} 
+
+body{
+    font-family: "GothamCond";
+    /* font-size: 54px; */
+}
+header{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+header .header-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+header .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    color: white;
+    letter-spacing: 0px;
+
+}
+header .logo .l1{
+    display: flex;
+    width: 40px;
+    height: 40px;
+
+    background-color: white;
+    border-radius: 13px;
+
+    justify-content: center;
+    align-items: center;
+}
+header .logo .l1 span{
+    /* opacity: 0; */
+    color: #f24973;
+}
+header .logo .l2{
+    /* font-weight: 100; */
+}
+header .logo .l2 span{
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+header .logo .l3{
+    border-left: solid white 1px;
+    padding: 10px;
+}
+
+header .nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+header .nav a{
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+header .nav a:hover{
+    color: #165aaa;
+    transition: 0.3s;
+}
+header .nav .btn{
+    display: block;
+    line-height: 40px;
+    font-weight: bold;
+    background-color: #5b4dff;
+    padding: 0 17px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+header .nav .btn:hover{
+    filter: brightness(106%);
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+
+
+.sec-1{
+    display: block;
+    width: 100%;
+    height: 700px;
+    background-color: #f24973;
+    background-image: url(https://workoutlabs.com/fit/wp-content/themes/printableworkouts/img/index-v3/workoutlabs-fit-app-gym-workouts-gymtimidation2.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
