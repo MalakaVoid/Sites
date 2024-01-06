@@ -25,18 +25,406 @@
 
 body{
     font-family: "GothamCond";
+    overflow-x: hidden;
+    /* overflow-y: unset; */
     /* font-size: 54px; */
 }
-
+@media (min-width: 900px) or (min-device-width: 900px){
+    .sec-1{
+        height: 700px;
+        background-position: bottom 0 right 65%;
+        background-size: contain;
+    }
+    .sec-1 .sec-1-container{
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 30px;
+    }
+    .sec-1 .title{
+        font-size: 116px;
+        text-align: right;
+        line-height: 106px;
+    }
+    .sec-1 .desc{
+        font-size: 52px;
+        text-align: right;
+    }
+    .sec-1 .btn-container a{
+        margin: 21px 8px 0 8px;
+        font-size: 24px;
+        width: 314px;
+        height: 65px;
+    }
+    .sec-1 .amount{
+        font-size: 16px;
+        width: 330px;
+        padding-top: 15px;
+    }
+    .sec-1 .amount span{
+        font-size: 18px;
+    }
+    .sec-1 .raiting{
+        top: 70%;
+        left: 15%;
+        width: 137px;
+    }
+    .sec-2 .logos{
+        margin-top: 55px;
+    }
+    .sec-2 .title{
+        font-size: 42px;
+        line-height: 46px;
+        margin-top: 75px;
+    }
+    .sec-2 .desc{
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 15px;
+    }
+    .sec-3{
+        margin: 110px auto;
+        max-width: 1090px;
+    }
+    .sec-3 .card-1{
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 200px;
+    }
+    .sec-3 .card-1  .text-container{
+        width: 469px;
+    }
+    .sec-3 .card-1 .img-container{
+        width: 510px;
+    }
+    .sec-3 .card-1 .img-container img{
+        position: absolute;
+        top: -37px;
+        left: 0;
+        width: inherit;
+    }
+    .sec-3 .text-container h2{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .sec-3 .text-container p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .sec-3 .text-container a{
+        font-size: 16px;
+        margin-top: 18px;
+    }
+    .sec-3 .text-container svg{
+        width: 13px;
+        height: 13px;
+    }
+    .sec-3 .card-2{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 250px;
+    }
+    .sec-3 .card-2  .text-container{
+        width: 523px;
+    }
+    .sec-3 .card-2 .img-container{
+        width: 421px;
+        position: relative;
+    }
+    .sec-3 .card-2 .img-container img{
+        position: absolute;
+        top: -80px;
+        left: 0;
+        width: inherit;
+    }
+    .sec-3 .card-3{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 210px;
+    }
+    .sec-3 .card-3  .text-container{
+        width: 469px;
+    }
+    .sec-3 .card-3 .img-container{
+        width: 543px;
+    }
+    .sec-3 .card-3 .img-container img{
+        position: absolute;
+        top: -37px;
+        left: 0;
+        width: inherit;
+    }
+    .sec-3 .card-4{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 200px;
+    }
+    .sec-3 .card-4  .text-container{
+        width: 523px;
+    }
+    .sec-3 .card-4 .img-container{
+        width: 421px;
+    }
+    .sec-3 .card-4 .img-container img{
+        position: absolute;
+        top: -37px;
+        left: 0;
+        width: inherit;
+    }
+    .sec-3 .card-5{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sec-3 .card-5  .text-container{
+        width: 469px;
+    }
+    .sec-3 .card-5 .img-container{
+        width: 543px;
+    }
+    .sec-3 .card-5 .img-container img{
+        position: absolute;
+        top: -80px;
+        left: 0;
+        width: inherit;
+    }
+    .questions{
+        margin-top: 200px;
+    }
+    .questions a{
+        font-size: 24px;
+    }
+    .sec-5{
+        padding: 80px 0;
+        width: 100%;
+    }
+    .sec-5 .title{
+        font-size: 40px;
+    }
+    .sec-5 .desc{
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 900px) or (max-device-width: 900px){
+    .sec-1{
+        height: 60vh;
+        background-position: center;
+        background-size: contain;
+    }
+    .sec-1 .sec-1-container{
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 30px;
+    }
+    .sec-1 .title{
+        font-size: 80px;
+        text-align: center;
+        line-height: 70px;
+    }
+    .sec-1 .desc{
+        font-size: 38px;
+        text-align: center;
+    }
+    .sec-1 .btn-container a{
+        margin: 25px 0 0 0;
+        font-size: 20px;
+        width: 250px;
+        height: 52px;
+    }
+    .sec-1 .amount{
+        font-size: 13px;
+        width: 264px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .sec-1 .amount span{
+        font-size: 15px;
+    }
+    .sec-1 .raiting{
+        top: 15%;
+        left: 22%;
+        width: 120px;
+    }
+    .sec-2 .logos{
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 55px;
+    }
+    .sec-2 .title{
+        font-size: 42px;
+        line-height: 46px;
+        margin-top: 75px;
+    }
+    .sec-2 .desc{
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 15px;
+    }
+    .sec-3{
+        margin: 60px auto;
+        max-width: 700px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    .sec-3 .text-container h2{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .sec-3 .text-container p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .sec-3 .text-container a{
+        font-size: 16px;
+        margin-top: 16px;
+    }
+    .sec-3 .text-container svg{
+        width: 13px;
+        height: 13px;
+    }
+    .sec-3 .card-1, .card-3, .card-5{
+        flex-direction: column-reverse;
+        justify-content: none;
+        position: relative;
+        gap: 20px;
+    }
+    .sec-3 .card-2,
+    .sec-3 .card-4{
+        flex-direction: column;
+        justify-content: none;
+        margin-bottom: 0;
+        gap: 20px;
+    }
+    .sec-3 .card-1 .text-container,
+    .sec-3 .card-3 .text-container,
+    .sec-3 .card-5  .text-container,
+    .sec-3 .card-2 .text-container,
+    .sec-3 .card-4  .text-container{
+        width: 100%;
+    }
+    .sec-3 .card-1 .img-container,
+    .sec-3 .card-3 .img-container,
+    .sec-3 .card-5 .img-container,
+    .sec-3 .card-2 .img-container,
+    .sec-3 .card-4 .img-container{
+        width: 100%;
+    }
+    .sec-3 .card-1 .img-container img,
+    .sec-3 .card-3 .img-container img,
+    .sec-3 .card-5 .img-container img,
+    .sec-3 .card-2 .img-container img,
+    .sec-3 .card-4 .img-container img{
+        position: relative;
+        width: inherit;
+    }
+    .questions{
+        margin-top: 100px;
+    }
+    .questions a{
+        font-size: 20px;
+    }
+    .sec-4 .girl{
+        display: none;
+        height: 560px;
+        right: -10%;
+    }
+    .sec-5{
+        padding: 80px 0;
+        width: 100%;
+    }
+    .sec-5 .title{
+        font-size: 40px;
+    }
+    .sec-5 .desc{
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 700px) or (max-device-width: 700px){
+    .sec-1{
+        height: 50vh;
+        background-position: center;
+        background-size: contain;
+    }
+    .sec-2 .logos{
+        margin-top: 35px;
+    }
+    .sec-2{
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .sec-2 .title{
+        font-size: 32px;
+        line-height: 36px;
+        margin-top: 35px;
+    }
+    .sec-2 .desc{
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 15px;
+    }
+    .sec-5{
+        padding: 80px 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .sec-5 .title{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .sec-5 .desc{
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+@media (max-width: 540px) or (max-device-width: 540px){
+    .sec-1{
+        height: 450px;
+        background-position: bottom 0;
+        background-size: auto 450px;
+    }
+    .sec-1 .title{
+        font-size: 60px;
+        text-align: center;
+        line-height: 50px;
+    }
+    .sec-1 .desc{
+        font-size: 28px;
+        text-align: center;
+    }
+    .sec-1 .btn-container a{
+        margin: 25px 0 0 0;
+        font-size: 18px;
+        width: 220px;
+        height: 45px;
+    }
+    .sec-1 .amount{
+        font-size: 12px;
+        width: 264px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .sec-1 .amount span{
+        font-size: 14px;
+    }
+    .sec-1 .raiting{
+        top: 18%;
+        left: 7%;
+        width: 90px;
+    }
+    .sec-2 .logos{
+        margin-top: 20px;
+    }
+}
 .sec-1{
     display: block;
     width: 100%;
-    height: 700px;
     background-color: #f24973;
     background-image: url(https://workoutlabs.com/fit/wp-content/themes/printableworkouts/img/index-v3/workoutlabs-fit-app-gym-workouts-gymtimidation2.webp);
-    background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom 0 right 65%;
 }
 .sec-1 .sec-1-container{
     position: relative;
@@ -45,24 +433,16 @@ body{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
     color: white;
-    
 }
 .sec-1 .title{
-    font-size: 116px;
     font-weight: 800;
     font-style: italic;
     text-wrap: wrap;
-    line-height: 106px;
-    text-align: right;
 }
 .sec-1 .desc{
-    font-size: 52px;
     font-weight: 800;
     font-style: italic;
-    text-align: right;
 }
 
 .sec-1 .btn-container a{
@@ -71,11 +451,7 @@ body{
     justify-content: center;
     background-color: #5b4dff;
     font-weight: bold;
-    margin: 21px 8px 0 8px;
-    font-size: 24px;
-    width: 314px;
     text-align: center;
-    height: 65px;
     border-radius: 50px;
     cursor: pointer;
 }
@@ -84,89 +460,52 @@ body{
     transition: 0.3s;
 }
 .sec-1 .amount{
-    font-size: 16px;
     text-align: center;
-    width: 330px;
-    padding-top: 15px;
     font-weight: lighter;
     letter-spacing: 0.5px;
 }
 .sec-1 .amount span{
     font-weight: bold;
-    font-size: 18px;
     color: #ffd500;
 }
 .sec-1 .raiting{
     position: absolute;
-    top: 70%;
-    left: 15%;
-    width: 137px;
 }
-
 
 .sec-2{
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
-.sec-2 .logos{
-    margin-top: 55px;
-}
+
 .sec-2 .title{
     font-weight: bold;
-    font-size: 42px;
     color: #000;
-    line-height: 46px;
     max-width: 600px;
     text-align: center;
-    margin-top: 75px;
 }
 .sec-2 .desc{
-    font-size: 18px;
     color: #000;
-    line-height: 28px;
     max-width: 675px;
     text-align: center;
     font-weight: lighter;
     letter-spacing: 0.5px;
-    margin-top: 15px;
 }
-.sec-3{
-    width: 1090px;
-    margin: 110px auto;
 
-}
-.sec-3 .card-1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 200px;
-}
-.sec-3 .card-1  .text-container{
-    width: 469px;
-    display: flex;
-    flex-direction: column;
+.sec-3{
+    width: 100%;
 }
 .sec-3 .text-container h2{
-    font-size: 28px;
     font-weight: bold;
-    line-height: 36px;
 }
 .sec-3 .text-container p{
-    font-size: 18px;
     font-weight: lighter;
     letter-spacing: 0.5px;
     margin-top: 10px;
-    line-height: 28px;
 }
 .sec-3 .text-container a{
-    font-size: 16px;
     color: #26bf66;
-    margin-top: 10px;
-    margin-top: 18px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -186,120 +525,42 @@ body{
     filter: brightness(106%);
     transition: 0.3s;
 }
-.sec-3 .card-1 .img-container{
-    width: 510px;
-    position: relative;
-}
-.sec-3 .card-1 .img-container img{
-    position: absolute;
-    top: -37px;
-    left: 0;
-    width: inherit;
-}
-
-.sec-3 .card-2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 250px;
-}
-.sec-3 .card-2  .text-container{
-    width: 523px;
-    display: flex;
-    flex-direction: column;
-}
-.sec-3 .card-2 .img-container{
-    width: 421px;
-    position: relative;
-}
-.sec-3 .card-2 .img-container img{
-    position: absolute;
-    top: -80px;
-    left: 0;
-    width: inherit;
-}
-
-.sec-3 .card-3{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 210px;
-}
-.sec-3 .card-3  .text-container{
-    width: 469px;
-    display: flex;
-    flex-direction: column;
-}
-.sec-3 .card-3 .img-container{
-    width: 543px;
-    position: relative;
-}
-.sec-3 .card-3 .img-container img{
-    position: absolute;
-    top: -37px;
-    left: 0;
-    width: inherit;
-}
-.sec-3 .card-4{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 200px;
-}
-.sec-3 .card-4  .text-container{
-    width: 523px;
-    display: flex;
-    flex-direction: column;
-}
-.sec-3 .card-4 .img-container{
-    width: 421px;
-    position: relative;
-}
-.sec-3 .card-4 .img-container img{
-    position: absolute;
-    top: -37px;
-    left: 0;
-    width: inherit;
-}
+.sec-3 .card-1,
+.sec-3 .card-2,
+.sec-3 .card-3,
+.sec-3 .card-4,
 .sec-3 .card-5{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     position: relative;
 }
+.sec-3 .card-1  .text-container,
+.sec-3 .card-2  .text-container,
+.sec-3 .card-3  .text-container,
+.sec-3 .card-4  .text-container,
 .sec-3 .card-5  .text-container{
-    width: 469px;
     display: flex;
     flex-direction: column;
 }
+.sec-3 .card-1 .img-container,
+.sec-3 .card-2 .img-container,
+.sec-3 .card-3 .img-container,
+.sec-3 .card-4 .img-container,
 .sec-3 .card-5 .img-container{
-    width: 543px;
     position: relative;
-}
-.sec-3 .card-5 .img-container img{
-    position: absolute;
-    top: -80px;
-    left: 0;
-    width: inherit;
 }
 .sec-3 .card-5 .text-container span{
     color: #26bf66;
 }
+
 .questions{
     width: 100%;
     display: block;
     text-align: center;
-    margin-top: 200px;
 }
 .questions a{
     display: inline-block;
     border-bottom: solid 2px #26bf66;
     color: #26bf66;
-    /* text-decoration: underline; */
-    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -307,6 +568,7 @@ body{
     filter: brightness(106%);
     transition: 0.3s;
 }
+
 .sec-4{
     margin-top: 200px;
     background-color: #f24973;
@@ -320,15 +582,27 @@ body{
 }
 .sec-4 .girl{
     position: absolute;
-    height: 560px;
     bottom: 0;
-    right: 5%;
+}
+@media (max-width: 1260px){
+    .sec-4 .girl{
+        height: 560px;
+        right: -10%;
+    }
+}
+@media (min-width: 1260px){
+    .sec-4 .girl{
+        height: 560px;
+        right: 5%;
+    }
 }
 .sec-4 .words{
     position: absolute;
-    width: 410px;
+    max-width: 410px;
+    width: 100%;
     top: -100px;
-    left: calc(50% - 205px);
+    left: 50%;
+    transform: translate(-50%,0);
 }
 .sec-4 .sub-container{
     padding: 25px 35px;
@@ -362,16 +636,15 @@ body{
     font-weight: bold;
 }
 
+
+
 .sec-5{
-    padding: 80px 0;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 }
 .sec-5 .title{
-    font-size: 40px;
     color: #000;
     font-weight: bold;
     text-align: center;
@@ -404,7 +677,7 @@ body{
     height: 94px;
     position: absolute;
     left: 49.5%;
-    top: 160px;
+    bottom: 70px;
     margin-left: -206px;
     transform: rotate(-10deg);
 }

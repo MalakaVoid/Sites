@@ -1,6 +1,6 @@
 <header id="header">
     <div class="header-container">
-        <a class="logo">
+        <a class="logo" href="/">
             <div class="l1"><span>WL</span></div>
             <div class="l2"><span>Workout</span>Labs</div>
             <div class="l3">Fit</div>

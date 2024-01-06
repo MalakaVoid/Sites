@@ -35,3 +35,6 @@ button{
 	border: none;
 }
 /* END OF RESET */
+a{
+	text-decoration: none;
+}
