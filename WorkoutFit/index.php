@@ -3,9 +3,9 @@
 <head>
     <meta charset='utf-8'>
     <title>fit</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='assets/styles/reset.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='assets/styles/header_footer.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='assets/styles/main.css'>
+    <link rel='stylesheet' type='text/css' href='assets/styles/reset.css'>
+    <link rel='stylesheet' type='text/css' href='assets/styles/header_footer.css'>
+    <link rel='stylesheet' type='text/css' href='assets/styles/main.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="assets/scripts/jquery.js"></script>
 </head>

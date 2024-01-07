@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/gothamnarrssm_medium.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/gothamssm_bold.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold; 
+} 
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/gothamssm_blackitalic.otf") format("truetype"); 
+    font-style: italic; 
+    font-weight: 800; 
+} 
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/gothamnarrssm_light.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: lighter; 
+} 
+body{
+    font-family: "GothamCond";
+    width: 100vw;
+    min-height: 100vh;
+    /* background-color: #00d084; */
+    /* background: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%); */
+    background-color: #30BF6C;
+}
+.main-container{
+    max-width: 440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-container .logo{
+    padding: 29px 0 26px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: white;
+    letter-spacing: 0px;
+    cursor: pointer;
+}
+.main-container .logo .l1{
+    display: flex;
+    width: 44px;
+    height: 44px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    justify-content: center;
+    align-items: center;
+}
+.main-container .logo .l1 span{
+    /* opacity: 0; */
+    color: #30BF6C;
+}
+.main-container .logo .l2{
+    /* font-weight: 100; */
+}
+.main-container .logo .l2 span{
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.main-container .logo .l3{
+    border-left: solid white 1px;
+    padding: 10px;
+}
+.main-container .form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 40px 60px 36px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 8px 0px rgba(61, 61, 77, 0.2);
+}
+.main-container .form-container .title{
+    width: 100%;
+    text-align: center;
+    line-height: 32px;
+    font-size: 28px;
+    color: #000;
+    font-weight: bold;
+    margin-top: 5px;
+    letter-spacing: -0.5px;
+}
+.main-container .form-container .sign-in-apple-btn{
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 7px;
+    width: 100%;
+    padding: 0 8%;
+    box-sizing: border-box;
+    height: 40px;
+}
+.main-container .form-container .sign-in-apple-btn svg{
+    height: 40px;
+}
+.main-container .form-container .desc-container{
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    color: #9595a5;
+    font-size: 16px;
+}
+.main-container .form-container .desc-container span{
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+    z-index: 2;
+}
+.main-container .form-container .desc-container::after{
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+}
+.main-container .form-container form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.main-container .form-container form .login-input-container,
+.main-container .form-container form .password-input-container{
+    position: relative;
+    width: 100%;
+    height: 52px;
+}
+.main-container .form-container form .password-input-container{
+    margin-top: 40px;
+}
+.main-container .form-container form .login-input-container input,
+.main-container .form-container form .password-input-container input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 42px;
+    background-color: transparent;
+    color: #17171a;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin-top: 14px;
+    border-bottom: 1px solid #e5e5e9;
+}
+.main-container .form-container form .login-input-container::after,
+.main-container .form-container form .password-input-container::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6045e6;
+    visibility: hidden;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    transform: scaleX(0);
+}
+.main-container .form-container form .focused::after{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.main-container .form-container form .login-input-container label,
+.main-container .form-container form .password-input-container label{
+    position: absolute;
+    line-height: 18px;
+    color: #9595a6;
+    font-size: 20px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    z-index: 1;
+    cursor: text;
+    left: 0;
+    top: 26px;
+    pointer-events: none;
+}
+.main-container form .login-input-container input:focus ~ label,
+.main-container form .login-input-container input:valid ~ label,
+.main-container form .password-input-container input:focus ~ label,
+.main-container form .password-input-container input:valid ~ label{
+    transform: translateY(-26px);
+    font-size: 16px;
+}
+.main-container form .sign-in-btn{
+    color: #fff;
+    margin-top: 30px;
+    padding: 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #6045e6;
+    border-radius: 50px;
+    line-height: 50px;
+}
+.main-container form .sign-in-btn:hover{
+    filter: brightness(106%);
+}
+.main-container .reset-password{
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    color: #9595a6;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+.main-container .reset-password:hover{
+    color: #6045e6;
+}
+.main-container .sign-up-container{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+}
+.main-container .sign-up-container .sign-up{
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+.main-container .sign-up-container .sign-up:hover{
+    text-decoration: underline;
+}
