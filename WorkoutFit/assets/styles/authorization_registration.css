@@ -143,11 +143,20 @@ body{
     width: 100%;
     height: 52px;
 }
-.main-container .form-container form .password-input-container{
-    margin-top: 40px;
+.main-container .form-container form .first-name-input-container,
+.main-container .form-container form .last-name-input-container{
+    position: relative;
+    width: 45%;
+    height: 52px;
+}
+.main-container .form-container form .password-input-container,
+.main-container .form-container form .margin-add{
+    margin-top: 35px;
 }
 .main-container .form-container form .login-input-container input,
-.main-container .form-container form .password-input-container input{
+.main-container .form-container form .password-input-container input,
+.main-container .form-container form .first-name-input-container input,
+.main-container .form-container form .last-name-input-container input{
     position: relative;
     width: 100%;
     outline: none;
@@ -160,8 +169,18 @@ body{
     margin-top: 14px;
     border-bottom: 1px solid #e5e5e9;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    font-size: 20px;
+    color: #17171a;
+    transition: background-color 5000s ease-in-out 0s;
+}
 .main-container .form-container form .login-input-container::after,
-.main-container .form-container form .password-input-container::after{
+.main-container .form-container form .password-input-container::after,
+.main-container .form-container form .first-name-input-container::after,
+.main-container .form-container form .last-name-input-container::after{
     content: "";
     position: absolute;
     bottom: -4px;
@@ -179,7 +198,9 @@ body{
 }
 
 .main-container .form-container form .login-input-container label,
-.main-container .form-container form .password-input-container label{
+.main-container .form-container form .password-input-container label,
+.main-container .form-container form .first-name-input-container label,
+.main-container .form-container form .last-name-input-container label{
     position: absolute;
     line-height: 18px;
     color: #9595a6;
@@ -194,7 +215,11 @@ body{
 .main-container form .login-input-container input:focus ~ label,
 .main-container form .login-input-container input:valid ~ label,
 .main-container form .password-input-container input:focus ~ label,
-.main-container form .password-input-container input:valid ~ label{
+.main-container form .password-input-container input:valid ~ label,
+.main-container form .first-name-input-container input:focus ~ label,
+.main-container form .first-name-input-container input:valid ~ label,
+.main-container form .last-name-input-container input:focus ~ label,
+.main-container form .last-name-input-container input:valid ~ label{
     transform: translateY(-26px);
     font-size: 16px;
 }
@@ -237,4 +262,42 @@ body{
 }
 .main-container .sign-up-container .sign-up:hover{
     text-decoration: underline;
+}
+
+
+
+.main-container .form-container .desc-container-register{
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+    color: #9595a5;
+    font-size: 16px;
+}
+.main-container .form-container .desc-container-register span{
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+    z-index: 2;
+}
+.main-container .form-container .names-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-container .form-container form .login-input-container svg,
+.main-container .form-container form .password-input-container svg,
+.main-container .form-container form .first-name-input-container svg,
+.main-container .form-container form .last-name-input-container svg{
+    position: absolute;
+    fill: #39bd6f;
+    top: 50%;
+    right: 7px;
+    margin-top: -2px;
+    width: 22px;
+    height: 22px;
+    left: auto;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
 }
