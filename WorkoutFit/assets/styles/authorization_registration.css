@@ -196,6 +196,11 @@ input:-webkit-autofill:active{
     visibility: visible;
     transform: scaleX(1);
 }
+.main-container .form-container form .hasError::after{
+    visibility: visible;
+    transform: scaleX(1);
+    background-color: red;
+}
 
 .main-container .form-container form .login-input-container label,
 .main-container .form-container form .password-input-container label,
