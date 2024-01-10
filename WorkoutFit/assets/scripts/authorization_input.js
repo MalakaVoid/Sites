@@ -1,39 +1,37 @@
-// let inputs = ["#login-input", "#password-input", "#first-name-input", "#last-name-input"];
-// let containers = [".login-input-container", ".password-input-container", ".first-name-input-container",".last-name-input-container"];
+let inputs = ["#login-input", "#password-input"];
+let containers = [".login-input-container", ".password-input-container"];
+
+for (let i = 0; i < inputs.length; i++) {
+    $(inputs[i]).focus(function(){
+        $(containers[i]).toggleClass("focused");
+    });
+    
+    $(inputs[i]).focusout(function(){
+        $(containers[i]).toggleClass("focused");
+    });
+};
 
 let inputs_dict = {}
 for (let i = 0; i < containers.length; i++){
     inputs_dict[containers[i]] = false;
 }
-console.log(inputs_dict)
 
-$("#first-name-input").focusout(function(){
-    var value = this.value;
-    tick(".first-name-input-container", /^[a-zA-Z0-9А-Яа-я]+$/.test(value));
-});
-$("#last-name-input").focusout(function(){
-    var value = this.value;
-    tick(".last-name-input-container", /^[a-zA-Z0-9А-Яа-я]+$/.test(value));
-});
 $("#login-input").focusout(function(){
     var value = this.value;
-    tick(".login-input-container", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value));
+    if (/^[a-zA-Z0-9.@]+$/.test(value)){
+        inputs_dict[".login-input-container"] = true;
+    }else{
+        inputs_dict[".login-input-container"] = false;
+    }
 });
 $("#password-input").focusout(function(){
     var value = this.value;
-    tick(".password-input-container", /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(value));
-})
-
-function tick(container,flag){
-    if (flag) {
-        $(container+" svg").css("opacity", "1");
-    } else{
-        $(container+" svg").css("opacity", "0");
+    if (/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(value)){
+        inputs_dict[".password-input-container"] = true;
+    }else{
+        inputs_dict[".password-input-container"] = false;
     }
-    inputs_dict[container] = flag;
-}
-
-
+})
 
 $("form").submit(function (e) { 
     let breakFlag = false;
@@ -41,6 +39,8 @@ $("form").submit(function (e) {
         if (!inputs_dict[key]){
             $(key).addClass("hasError");
             breakFlag = true;
+        }else{
+            $(key).removeClass("hasError");
         }
     }
     if (breakFlag){
@@ -48,5 +48,4 @@ $("form").submit(function (e) {
     }else{
         return;
     }
-    
 });

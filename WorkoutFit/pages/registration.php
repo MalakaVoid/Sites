@@ -24,10 +24,10 @@
                     Enjoy unlimited access free for 7 days
                 </span>
             </div>
-            <form method="post">
+            <form method="post" novalidate>
                 <div class="names-container">
                     <div class="first-name-input-container">
-                        <input id='first-name-input' type="text" name="first_name">
+                        <input id='first-name-input' type="text" name="first_name" required>
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
                             <g id="&#x421;&#x43B;&#x43E;&#x439;_1">
@@ -43,7 +43,7 @@
                         <label for="first-name-input">First name</label>
                     </div>
                     <div class="last-name-input-container">
-                        <input id='last-name-input' type="text" name="last_name">
+                        <input id='last-name-input' type="text" name="last_name" required>
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
                             <g id="&#x421;&#x43B;&#x43E;&#x439;_1">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="login-input-container margin-add">
-                    <input id='login-input' type="text" name="login">
+                    <input id='login-input' type="text" name="login" required>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
                             <g id="&#x421;&#x43B;&#x43E;&#x439;_1">
@@ -76,7 +76,7 @@
                     <label for="login-input">Email</label>
                 </div>
                 <div class="password-input-container">
-                    <input id='password-input' type="password" name="password">
+                    <input id='password-input' type="password" name="password" required>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
                             <g id="&#x421;&#x43B;&#x43E;&#x439;_1">
@@ -95,10 +95,9 @@
             </form>
         </div>
         <div class="sign-up-container">
-            Already a member? <a href="authorization.html" class="sign-up">Sign in</a>
+            Already a member? <a href="authorization.php" class="sign-up">Sign in</a>
         </div>
     </section>
-    <script src="../assets/scripts/auth-regis_focus.js"></script>
-    <script src="../assets/scripts/authorization_input.js"></script>
+    <script src="../assets/scripts/registration_input.js"></script>
 </body>
 </html>

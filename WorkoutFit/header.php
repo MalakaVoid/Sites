@@ -67,8 +67,8 @@
     <div class="mobile-menu-container">
         <a>Workouts</a>
         <a>iPhone App</a>
-        <a>Sign In</a>
-        <a>Get started free</a>
+        <a href="pages/authorization.html">Sign In</a>
+        <a href="pages/authorization.html">Get started free</a>
     </div>
 </div>
 <script src="assets/scripts/header_menu.js"></script>

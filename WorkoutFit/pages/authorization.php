@@ -42,7 +42,7 @@
                     or sign in below
                 </span>
             </div>
-            <form>
+            <form novalidate>
                 <div class="login-input-container">
                     <input id='login-input' type="text" name="login" required>
                     <label for="login-input">Email or username</label>
@@ -56,7 +56,7 @@
             <a class="reset-password">Reset my password</a>
         </div>
         <div class="sign-up-container">
-            Don't have an account yet? <a href="registration.html" class="sign-up">Sign up</a>
+            Don't have an account yet? <a href="registration.php" class="sign-up">Sign up</a>
         </div>
     </section>
     <script src="../assets/scripts/authorization_input.js"></script>
