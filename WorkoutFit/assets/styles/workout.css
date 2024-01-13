@@ -1,33 +1,30 @@
 @font-face {
     font-family: "GothamCond"; 
-    src: url("../fonts/gothamnarrssm_medium.otf") format("truetype"); 
+    src: url("../fonts/Gotham-Font/GothamBold.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 @font-face {
     font-family: "GothamCond"; 
-    src: url("../fonts/gothamssm_bold.otf") format("truetype"); 
-    font-style: normal; 
-    font-weight: bold; 
-} 
-@font-face {
-    font-family: "GothamCond"; 
-    src: url("../fonts/gothamssm_blackitalic.otf") format("truetype"); 
+    src: url("../fonts/Gotham-Font/GothamBoldItalic.ttf") format("truetype"); 
     font-style: italic; 
-    font-weight: 800; 
+    font-weight: normal; 
 } 
 @font-face {
-    font-family: "GothamCond"; 
-    src: url("../fonts/gothamnarrssm_light.otf") format("truetype"); 
+    font-family: "GothamCond_black"; 
+    src: url("../fonts/Gotham-Font/Gotham-Black.otf") format("truetype"); 
     font-style: normal; 
-    font-weight: lighter; 
+    font-weight: normal; 
 } 
-
+@font-face {
+    font-family: "GothamCond_light"; 
+    src: url("../fonts/Gotham-Font/Gotham-Light.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+} 
 body{
-    font-family: "GothamCond";
+    font-family: "GothamCond_light";
     overflow-x: hidden;
-    /* overflow-y: unset; */
-    /* font-size: 54px; */
 }
 .sec-1 {
     display: block;
@@ -38,14 +35,15 @@ body{
 }
 .sec-1 > .card-1,
 .sec-1 > .card-2,
-.sec-1 > .card-3{
+.sec-1 > .card-3,
+.sec-1 > .card-4{
     display: block;
     width: 100%;
     background-repeat: no-repeat;
     min-height: 490px;
     height: 490px;
-    background-position: top 20%;
-    background-size: 100%;
+    background-position: top -250px right;
+    background-size: cover;
     position: absolute;
     top: 0;
 }
@@ -57,54 +55,340 @@ body{
     z-index: 2;
 }
 .sec-1 .card-1{
-    background-image: url(https://workoutlabs.com/fit/wp-content/themes/printableworkouts/img/index-v3/workoutlabs-fit-app-gym-workouts-gymtimidation2.webp);
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/02/beginner-full-body-transformation-gym-training-plan.jpg);
     left: 0%;
 }
 .sec-1 .card-1 .background-content{
-    background-color: #ffaa00;
+    background-color: #5c69f2;
 }
 .sec-1 .card-2{
-    background-image: url(https://workoutlabs.com/fit/wp-content/themes/printableworkouts/img/index-v3/workoutlabs-fit-app-gym-workouts-gymtimidation2.webp);
-    left: 100%;
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/03/total-body-toning-gym-workout-plan.jpg);
+    /* left: 100%; */
+    display: none;
 }
 .sec-1 .card-2 .background-content{
-    background-color: green;
+    background-color: #7a45e5;
 }
 .sec-1 .card-3{
-    background-image: url(https://workoutlabs.com/fit/wp-content/themes/printableworkouts/img/index-v3/workoutlabs-fit-app-gym-workouts-gymtimidation2.webp);
-    left: 200%;
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/05/engage-intermediate-full-body-crafting-plan.jpg);
+    /* left: 100%; */
+    display: none;
 }
 .sec-1 .card-3 .background-content{
-    background-color: blue;
+    background-color: #716bb3;
+}
+.sec-1 .card-4{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2023/09/newbie-orientationbeat-gymtimidation.webp);
+    /* left: 100%; */
+    display: none;
+}
+.sec-1 .card-4 .background-content{
+    background-color: #ffaa00;
 }
 .sec-1 .content{
-    max-width: 1100px;
-    margin: 80px auto 0 auto;
+    position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 70%;
+    margin: 80px auto 0 auto;
+    flex-direction: row;
+    z-index: 10;
 }
 .sec-1 .arrow-right{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     z-index: 3;
-    right: 10%;
+    left: calc(50% + 480px);
     top: 50%;
+    padding: 5px;
+}
+.sec-1 .arrow-right svg path,
+.sec-1 .arrow-left svg path{
+    fill: rgba(255, 255, 255, 0.6);
+}
+.sec-1 .arrow-right:hover svg path,
+.sec-1 .arrow-left:hover svg path{
+    fill: #fff;
+    transition: 0.25s;
 }
 .sec-1 .arrow-right svg{
     width: inherit;
     height: inherit;
 }
 .sec-1 .arrow-left{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     z-index: 3;
-    left: 10%;
+    right: calc(50% + 480px);
     top: 50%;
+    padding: 5px;
+    
 }
 .sec-1 .arrow-left svg{
     width: inherit;
     height: inherit;
     transform: rotate(180deg);
+}
+.sec-1 .content .text-content{
+    margin-top: 30px;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+}
+.sec-1 .content .text-content h1{
+    font-family: "GothamCond_black";
+    color: white;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 5000;
+    line-height: 52px;
+    cursor: pointer;
+}
+.sec-1 .content .text-content .desc{
+    margin-top: 17px;
+    color: white;
+    font-size: 17px;
+    line-height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.sec-1 .content .text-content .btn{
+    font-family: "GothamCond";
+    display: inline-flex;
+    margin-top: 17px;
+    padding: 0px 25px;
+    line-height: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #30BF6C;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+.sec-1 .content .text-content .btn:hover{
+    filter: brightness(106%);
+    transition: 0.3s;
+}
+.sec-1 .dots{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    justify-content: center;
+    gap: 10px;
+    opacity: 1;
+    z-index: 10;
+}
+.sec-1 .dots .owl-dot{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    transition: 0.25s;
+}
+.sec-1 .dots .active{
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.25s;
+}
+.sec-1 .dots .owl-dot:hover{
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.25s;
+}
+.mini-card{
+    width: 320px;
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
+}
+.mini-card > img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+.mini-card .raiting{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    line-height: 18px;
+    transition: all 0.25s ease;
+}
+.mini-card .raiting .t{
+    font-size: 16px;
+    font-family: "GothamCond";
+}
+.mini-card .raiting .t img{
+    display: inline;
+    width: 16px;
+}
+.mini-card .raiting .b{
+    opacity: 0.75;
+    font-size: 12px;
+}
+.mini-card .title{
+    font-family: "GothamCond_black";
+    color: #fff;
+    font-size: 26px;
+    padding: 0 30px;
+    margin: 98px auto 0;
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+.mini-card .attention-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.25s ease;
+}
+.mini-card .attention-container .attention{
+    background-color: #30BF6C;
+    color: #fff;
+    font-size: 12px;
+    font-family: "GothamCond";
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 4px 9px;
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+.mini-card .type{
+    font-family: "GothamCond";
+    position: absolute;
+    color: #fff;
+    opacity: 0.65;
+    font-size: 13px;
+    bottom: 25px;
+    left: 30px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+.mini-card .duration{
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    font-family: "GothamCond_black";
+    color: #fff;
+    opacity: 0.65;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    transition: all 0.25s ease;
+}
+.mini-card .duration .dur{
+    font-size: 28px;
+    display: block;
+    font-weight: 900;
+}
+.mini-card .duration .dur-type{
+    display: block;
+}
+.mini-card:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.mini-card:hover .title{
+    font-size: 19px;
+    margin-top: 25px;
+}
+.mini-card:hover .raiting{
+    display: none;
+}
+.mini-card:hover .attention-container{
+    display: none;
+}
+.mini-card:hover .type{
+    display: none;
+}
+.mini-card:hover .duration{
+    display: none;
+}
+.mini-card .desc{
+    /* margin-top: 4px; */
+    font-weight: 600;
+    opacity: 0;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 30px;
+    line-height: 22px;
+    /* letter-spacing: -0.5px; */
+    max-height: 136px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all 0.25s ease;
+}
+.mini-card:hover .desc{
+    opacity: 1;
+
+}
+.mini-card .stats-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+    transition: all 0.25s ease;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+}
+.mini-card .stats-container .stats{
+    /* font-family: "GothamCond"; */
+    font-weight: bold;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 5px;
+    line-height: 17px;
+}
+.mini-card .stats-container .stats span{
+    font-size: 15px;
+    color: #ffd600;
+}
+.mini-card .btn-container{
+    text-align: center;
+}
+.mini-card .btn{
+    font-family: "GothamCond";
+    display: inline-flex;
+    margin-top: 10px;
+    padding: 0px 25px;
+    line-height: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #30BF6C;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+.mini-card .btn:hover{
+    filter: brightness(106%);
+    transition: 0.3s;
+}
+.mini-card:hover .stats-container{
+    opacity: 1;
 }

@@ -1,3 +1,28 @@
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/Gotham-Font/GothamBold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/Gotham-Font/GothamBoldItalic.ttf") format("truetype"); 
+    font-style: italic; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond_black"; 
+    src: url("../fonts/Gotham-Font/Gotham-Black.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond_light"; 
+    src: url("../fonts/Gotham-Font/Gotham-Light.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
 @media (min-width: 950px){
     header{
         padding: 0px 40px;
@@ -68,6 +93,8 @@
 }
 
 header{
+    font-family: "GothamCond_light";
+    font-weight: 600;
     position: absolute;
     display: block;
     top: 0;
@@ -96,6 +123,7 @@ header .logo{
     color: white;
     letter-spacing: 0px;
     cursor: pointer;
+    font-family: "GothamCond_light"
 }
 header .logo .l1{
     display: flex;
@@ -104,7 +132,7 @@ header .logo .l1{
 
     background-color: white;
     border-radius: 13px;
-
+    font-family: "GothamCond";
     justify-content: center;
     align-items: center;
 }
@@ -113,15 +141,16 @@ header .logo .l1 span{
     color: #f24973;
 }
 header .logo .l2{
-    /* font-weight: 100; */
+    font-weight: 600;
 }
 header .logo .l2 span{
-    font-weight: bold;
+    font-family: "GothamCond";
     letter-spacing: -1px;
 }
 header .logo .l3{
     border-left: solid white 1px;
     padding: 10px;
+    font-weight: 600;
 }
 
 header .nav{
@@ -140,9 +169,9 @@ header .nav a:hover{
     transition: 0.3s;
 }
 header .nav .btn{
+    font-family: "GothamCond";
     display: block;
     line-height: 40px;
-    font-weight: bold;
     background-color: #5b4dff;
     padding: 0 17px;
     box-sizing: border-box;
