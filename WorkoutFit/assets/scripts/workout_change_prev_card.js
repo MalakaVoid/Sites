@@ -1,4 +1,4 @@
-let cards = [".card-1", ".card-2", ".card-3", ".card-4"]
+let cards = [".card-1", ".card-2", ".card-3", ".card-4", ".card-5", ".card-6"]
 let current_card_id = 0;
 
 

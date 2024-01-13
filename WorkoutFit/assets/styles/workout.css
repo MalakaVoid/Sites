@@ -19,7 +19,7 @@
 @font-face {
     font-family: "GothamCond_light"; 
     src: url("../fonts/Gotham-Font/Gotham-Light.otf") format("truetype"); 
-    font-style: normal; 
+    font-style: normal;
     font-weight: normal;
 } 
 body{
@@ -33,10 +33,7 @@ body{
     overflow: hidden;
     position: relative;
 }
-.sec-1 > .card-1,
-.sec-1 > .card-2,
-.sec-1 > .card-3,
-.sec-1 > .card-4{
+.sec-1 > .card{
     display: block;
     width: 100%;
     background-repeat: no-repeat;
@@ -85,7 +82,23 @@ body{
 .sec-1 .card-4 .background-content{
     background-color: #ffaa00;
 }
-.sec-1 .content{
+.sec-1 .card-5{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2022/11/glute-envy-lowerbody-sculpting-plan.jpg);
+    /* left: 100%; */
+    display: none;
+}
+.sec-1 .card-5 .background-content{
+    background-color: #f27349;
+}
+.sec-1 .card-6{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/11/home-power-intermediate-weight-loss-toning-plan.jpg);
+    /* left: 100%; */
+    display: none;
+}
+.sec-1 .card-6 .background-content{
+    background-color: #3f4449;
+}
+.sec-1 .card .content{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -133,13 +146,13 @@ body{
     height: inherit;
     transform: rotate(180deg);
 }
-.sec-1 .content .text-content{
+.sec-1 .card .content .text-content{
     margin-top: 30px;
     width: 460px;
     display: flex;
     flex-direction: column;
 }
-.sec-1 .content .text-content h1{
+.sec-1 .card .content .text-content h1{
     font-family: "GothamCond_black";
     color: white;
     font-size: 46px;
@@ -147,8 +160,9 @@ body{
     font-weight: 5000;
     line-height: 52px;
     cursor: pointer;
+    letter-spacing: -1px;
 }
-.sec-1 .content .text-content .desc{
+.sec-1 .card .content .text-content .desc{
     margin-top: 17px;
     color: white;
     font-size: 17px;
@@ -156,7 +170,7 @@ body{
     cursor: pointer;
     font-weight: bold;
 }
-.sec-1 .content .text-content .btn{
+.sec-1 .card .content .text-content .btn{
     font-family: "GothamCond";
     display: inline-flex;
     margin-top: 17px;
@@ -169,7 +183,7 @@ body{
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
 }
-.sec-1 .content .text-content .btn:hover{
+.sec-1 .card .content .text-content .btn:hover{
     filter: brightness(106%);
     transition: 0.3s;
 }
@@ -201,15 +215,16 @@ body{
     transition: 0.25s;
 }
 .mini-card{
+    display: flex;
+    flex-direction: column;
     width: 320px;
     height: 320px;
     background-color: rgba(0, 0, 0, 0.3);
     position: relative;
     margin-top: 30px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     transition: all 0.25s ease;
+    cursor: pointer;
 }
 .mini-card > img{
     position: absolute;
