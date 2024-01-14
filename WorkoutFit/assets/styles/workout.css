@@ -407,3 +407,91 @@ body{
 .mini-card:hover .stats-container{
     opacity: 1;
 }
+.sec-2{
+    display: block;
+    width: 100%;
+}
+.sec-2 .wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 52px;
+}
+.sec-2 .wrapper .options{
+    padding-left: 25px;
+    box-sizing: border-box;
+    width: 71%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.sec-2 .wrapper .options .my-goals{
+    width: 26.5%;
+    position: relative;
+    border-bottom: solid 1px #17171a30;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.sec-2 .wrapper .options .my-goals .text{
+    line-height: 18px;
+    font-family: "GothamCond_black";
+    cursor: pointer;
+    font-size: 22px;
+    color: #17171a;
+    margin-top: 4px;
+    width: 90%;
+}
+.sec-2 .arrow-down{
+    width: 5px;
+    height: 5px;
+    transform: rotate(90deg);
+}
+.sec-2 .arrow-down svg path{
+    fill: #17171a30;
+}
+.sec-2 .wrapper .options .dropdown{
+    position: absolute;
+    display: none;
+    width: 110%;
+    top: 0;
+    left: 0;
+    margin-left: -5%;
+    z-index: 10;
+    height: 232px;
+    /* background-color: red; */
+}
+.sec-2 .wrapper .options .my-goals ul{
+    width: 100%;
+    padding: 3px 0;
+    padding-left: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 5px 8px 0px rgba(61, 61, 77, 0.2);
+    list-style-type: none;
+    height: 200px;
+    max-width: 260px;
+    transition: all 0.25 ease;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+.sec-2 .wrapper .options li{
+    height: 40px;
+    line-height: 40px;
+    /* padding: 0 20px; */
+    position: relative;
+    color: #17171a98;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "GothamCond";
+}
