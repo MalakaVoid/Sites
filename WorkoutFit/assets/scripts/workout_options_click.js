@@ -1,11 +1,27 @@
 $(".options div").on("click", function () {
-    $(this)
-    .find(".dropdown")
-    .slideDown("fast");
+    $(".dropdown",this)
+    .show("fast");
 
 
-    $(this).find(".dropdown").on("mouseout", function () {
-        $(this)
-        .slideUp("fast");
+    $(".dropdown", this)
+    .hover(function () {
+        return;
+    },
+    function(){
+        $(this).hide("fast");
     });
 });
+
+
+$(".sec-2 input").change(function(){
+    $(this)
+    .parent()
+    .find(".toggle-container")
+    .toggleClass("toggle-checked");
+});
+
+$("#input-search").focus(function(){
+    $(".input-search-container").toggleClass("focused");
+}).focusout(function(){
+    $(".input-search-container").toggleClass("focused");
+})
