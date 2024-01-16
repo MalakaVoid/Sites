@@ -41,6 +41,10 @@
     footer .footer-container-2 .info p{
         margin-left: auto;
     }
+    header .logo .logo-svg{
+        width: 45px;
+        height: 45px;
+    }
 }
 @media (max-width: 950px){
     header{
@@ -72,8 +76,12 @@
     header .logo .l2{
         display: none;
     }
+    header .logo .logo-svg{
+        width: 50px;
+        height: 50px;
+    }
 }
-@media (max-width: 700px){
+@media (max-width: 710px){
     header{
         padding: 0px 20px;
     }
@@ -95,14 +103,14 @@
 header{
     font-family: "GothamCond_light";
     font-weight: 600;
-    position: absolute;
+    position: fixed;
     display: block;
     top: 0;
     left: 0;
     right: 0;
     height: 80px;
     box-sizing: border-box;
-    z-index: 10;
+    z-index: 110;
 }
 header .header-container{
     width: 100%;
@@ -125,20 +133,12 @@ header .logo{
     cursor: pointer;
     font-family: "GothamCond_light"
 }
-header .logo .l1{
+header .logo .logo-svg{
     display: flex;
-    width: 40px;
-    height: 40px;
-
-    background-color: white;
-    border-radius: 13px;
-    font-family: "GothamCond";
+    width: 45px;
+    height: 45px;
     justify-content: center;
     align-items: center;
-}
-header .logo .l1 span{
-    /* opacity: 0; */
-    color: #f24973;
 }
 header .logo .l2{
     font-weight: 600;
@@ -207,7 +207,8 @@ header .nav .menu-close-btn:hover svg{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 9;
+    z-index: 109;
+    font-family: "GothamCond";
 }
 #mobile-menu .mobile-menu-container{
     width: 100vw;
@@ -229,7 +230,39 @@ header .nav .menu-close-btn:hover svg{
     color: white;
     transition: 0.3s;
 }
-
+/* SCROLLED HEADER */
+#header.scrolled{
+    box-shadow: 0px 1px 2px 0px rgba(61, 61, 77, 0.1);
+    background-color: rgba(255, 255, 255, 0.97);
+    position: fixed;
+    transition: 0.3s;
+}
+#header.scrolled .logo{
+    color: #17171a;
+}
+#header.scrolled .logo .l3{
+    color: #26bf66;
+    border-left-color: #e6e6eb;
+}
+#header.scrolled .logo-svg svg path{
+    fill: #26bf66;
+}
+#header.scrolled .nav a{
+    color: #17171a;
+}
+#header.scrolled .nav a:hover{
+    color: #165aaa;
+}
+#header.scrolled .nav .btn{
+    color: white;
+}
+#header.scrolled .nav .menu-btn svg{
+    fill: #17171a;
+}
+#header.scrolled .nav .menu-btn:hover svg{
+    fill: #165aaa;
+}
+/* ------------- */
 
 
 footer{
@@ -252,30 +285,28 @@ footer .main-container{
     margin: 0 auto;
     flex-direction: row;
     gap: 40px;
-    color: #eae3d9;
+    color: white;
     font-size: 15px;
     flex-wrap: wrap;
 }
 footer .logo{
     width: 160px;
+    font-family: "GothamCond";
+    opacity: 1;
 }
-
-footer .logo .l1{
-    font-size: 22px;
-    color: #26bf66;
-    letter-spacing: 0px;
-    font-weight: bold;
-    display: flex;
-    cursor: pointer;
+footer .logo .logo-svg{
+    color: white;
+    display: block;
     width: 55px;
     height: 55px;
-
-    background-color: white;
-    border-radius: 18px;
-
-    justify-content: center;
-    align-items: center;
+    opacity: 1;
 }
+footer .logo .logo-svg svg{
+    width: inherit;
+    height: inherit;
+    fill: white;
+}
+
 footer .workout{
     display: flex;
     flex-direction: column;
@@ -294,12 +325,15 @@ footer .more{
 footer .main-container > div > h3{
     color: white;
     width: 160px;
+    font-family: "GothamCond";
 }
 footer .main-container > div > a{
     cursor: pointer;
+    font-weight: 800;
+    opacity: 0.6;
 }
 footer .main-container > div > a:hover{
-    color: white;
+    opacity: 1;
     transition: 0.3s;
 }
 footer .social-media{
@@ -328,7 +362,7 @@ footer .footer-container-2{
 }
 footer .footer-container-2 .info{
     max-width: 1150px;
-    font-size: 15px;
+    font-size: 13px;
     width: 100%;
     margin: 0 auto;
     display: flex;

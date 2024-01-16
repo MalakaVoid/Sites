@@ -287,6 +287,12 @@ body{
     text-transform: uppercase;
     border-radius: 100px;
 }
+.mini-card .attention-container .attention.red{
+    background-color: #ff5959;
+}
+.mini-card .attention-container .attention.blue{
+    background-color: #5c5ce6;
+}
 .mini-card .type{
     font-family: "GothamCond";
     position: absolute;
@@ -634,6 +640,111 @@ body{
     visibility: visible;
     transform: scaleX(1);
 }
+.sec-2 .wrapper .category-title{
+    width: 100%;
+    color: #17171a;
+    font-family: "GothamCond_black";
+    font-size: 32px;
+    margin-top: 50px;
+    padding: 0px 25px;
+    letter-spacing: -0.5px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+.sec-2 .wrapper .category-title .amount{
+    color: #cfcfcf;
+    font-family: "GothamCond";
+    margin-left: 15px;
+    font-weight: 200;
+}
+.sec-2 .wrapper .mini-cards-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: 0.3s;
+}
+.sec-2 .wrapper .mini-cards-container .mini-card{
+    margin: 10px 25px;
+}
+.sec-2 .wrapper .small-trains-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    box-sizing: border-box;
+    gap: 5px;
+}
+.sec-2 .wrapper .small-trains-container .small-card{
+    width: 100%;
+    max-width: 690px;
+    padding: 13px 20px;
+    box-sizing: border-box;
+    letter-spacing: -0.5px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.sec-2 .wrapper .small-trains-container .small-card.green{
+    background-color: #30bf6c;
+    box-shadow: 0px 3px 6px 0px rgb(48 191 108 / 20%);
+}
+.sec-2 .wrapper .small-trains-container .small-card.blue{
+    background-color: #5c5ce6;
+    box-shadow: 0px 3px 6px 0px rgb(92 92 230 / 20%);
+}
+.sec-2 .wrapper .small-trains-container .small-card:hover{
+    transform: scale(1.025);
+    transition: 0.25s;
+}
+.sec-2 .wrapper .small-trains-container .small-card .title{
+    font-family: "GothamCond_black";
+    font-size: 22px;
+    line-height: 22px;
+    color: #fff;
+    letter-spacing: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec-2 .wrapper .small-trains-container .small-card .title span{
+    font-size: 16px;
+    display: block;
+    color: #fff;
+    font-family: "GothamCond";
+    line-height: 22px;
+    text-align: right;
+}
+.sec-2 .wrapper .small-trains-container .small-card .desc{
+    margin-top: 6px;
+    font-family: "GothamCond";
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0;
+
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.5;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sec-2 .wrapper .small-trains-container .small-card .title span{
+    font-size: 16px;
+    display: block;
+    font-family: "GothamCond";
+    text-align: right;
+}
+
 
 
 

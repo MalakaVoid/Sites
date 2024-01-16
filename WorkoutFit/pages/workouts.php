@@ -10,81 +10,7 @@
     <script type="text/javascript" src="../assets/scripts/jquery.js"></script>
 </head>
 <body>
-    <header id="header">
-        <div class="header-container">
-            <a class="logo" href="/">
-                <div class="l1"><span>WL</span></div>
-                <div class="l2"><span>Workout</span>Labs</div>
-                <div class="l3">Fit</div>
-            </a>
-            <div class="nav">
-                <a class="hide-mob">Workout Builder Demo</a>
-                <a class="hide-mob">iPhone App</a>
-                <a class="hide-mob" href="pages/authorization.html">Sign in</a>
-                <a class="btn">Try it free!</a>
-                <div class="menu-btn">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.879px" height="103.609px" viewBox="0 0 122.879 103.609" enable-background="new 0 0 122.879 103.609" xml:space="preserve"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"/></g></svg>
-                </div>
-                <div class="menu-close-btn">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        width="612.043px" height="612.043px" viewBox="0 0 612.043 612.043" style="enable-background:new 0 0 612.043 612.043;"
-                        xml:space="preserve">
-                        <g>
-                            <g id="cross">
-                                <g>
-                                    <path d="M397.503,306.011l195.577-195.577c25.27-25.269,25.27-66.213,0-91.482c-25.269-25.269-66.213-25.269-91.481,0
-                                        L306.022,214.551L110.445,18.974c-25.269-25.269-66.213-25.269-91.482,0s-25.269,66.213,0,91.482L214.54,306.033L18.963,501.61
-                                        c-25.269,25.269-25.269,66.213,0,91.481c25.269,25.27,66.213,25.27,91.482,0l195.577-195.576l195.577,195.576
-                                        c25.269,25.27,66.213,25.27,91.481,0c25.27-25.269,25.27-66.213,0-91.481L397.503,306.011z"/>
-                                </g>
-                            </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                    </svg>
-    
-                </div>
-            </div>
-        </div>
-    </header>
-    <div id='mobile-menu'>
-        <div class="mobile-menu-container">
-            <a>Workouts</a>
-            <a>iPhone App</a>
-            <a href="pages/authorization.html">Sign In</a>
-            <a href="pages/authorization.html">Get started free</a>
-        </div>
-    </div>
-    <script src="assets/scripts/header_menu.js"></script>
-    <!-- <?php include("header.php");?>     -->
+    <?php include("../header.php");?>    
 
     <section class="sec-1">
         <div class="dots">
@@ -184,7 +110,7 @@
                     </div>
                     <h3 class="title">Total Body Tone: Gym Workout Plan</h3>
                     <div class="attention-container">
-                        <span class="attention">Intermediate</span>
+                        <span class="attention blue">Intermediate</span>
                     </div>
                     <div class="type">FULL GYM</div>
                     <div class="duration">
@@ -218,7 +144,7 @@
                     </div>
                     <h3 class="title">Engage: Intermediate Full Body Crafting Plan</h3>
                     <div class="attention-container">
-                        <span class="attention">Intermediate</span>
+                        <span class="attention blue">Intermediate</span>
                     </div>
                     <div class="type">FULL GYM</div>
                     <div class="duration">
@@ -252,7 +178,7 @@
                     </div>
                     <h3 class="title">Newbie Orientation: Beat GymTimidation</h3>
                     <div class="attention-container">
-                        <span class="attention">Intermediate</span>
+                        <span class="attention">Beginner</span>
                     </div>
                     <div class="type">FULL GYM</div>
                     <div class="duration">
@@ -320,7 +246,7 @@
                     </div>
                     <h3 class="title">Home Power: No-Equipment Fat Loss & Toning Plan</h3>
                     <div class="attention-container">
-                        <span class="attention">Intermediate</span>
+                        <span class="attention blue">Intermediate</span>
                     </div>
                     <div class="type">DUMBBELLS</div>
                     <div class="duration">
@@ -533,6 +459,323 @@
                     </div>
                 </div>
             </div>
+            <div class="category-title">
+                Training Plans <span class="amount">20</span>
+            </div>
+            <div class="mini-cards-container">
+                <a class="mini-card mini-card-1">
+                    <img src="../assets/images/workout_cards/beginner-full-body-transformation-gym-training-plan.jpg">
+                    <div class="raiting">
+                        <span class="t">97%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">5,738 votes</span>
+                    </div>
+                    <h3 class="title">Beginner Full Body Transformation</h3>
+                    <div class="attention-container">
+                        <span class="attention">BEGINNER</span>
+                    </div>
+                    <div class="type">FULL GYM</div>
+                    <div class="duration">
+                        <span class="dur">6</span>
+                        <span class="dur-type">weeks</span>
+                    </div>
+                    <div class="desc">Great for starting your fitness journey, this beginner training plan will leave pounds of body fat crying in a pool on the ground. It will be emotional.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>616</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card mini-card-2">
+                    <img src="../assets/images/workout_cards/total-body-toning-gym-workout-plan.jpg">
+                    <div class="raiting">
+                        <span class="t">97%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">7,032 votes</span>
+                    </div>
+                    <h3 class="title">Total Body Tone: Gym Workout Plan</h3>
+                    <div class="attention-container">
+                        <span class="attention blue">Intermediate</span>
+                    </div>
+                    <div class="type">FULL GYM</div>
+                    <div class="duration">
+                        <span class="dur">8</span>
+                        <span class="dur-type">weeks</span>
+                    </div>
+                    <div class="desc">The title doesn’t leave much mystery but the plan itself does. The Total Body Toning plan’s magic will reveal your fantastic body hiding beneath that soft layer covering it – in only 8 weeks.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>636</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card mini-card-3">
+                    <img src="../assets/images/workout_cards/engage-intermediate-full-body-crafting-plan.jpg">
+                    <div class="raiting">
+                        <span class="t">97%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">4,575 votes</span>
+                    </div>
+                    <h3 class="title">Engage: Intermediate Full Body Crafting Plan</h3>
+                    <div class="attention-container">
+                        <span class="attention blue">Intermediate</span>
+                    </div>
+                    <div class="type">FULL GYM</div>
+                    <div class="duration">
+                        <span class="dur">6</span>
+                        <span class="dur-type">weeks</span>
+                    </div>
+                    <div class="desc">If you’ve completed the Beginner Transformation Plan or if you’re ready for something a little more challenging, this plan is for you.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>708</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card mini-card-4">
+                    <img src="../assets/images/workout_cards/newbie-orientationbeat-gymtimidation.webp">
+                    <div class="raiting">
+                        <span class="t">92%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">53 votes</span>
+                    </div>
+                    <h3 class="title">Newbie Orientation: Beat GymTimidation</h3>
+                    <div class="attention-container">
+                        <span class="attention blue">Intermediate</span>
+                    </div>
+                    <div class="type">FULL GYM</div>
+                    <div class="duration">
+                        <span class="dur">4</span>
+                        <span class="dur-type">weeks</span>
+                    </div>
+                    <div class="desc">New to the gym? Make it your second home with this 4-week confidence-boosting crash course.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>68</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card mini-card-5">
+                    <img src="../assets/images/workout_cards/glute-envy-lowerbody-sculpting-plan.jpg">
+                    <div class="raiting">
+                        <span class="t">98%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">924 votes</span>
+                    </div>
+                    <h3 class="title">Glute Envy: Lower Body Sculpting Plan</h3>
+                    <div class="attention-container">
+                        <span class="attention">BEGINNER</span>
+                    </div>
+                    <div class="type">DUMBBELLS</div>
+                    <div class="duration">
+                        <span class="dur">8</span>
+                        <span class="dur-type">weeks</span>
+                    </div>
+                    <div class="desc">A perfect entry into the world of glute crafting, this beginner-intermediate training plan will help sculpt that 🍑 nicely, without neglecting your awesome upper body and core.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>56</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card mini-card-6">
+                    <img src="../assets/images/workout_cards/home-power-intermediate-weight-loss-toning-plan.jpg">
+                    <div class="raiting">
+                        <span class="t">97%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">4,068 votes</span>
+                    </div>
+                    <h3 class="title">Home Power: No-Equipment Fat Loss & Toning Plan</h3>
+                    <div class="attention-container">
+                        <span class="attention blue">Intermediate</span>
+                    </div>
+                    <div class="type">DUMBBELLS</div>
+                    <div class="duration">
+                        <span class="dur">6</span>
+                        <span class="dur-type">weeks</span>
+                    </div>
+                    <div class="desc">Ready to advance things a little more in the casa? All you need is some space and a tough mindset. This plan will help you do the rest.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>180</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+
+
+                <a class="mini-card">
+                    <img src="../assets/images/workout_cards/20-stronger-fitter-at-home-dumbbell-burner.webp">
+                    <div class="raiting">
+                        <span class="t">96%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">500 votes</span>
+                    </div>
+                    <h3 class="title">20% Stronger & Fitter: At Home Dumbbell Burner</h3>
+                    <div class="attention-container">
+                        <span class="attention blue">Intermediate</span>
+                    </div>
+                    <div class="type">DUMBBELLS</div>
+                    <div class="duration">
+                        <span class="dur">8</span>
+                        <span class="dur-type">weeks</span>
+                    </div>
+                    <div class="desc">Progression is in session: get 20% stronger and fitter in 8 short weeks with just a set of dumbbells. Let’s go!</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>186</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card">
+                    <img src="../assets/images/workout_cards/limit-fat-burn-training-plan-workoutlabs.jpg">
+                    <div class="raiting">
+                        <span class="t">96%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">564 votes</span>
+                    </div>
+                    <h3 class="title">HIIT the Limit: Gym Fat-Burn Plan</h3>
+                    <div class="attention-container">
+                        <span class="attention red">Advanced</span>
+                    </div>
+                    <div class="type">FULL GYM</div>
+                    <div class="duration">
+                        <span class="dur">8</span>
+                        <span class="dur-type">weeks</span>
+                    </div>
+                    <div class="desc">Ready to challenge yourself in ways you’ve never experienced before? Take on HIIT the Limit – a new kind of fat-burning gym plan!</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>14</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+            </div>
+            <div class="category-title">
+                Workout Packs & Single Workouts <span class="amount">26</span>
+            </div>
+            <div class="mini-cards-container">
+                <a class="mini-card">
+                    <img src="../assets/images/workout_cards/pure-abs-attack-and-booty-blast-gym-workout.jpg">
+                    <div class="raiting">
+                        <span class="t">99%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">725 votes</span>
+                    </div>
+                    <h3 class="title">Pure Abs Attack & Booty Blast Gym Workout</h3>
+                    <div class="attention-container">
+                        <span class="attention blue">Intermediate</span>
+                    </div>
+                    <div class="type">FULL GYM</div>
+                    <div class="duration">
+                        <span class="dur">60</span>
+                        <span class="dur-type">minutes</span>
+                    </div>
+                    <div class="desc">“I’m not a fan of firm abs and a squat booty” – Said no one, ever. Which is why we’re going to focus on those two wonderful features of the human form.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>86</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card">
+                    <img src="../assets/images/workout_cards/baby-got-back-back-butt-resistance-band-workout-pack3.jpg">
+                    <div class="raiting">
+                        <span class="t">97%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">582 votes</span>
+                    </div>
+                    <h3 class="title">Baby Got Back: Back & Butt 3-Day Workout Pack</h3>
+                    <div class="attention-container">
+                        <span class="attention blue">Intermediate</span>
+                    </div>
+                    <div class="type">Resistance bands</div>
+                    <div class="duration">
+                        <span class="dur">33-50</span>
+                        <span class="dur-type">minutes</span>
+                    </div>
+                    <div class="desc">When people hate to see you go, but love to watch you leave – give them something to look at.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>28</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card">
+                    <img src="../assets/images/workout_cards/bingo-wing-bye-bye-arm-toning-workout.jpg">
+                    <div class="raiting">
+                        <span class="t">100%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">1,093 votes</span>
+                    </div>
+                    <h3 class="title">Bingo Wing Bye-Bye: Arm Toning Workout</h3>
+                    <div class="attention-container">
+                        <span class="attention">Beginner</span>
+                    </div>
+                    <div class="type">DUMBBELLS</div>
+                    <div class="duration">
+                        <span class="dur">35</span>
+                        <span class="dur-type">minutes</span>
+                    </div>
+                    <div class="desc">With this workout you can say bye-bye to those bingo wings that always seem to just…hang around. A set of dumbbells is all you need.</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>102</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+                <a class="mini-card">
+                    <img src="../assets/images/workout_cards/15-minute-elevator-space-bodyweight-workout.jpg">
+                    <div class="raiting">
+                        <span class="t">97%
+                            <img src="../assets/images/workout_cards/thumbsup.webp">
+                        </span>
+                        <span class="b">319 votes</span>
+                    </div>
+                    <h3 class="title">15-min Intense Bodyweight Workout</h3>
+                    <div class="attention-container">
+                        <span class="attention blue">Intermediate</span>
+                    </div>
+                    <div class="type">NO EQUIPMENT</div>
+                    <div class="duration">
+                        <span class="dur">15</span>
+                        <span class="dur-type">minutes</span>
+                    </div>
+                    <div class="desc">Not much time for a workout? We’ve got you covered. This full-body workout will have you losing fat and toning muscles in no time!</div>
+                    <div class="stats-container">
+                        <div class="stats">Started by <span>12</span> users this month</div>
+                        <div class="btn-container"><div class="btn">VIEW</div></div>
+                    </div>
+                </a>
+            </div>
+            <div class="category-title">
+                Workouts of the Day <span class="amount">791</span>
+            </div>
+            <div class="small-trains-container">
+                <a class="small-card green">
+                    <div class="title">
+                        Round By Round Push-UP Burner 🔥 <span class="b">12 min</span>
+                    </div>
+                    <div class="desc">
+                        Get toned, Lose fat <span>NO EQUIPMENT</span>
+                    </div>
+                </a>
+                <a class="small-card blue">
+                    <div class="title">
+                        Round By Round Squat Burner 🔥 <span class="b">12 min</span>
+                    </div>
+                    <div class="desc">
+                        Gain muscle, Lose fat <span>NO EQUIPMENT</span>
+                    </div>
+                </a>
+                <a class="small-card green">
+                    <div class="title">
+                        Limit HIIT Upper! ⬆️ <span class="b">26 min</span>
+                    </div>
+                    <div class="desc">
+                        Increase Endurance, Lose fat <span>NO EQUIPMENT</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -543,6 +786,6 @@
 
     <script src="../assets/scripts/workout_change_prev_card.js"></script>
     <script src="../assets/scripts/workout_options_click.js"></script>
-    <!-- <?php include("footer.php");?> -->
+    <?php include("../footer.php");?>
 </body>
 </html>

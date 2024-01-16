@@ -11,7 +11,9 @@
 <body>
     <section class="main-container">
         <a class="logo" href="/">
-            <div class="l1"><span>WL</span></div>
+            <div class="l1"><svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20V44C0 55.0457 8.95431 64 20 64H44C55.0457 64 64 55.0457 64 44V20C64 8.95431 55.0457 0 44 0H20ZM38.63 19.7H34.01L29.96 34.43L26.63 19.7H20.81L16.73 34.49L13.28 19.7H8.33L13.64 41H19.22L23.42 25.88L26.93 41H32.48L38.63 19.7ZM40.8702 19.7V41H52.9302L53.1402 38.99H43.1802V19.7H40.8702Z" fill="white"/>
+            </svg></div>
             <div class="l2"><span>Workout</span>Labs</div>
             <div class="l3">Fit</div>
         </a>

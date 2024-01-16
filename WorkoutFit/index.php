@@ -35,7 +35,7 @@
             <div class="text-container">
                 <h2>Choose effective training plans with easy-to-follow workouts</h2>
                 <p>Get a clear plan of action to reach your goals with a range of effective workout programs, that we continuously improve and optimize.</p>
-                <a href="pages/workouts.html">SEE THE WORKOUTS
+                <a href="pages/workouts.php">SEE THE WORKOUTS
                     <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <title>keyboard_arrow_right</title>
                         <desc>Created with Sketch.</desc>
