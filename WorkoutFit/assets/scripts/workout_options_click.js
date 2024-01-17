@@ -1,15 +1,32 @@
-$(".options div").on("click", function () {
-    $(".dropdown",this)
-    .show("fast");
+$(".container").on("click", function () {
+    $(this).next()
+    .show("fast", function(){
+        $(this)
+        .hover(function () {
+            return;
+        },
+        function(){
+            $(this).hide("fast");
+        })
 
-
-    $(".dropdown", this)
-    .hover(function () {
-        return;
-    },
-    function(){
-        $(this).hide("fast");
+        
     });
+
+
+    $(this).next()
+    .find(".blank").click(function(){
+        $(this).parent()
+        .hide("fast");
+    })
+
+
+    // $(this).next()
+    // .mouseout(function () {
+    //     return;
+    // },
+    // function(){
+    //     $(this).hide("fast").toggleClass("shown");
+    // })
 });
 
 
@@ -25,3 +42,19 @@ $("#input-search").focus(function(){
 }).focusout(function(){
     $(".input-search-container").toggleClass("focused");
 })
+
+
+
+$(".settings-button").click(function(){
+    if ($(".options").hasClass("shown")){
+        $(".options")
+        .slideUp("fast")
+        .toggleClass("shown");
+        return;
+    }
+
+    $(".options")
+    .slideDown("fast")
+    .css("display", "flex")
+    .toggleClass("shown");
+});

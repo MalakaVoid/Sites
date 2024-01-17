@@ -6,6 +6,7 @@
     <link rel='stylesheet' type='text/css' href='../assets/styles/reset.css'>
     <link rel='stylesheet' type='text/css' href='../assets/styles/header_footer.css'>
     <link rel='stylesheet' type='text/css' href='../assets/styles/workout.css'>
+    <link rel='stylesheet' type='text/css' href='../assets/styles/workout_mobile.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="../assets/scripts/jquery.js"></script>
 </head>
@@ -268,26 +269,29 @@
             <div class="filters">
                 <div class="options">
                     <div class="my-goals">
-                        <div class="text">My goals</div>
-                        <div class="arrow-down">
-                            <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>keyboard_arrow_right</title>
-                                <desc>Created with Sketch.</desc>
-                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Rounded" transform="translate(-687.000000, -2464.000000)">
-                                        <g id="Hardware" transform="translate(100.000000, 2404.000000)">
-                                            <g id="-Round-/-Hardware-/-keyboard_arrow_right" transform="translate(578.000000, 54.000000)">
-                                                <g>
-                                                    <rect id="Rectangle-Copy-105" x="0" y="0" width="24" height="24"></rect>
-                                                    <path d="M9.29,15.88 L13.17,12 L9.29,8.12 C8.9,7.73 8.9,7.1 9.29,6.71 C9.68,6.32 10.31,6.32 10.7,6.71 L15.29,11.3 C15.68,11.69 15.68,12.32 15.29,12.71 L10.7,17.3 C10.31,17.69 9.68,17.69 9.29,17.3 C8.91,16.91 8.9,16.27 9.29,15.88 Z" id="arrow-color" fill="#fff"></path>
+                        <div class="container">
+                            <div class="text">My goals</div>
+                            <div class="arrow-down">
+                                <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>keyboard_arrow_right</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Rounded" transform="translate(-687.000000, -2464.000000)">
+                                            <g id="Hardware" transform="translate(100.000000, 2404.000000)">
+                                                <g id="-Round-/-Hardware-/-keyboard_arrow_right" transform="translate(578.000000, 54.000000)">
+                                                    <g>
+                                                        <rect id="Rectangle-Copy-105" x="0" y="0" width="24" height="24"></rect>
+                                                        <path d="M9.29,15.88 L13.17,12 L9.29,8.12 C8.9,7.73 8.9,7.1 9.29,6.71 C9.68,6.32 10.31,6.32 10.7,6.71 L15.29,11.3 C15.68,11.69 15.68,12.32 15.29,12.71 L10.7,17.3 C10.31,17.69 9.68,17.69 9.29,17.3 C8.91,16.91 8.9,16.27 9.29,15.88 Z" id="arrow-color" fill="#fff"></path>
+                                                    </g>
                                                 </g>
                                             </g>
                                         </g>
                                     </g>
-                                </g>
-                            </svg>
+                                </svg>
+                            </div>
                         </div>
                         <div class="dropdown">
+                            <div class="blank"></div>
                             <ul>
                                 <li>
                                     <input id="#lose-fat" type="checkbox" name="lose_fat">
@@ -338,26 +342,29 @@
                         </div>
                     </div>
                     <div class="my-equipment">
-                        <div class="text">My equipment</div>
-                        <div class="arrow-down">
-                            <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>keyboard_arrow_right</title>
-                                <desc>Created with Sketch.</desc>
-                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Rounded" transform="translate(-687.000000, -2464.000000)">
-                                        <g id="Hardware" transform="translate(100.000000, 2404.000000)">
-                                            <g id="-Round-/-Hardware-/-keyboard_arrow_right" transform="translate(578.000000, 54.000000)">
-                                                <g>
-                                                    <rect id="Rectangle-Copy-105" x="0" y="0" width="24" height="24"></rect>
-                                                    <path d="M9.29,15.88 L13.17,12 L9.29,8.12 C8.9,7.73 8.9,7.1 9.29,6.71 C9.68,6.32 10.31,6.32 10.7,6.71 L15.29,11.3 C15.68,11.69 15.68,12.32 15.29,12.71 L10.7,17.3 C10.31,17.69 9.68,17.69 9.29,17.3 C8.91,16.91 8.9,16.27 9.29,15.88 Z" id="arrow-color" fill="#fff"></path>
+                        <div class="container">
+                            <div class="text">My equipment</div>
+                            <div class="arrow-down">
+                                <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>keyboard_arrow_right</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Rounded" transform="translate(-687.000000, -2464.000000)">
+                                            <g id="Hardware" transform="translate(100.000000, 2404.000000)">
+                                                <g id="-Round-/-Hardware-/-keyboard_arrow_right" transform="translate(578.000000, 54.000000)">
+                                                    <g>
+                                                        <rect id="Rectangle-Copy-105" x="0" y="0" width="24" height="24"></rect>
+                                                        <path d="M9.29,15.88 L13.17,12 L9.29,8.12 C8.9,7.73 8.9,7.1 9.29,6.71 C9.68,6.32 10.31,6.32 10.7,6.71 L15.29,11.3 C15.68,11.69 15.68,12.32 15.29,12.71 L10.7,17.3 C10.31,17.69 9.68,17.69 9.29,17.3 C8.91,16.91 8.9,16.27 9.29,15.88 Z" id="arrow-color" fill="#fff"></path>
+                                                    </g>
                                                 </g>
                                             </g>
                                         </g>
                                     </g>
-                                </g>
-                            </svg>
+                                </svg>
+                            </div>
                         </div>
                         <div class="dropdown">
+                            <div class="blank"></div>
                             <ul>
                                 <li>
                                     <input id="#full-gym" type="checkbox" name="full_gym">
@@ -399,26 +406,29 @@
                         </div>
                     </div>
                     <div class="my-level">
-                        <div class="text">My level</div>
-                        <div class="arrow-down">
-                            <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>keyboard_arrow_right</title>
-                                <desc>Created with Sketch.</desc>
-                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Rounded" transform="translate(-687.000000, -2464.000000)">
-                                        <g id="Hardware" transform="translate(100.000000, 2404.000000)">
-                                            <g id="-Round-/-Hardware-/-keyboard_arrow_right" transform="translate(578.000000, 54.000000)">
-                                                <g>
-                                                    <rect id="Rectangle-Copy-105" x="0" y="0" width="24" height="24"></rect>
-                                                    <path d="M9.29,15.88 L13.17,12 L9.29,8.12 C8.9,7.73 8.9,7.1 9.29,6.71 C9.68,6.32 10.31,6.32 10.7,6.71 L15.29,11.3 C15.68,11.69 15.68,12.32 15.29,12.71 L10.7,17.3 C10.31,17.69 9.68,17.69 9.29,17.3 C8.91,16.91 8.9,16.27 9.29,15.88 Z" id="arrow-color" fill="#fff"></path>
+                        <div class="container">
+                            <div class="text">My level</div>
+                            <div class="arrow-down">
+                                <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>keyboard_arrow_right</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Rounded" transform="translate(-687.000000, -2464.000000)">
+                                            <g id="Hardware" transform="translate(100.000000, 2404.000000)">
+                                                <g id="-Round-/-Hardware-/-keyboard_arrow_right" transform="translate(578.000000, 54.000000)">
+                                                    <g>
+                                                        <rect id="Rectangle-Copy-105" x="0" y="0" width="24" height="24"></rect>
+                                                        <path d="M9.29,15.88 L13.17,12 L9.29,8.12 C8.9,7.73 8.9,7.1 9.29,6.71 C9.68,6.32 10.31,6.32 10.7,6.71 L15.29,11.3 C15.68,11.69 15.68,12.32 15.29,12.71 L10.7,17.3 C10.31,17.69 9.68,17.69 9.29,17.3 C8.91,16.91 8.9,16.27 9.29,15.88 Z" id="arrow-color" fill="#fff"></path>
+                                                    </g>
                                                 </g>
                                             </g>
                                         </g>
                                     </g>
-                                </g>
-                            </svg>
+                                </svg>
+                            </div>
                         </div>
                         <div class="dropdown">
+                            <div class="blank"></div>
                             <ul>
                                 <li>
                                     <input id="#beginner" type="checkbox" name="beginner">
@@ -456,6 +466,9 @@
                     </svg>
                     <div class="input-search-container">
                         <input id="input-search" type="text" name="search_input" placeholder="Search by name">
+                    </div>
+                    <div class="settings-button">
+                        <img src="../assets/images/logos_sec_2/icons8-settings-48.png">
                     </div>
                 </div>
             </div>
