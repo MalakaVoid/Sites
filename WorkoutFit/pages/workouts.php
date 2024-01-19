@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>fit</title>
+    <title>Workouts</title>
     <link rel='stylesheet' type='text/css' href='../assets/styles/reset.css'>
     <link rel='stylesheet' type='text/css' href='../assets/styles/header_footer.css'>
     <link rel='stylesheet' type='text/css' href='../assets/styles/workout.css'>
@@ -67,7 +67,7 @@
                     <a class="desc">Great for starting your fitness journey, this beginner training plan will leave pounds of body fat crying in a pool on the ground. It will be emotional.</a>
                     <div><a class="btn">VIEW PLAN</a></div>
                 </div>
-                <a class="mini-card mini-card-1">
+                <a href="workout_card.php" class="mini-card mini-card-1">
                     <img src="../assets/images/workout_cards/beginner-full-body-transformation-gym-training-plan.jpg">
                     <div class="raiting">
                         <span class="t">97%
@@ -291,7 +291,6 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <div class="blank"></div>
                             <ul>
                                 <li>
                                     <input id="#lose-fat" type="checkbox" name="lose_fat">
@@ -364,7 +363,6 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <div class="blank"></div>
                             <ul>
                                 <li>
                                     <input id="#full-gym" type="checkbox" name="full_gym">
@@ -428,7 +426,6 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <div class="blank"></div>
                             <ul>
                                 <li>
                                     <input id="#beginner" type="checkbox" name="beginner">
@@ -476,7 +473,7 @@
                 Training Plans <span class="amount">20</span>
             </div>
             <div class="mini-cards-container">
-                <a class="mini-card mini-card-1">
+                <a href="workout_card.php" class="mini-card mini-card-1">
                     <img src="../assets/images/workout_cards/beginner-full-body-transformation-gym-training-plan.jpg">
                     <div class="raiting">
                         <span class="t">97%

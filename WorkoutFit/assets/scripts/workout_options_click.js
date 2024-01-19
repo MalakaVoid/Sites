@@ -1,32 +1,26 @@
+let flag = false;
 $(".container").on("click", function () {
+    if (flag){
+        $(this).next().hide("fast");
+        flag = !flag;
+        return;
+    } else{
+        $(this).next().show("fast");
+        flag = !flag;
+    }
+
     $(this).next()
     .show("fast", function(){
-        $(this)
+        $(this).parent()
         .hover(function () {
             return;
         },
         function(){
-            $(this).hide("fast");
+            $(this).find(".dropdown")
+            .hide("fast");
+            flag=false;
         })
-
-        
     });
-
-
-    $(this).next()
-    .find(".blank").click(function(){
-        $(this).parent()
-        .hide("fast");
-    })
-
-
-    // $(this).next()
-    // .mouseout(function () {
-    //     return;
-    // },
-    // function(){
-    //     $(this).hide("fast").toggleClass("shown");
-    // })
 });
 
 
