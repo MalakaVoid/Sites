@@ -140,21 +140,66 @@
                 <p>Unless you’re emotionally attached to stubborn body fat, we suggest that you take on this plan, immediately. There is no time like now.</p>
                 <p>This <span class="b">beginner gym workout plan for women and men</span> is a great fit for you if you have one priority in mind: to permanently say goodbye to love handles, thunder thighs, and wobbly bellies. Focusing on the fun sides of cardio fitness, this program takes on a delightful <span class="b">mix of fitness-improving circuit routines, fat-stripping cardio sessions and frame-toning full-body workouts.</span></p>
                 <p>Nobody wants a boring gym routine, which is why this plan has been developed with fun, dynamic, and progressive workouts that will leave your fat begging for mercy and your body crying for more.</p>
+                <div class="front-hide"></div>
             </div>
+            <a class="read-more">Read more
+            <div class="arrow-bottom">
+                <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>keyboard_arrow_right</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Rounded" transform="translate(-687.000000, -2464.000000)">
+                            <g id="Hardware" transform="translate(100.000000, 2404.000000)">
+                                <g id="-Round-/-Hardware-/-keyboard_arrow_right" transform="translate(578.000000, 54.000000)">
+                                    <g>
+                                        <rect id="Rectangle-Copy-105" x="0" y="0" width="24" height="24"></rect>
+                                        <path d="M9.29,15.88 L13.17,12 L9.29,8.12 C8.9,7.73 8.9,7.1 9.29,6.71 C9.68,6.32 10.31,6.32 10.7,6.71 L15.29,11.3 C15.68,11.69 15.68,12.32 15.29,12.71 L10.7,17.3 C10.31,17.69 9.68,17.69 9.29,17.3 C8.91,16.91 8.9,16.27 9.29,15.88 Z" id="arrow-color" fill="#fff"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            </a>
             <div class="instructions-container">
                 <img src="../assets/images/illustr/illustrated-printable-workout-preview.jpg">
                 <p class="img-desc">This training plan consists of easy-to-follow visual workouts, which you can print or access on any device.</p>
                 <div class="btn-container"><button>VIEW SAMPLE WORKOUT</button></div>
-                <h3 class="title">Instructions</h3>
-                <p>Most workouts in this plan contain a <span class="b">warm-up and a post-workout cool-down.</span> We highly suggest you take the time to complete these. You’ll increase your ability to complete the workout due to a change in mindset, heart rate, muscle activation, and most importantly; massively <span class="b">reduce the risk of injury.</span> The cool-downs will aid your recovery too because aching and creaking is never fun!</p>
-                <p>Each week is comprised of a cardio, a circuit and a full-body workout, though variations occur every week. Certain workouts will pop up repeatedly to give you a sense of familiarity, which in turn gives you the opportunity to challenge your previous self. Take notes throughout each workout regarding what amount of weight you’re using and the amount of time taken per circuit. You can use these notes in the future for specific challenges.</p>
-                <p>Finally, and most importantly, grab your water! Dehydration can wreck your performance; after all, your body is made mostly of water, so give it some love! Short sips are ideal, try to avoid gulping down half a bottle at a time.</p>
+                <div class="instructions-text">
+                    <h3 class="title">Instructions</h3>
+                    <p>Most workouts in this plan contain a <span class="b">warm-up and a post-workout cool-down.</span> We highly suggest you take the time to complete these. You’ll increase your ability to complete the workout due to a change in mindset, heart rate, muscle activation, and most importantly; massively <span class="b">reduce the risk of injury.</span> The cool-downs will aid your recovery too because aching and creaking is never fun!</p>
+                    <p>Each week is comprised of a cardio, a circuit and a full-body workout, though variations occur every week. Certain workouts will pop up repeatedly to give you a sense of familiarity, which in turn gives you the opportunity to challenge your previous self. Take notes throughout each workout regarding what amount of weight you’re using and the amount of time taken per circuit. You can use these notes in the future for specific challenges.</p>
+                    <p>Finally, and most importantly, grab your water! Dehydration can wreck your performance; after all, your body is made mostly of water, so give it some love! Short sips are ideal, try to avoid gulping down half a bottle at a time.</p>
+                    <div class="front-hide"></div>
+                </div>
+                <a class="read-more-2">Read more
+                    <div class="arrow-bottom">
+                        <svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>keyboard_arrow_right</title>
+                            <desc>Created with Sketch.</desc>
+                            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Rounded" transform="translate(-687.000000, -2464.000000)">
+                                    <g id="Hardware" transform="translate(100.000000, 2404.000000)">
+                                        <g id="-Round-/-Hardware-/-keyboard_arrow_right" transform="translate(578.000000, 54.000000)">
+                                            <g>
+                                                <rect id="Rectangle-Copy-105" x="0" y="0" width="24" height="24"></rect>
+                                                <path d="M9.29,15.88 L13.17,12 L9.29,8.12 C8.9,7.73 8.9,7.1 9.29,6.71 C9.68,6.32 10.31,6.32 10.7,6.71 L15.29,11.3 C15.68,11.69 15.68,12.32 15.29,12.71 L10.7,17.3 C10.31,17.69 9.68,17.69 9.29,17.3 C8.91,16.91 8.9,16.27 9.29,15.88 Z" id="arrow-color" fill="#fff"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
     <section class="fixed-button">
         <button>VIEW SAMPLE WORKOUT</button>
     </section>
+    <script src="/assets/scripts/read_more_expand.js"></script>
     <?php include("../footer.php");?>
     <div class="blank"></div>
 </body>

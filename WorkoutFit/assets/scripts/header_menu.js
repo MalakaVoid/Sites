@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    scroll_class();
+
     $(".menu-btn").click(function(){
         $("#mobile-menu").fadeIn(400);
         $(".menu-close-btn").show();

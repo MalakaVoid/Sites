@@ -275,6 +275,64 @@ body{
     margin-top: 20px;
     color: #17171a;
     letter-spacing: -0.5px;
+    position: relative;
+    overflow: hidden;
+    height: 190px;
+}
+.sec-2 .more-info.active{
+    height: auto;
+    overflow: visible;
+}
+.sec-2  .front-hide{
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    box-shadow: 0px -75px 70px 0px rgba(255, 255, 255, 1) inset;
+}
+.sec-2 .read-more,
+.sec-2 .read-more-2{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #26bf66;
+    font-size: 17px;
+    line-height: 60px;
+    text-decoration: none;
+    font-family: "GothamCond_medium";
+    /* font-weight: bold; */
+    cursor: pointer;
+}
+.sec-2 .arrow-bottom{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+}
+.sec-2 .arrow-bottom svg{
+    width: 14px;
+    height: 14px;
+    transform: rotate(90deg);
+}
+.sec-2 .arrow-bottom svg path{
+    fill: #ccc;
+}
+.sec-2 .read-more:hover{
+    text-decoration: underline;
+}
+.sec-2 .read-more:hover .arrow-bottom svg path{
+    fill: #24c069;
+    transition: 0.25s;
+}
+.sec-2 .read-more-2:hover{
+    text-decoration: underline;
+}
+.sec-2 .read-more-2:hover .arrow-bottom svg path{
+    fill: #24c069;
+    transition: 0.25s;
 }
 
 .sec-2 .instructions-container{
@@ -317,6 +375,10 @@ body{
     text-decoration: none;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
+}
+.sec-2 .instructions-container button:hover{
+    filter: brightness(106%);
+    transition: 0.3s;
 }
 .sec-2 .instructions-container .title{
     color: #000;
@@ -363,7 +425,20 @@ body{
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
 }
+.fixed-button button:hover{
+    filter: brightness(106%);
+    transition: 0.3s;
+}
 .blank{
     width: 100%;
     height: 70px;
+}
+
+.sec-2 .instructions-text{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    
 }
