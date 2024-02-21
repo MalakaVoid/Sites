@@ -1,0 +1,444 @@
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/Gotham-Font/GothamBold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/Gotham-Font/GothamBoldItalic.ttf") format("truetype"); 
+    font-style: italic; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond_black"; 
+    src: url("../fonts/Gotham-Font/Gotham-Black.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond_light"; 
+    src: url("../fonts/Gotham-Font/Gotham-Light.otf") format("truetype"); 
+    font-style: normal;
+    font-weight: normal;
+} 
+@font-face {
+    font-family: "GothamCond_medium"; 
+    src: url("../fonts/Gotham-Font/GothamMedium.ttf") format("truetype"); 
+} 
+body{
+    font-family: "GothamCond_light";
+    overflow-x: hidden;
+}
+.sec-1 {
+    display: block;
+    width: 100%;
+    /* overflow: hidden; */
+    position: relative;
+}
+.sec-1 .card{
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    min-height: inherit;
+    height: inherit;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+}
+.sec-1 > div .background-content{
+    position: absolute;
+    opacity: 0.9;
+    width: inherit;
+    min-height: inherit;
+    z-index: 2;
+
+}
+.sec-1 .card{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/02/beginner-full-body-transformation-gym-training-plan.jpg);
+    left: 0%;
+}
+.sec-1 .card .background-content{
+    background-color: #5c69f2;
+}
+.sec-1 .card .content{
+    position: absolute;
+    flex-direction: row;
+    z-index: 10;
+    position: absolute;
+}
+.mini-card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.mini-card > img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+.mini-card .raiting{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    transition: all 0.25s ease;
+
+}
+.mini-card .raiting .t{
+    font-family: "GothamCond";
+}
+
+.mini-card .raiting .t img{
+    display: inline;
+    width: 16px;
+}
+.mini-card .raiting .b{
+    opacity: 0.75;
+}
+.mini-card .title{
+    font-family: "GothamCond_black";
+    color: #fff;
+    text-align: center;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+.mini-card .attention-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.25s ease;
+}
+.mini-card .attention-container .attention{
+    background-color: #30BF6C;
+    color: #fff;
+    font-family: "GothamCond";
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+.mini-card .attention-container .attention.red{
+    background-color: #ff5959;
+}
+.mini-card .attention-container .attention.blue{
+    background-color: #5c5ce6;
+}
+/* .mini-card .type{
+    font-family: "GothamCond";
+    position: absolute;
+    color: #fff;
+    opacity: 0.65;
+    font-size: 13px;
+    bottom: 25px;
+    left: 30px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+} */
+.mini-card .stats-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all 0.25s ease;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+}
+.mini-card .stats-container .stats{
+    font-weight: bold;
+    color: #fff;
+}
+.mini-card .stats-container .stats span{
+    font-family: "GothamCond";
+    color: #ffd600;
+}
+.sec-1 .back-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
+
+    position: absolute;
+    z-index: 15;
+    cursor: pointer;
+}
+.sec-1 .back-btn .text{
+    font-family: "GothamCond";
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.6px;
+    opacity: 0.5;
+    text-decoration: none;
+}
+.sec-1 .arrow-left{
+    transition: ease all .25s;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    transform: rotate(180deg);
+}
+.sec-1 .arrow-left svg{
+    width: inherit;
+    height: inherit;
+}
+.sec-1 .arrow-left svg path{
+    fill: rgba(255, 255, 255, 0.6);
+}
+.sec-1 .back-btn:hover .text{
+    opacity: 1;
+    transition: 0.25s;
+}
+.sec-1 .back-btn:hover svg path{
+    fill: #fff;
+    transition: 0.25s;
+}
+
+.sec-2 {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.sec-2 .wrapper{
+    display: flex;
+    flex-direction: column;
+
+    width: 680px;
+    margin: 0 auto;
+}
+.sec-2 .wrapper .desc{
+    letter-spacing: -0.4px;
+    color: #17171a;
+    font-weight: 500;
+}
+.sec-2 .wrapper .types{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #17171a;
+    line-height: 30px;
+    font-size: 17px;
+    /* font-family: "GothamCond"; */
+}
+.sec-2 .wrapper .types > div{
+    width: 312px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 17px;
+}
+.sec-2 .wrapper .types > div p{
+    padding-left: 5px;
+    font-family: "GothamCond_medium";
+}
+.sec-2 .wrapper .types svg{
+    height: 30px;
+    width: 30px;
+}
+.sec-2 .wrapper .types .place svg{
+    fill: #5c5ce6;
+}
+.sec-2 .wrapper .types .purpose svg{
+    fill: #30BF6C;
+}
+.sec-2 .wrapper .types .time-plan svg path{
+    stroke: #ff5959;
+}
+.sec-2 .wrapper .types .training-time svg path{
+    stroke: #e99700;
+}
+.sec-2 .more-info p{
+    margin-top: 15px;
+}
+.sec-2 .more-info .b,
+.sec-2 .instructions-container .b{
+    font-family: "GothamCond_medium";
+    letter-spacing: 0;
+}
+.sec-2 .more-info{
+    margin-top: 20px;
+    color: #17171a;
+    letter-spacing: -0.5px;
+    position: relative;
+    overflow: hidden;
+    height: 190px;
+}
+.sec-2 .more-info.active{
+    height: auto;
+    overflow: visible;
+}
+.sec-2  .front-hide{
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    box-shadow: 0px -75px 70px 0px rgba(255, 255, 255, 1) inset;
+}
+.sec-2 .read-more,
+.sec-2 .read-more-2{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #26bf66;
+    font-size: 17px;
+    line-height: 60px;
+    text-decoration: none;
+    font-family: "GothamCond_medium";
+    /* font-weight: bold; */
+    cursor: pointer;
+}
+.sec-2 .arrow-bottom{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+}
+.sec-2 .arrow-bottom svg{
+    width: 14px;
+    height: 14px;
+    transform: rotate(90deg);
+}
+.sec-2 .arrow-bottom svg path{
+    fill: #ccc;
+}
+.sec-2 .read-more:hover{
+    text-decoration: underline;
+}
+.sec-2 .read-more:hover .arrow-bottom svg path{
+    fill: #24c069;
+    transition: 0.25s;
+}
+.sec-2 .read-more-2:hover{
+    text-decoration: underline;
+}
+.sec-2 .read-more-2:hover .arrow-bottom svg path{
+    fill: #24c069;
+    transition: 0.25s;
+}
+
+.sec-2 .instructions-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sec-2 .instructions-container img{
+    max-width: 499px;
+    margin: 52px auto 0;
+    display: block;
+    width: 100%;
+}
+.sec-2 .instructions-container .img-desc{
+    margin: 20px auto 0;
+    display: block;
+    text-align: center;
+    letter-spacing: -0.5px;
+
+}
+.sec-2 .btn-container{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.sec-2 .instructions-container button{
+    display: inline-block;
+    background-color: #24c069;
+    min-width: 120px;
+    padding: 0 25px;
+    line-height: 50px;
+    height: 50px;
+    display: inline-block;
+    font-family: "GothamCond";
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: -0.5px;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+.sec-2 .instructions-container button:hover{
+    filter: brightness(106%);
+    transition: 0.3s;
+}
+.sec-2 .instructions-container .title{
+    color: #000;
+    font-size: 26px;
+    text-align: center;
+    font-family: "GothamCond_medium";
+    margin: 50px 0 10px;
+    letter-spacing: -0.7px;
+}
+.sec-2 .instructions-container p{
+    /* font-family: "GothamCond_medium"; */
+    font-weight: 100;
+    margin-top: 15px;
+    color: #17171a;
+    letter-spacing: -0.5px;
+}
+.fixed-button{
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0px -2px 5px 0px rgba(61, 61, 77, 0.1);
+    background: rgba(255, 255, 255, .95);
+    text-align: center;
+    z-index: 101;
+}
+.fixed-button button{
+    display: inline-block;
+    background-color: #24c069;
+    min-width: 120px;
+    padding: 0 25px;
+    line-height: 50px;
+    height: 50px;
+    display: inline-block;
+    font-family: "GothamCond";
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: -0.5px;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+.fixed-button button:hover{
+    filter: brightness(106%);
+    transition: 0.3s;
+}
+.blank{
+    width: 100%;
+    height: 70px;
+}
+
+.sec-2 .instructions-text{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    
+}

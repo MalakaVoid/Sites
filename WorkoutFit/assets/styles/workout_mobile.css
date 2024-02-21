@@ -1,0 +1,218 @@
+@media (min-width: 1050px){
+    .sec-1 {
+        height: 490px;
+        min-height: 490px;
+    }
+    .sec-1 > .card{
+        background-position: top -250px right;
+    }
+    .sec-1 .arrow-right{
+        left: calc(50% + 480px);
+        top: 50%;
+    }
+    .sec-1 .arrow-left{
+        right: calc(50% + 480px);
+        top: 50%;
+    }
+    .sec-1 .card .content{
+        max-width: 900px;
+    }
+    .sec-1 .card .content .text-content{
+        width: 460px;
+    }
+    .sec-1 .card .content .text-content h1{
+        line-height: 52px;
+        font-size: 46px;
+    }
+    .sec-2 .wrapper{
+        max-width: 1110px;
+        margin-top: 52px;
+    }
+    .sec-2 .wrapper .filters{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sec-2 .wrapper .filters .search-container{
+        width: 29%;
+    }
+    .sec-2 .wrapper .filters .search-container .input-search-container{
+        width: 67%;
+    }
+    .sec-2 .wrapper .mini-cards-container .mini-card{
+        margin: 10px 25px;
+    }
+    .sec-2 .wrapper .filters .options{
+        flex-direction: row;
+        position: relative;
+        width: 71%;
+        padding-left: 25px;
+    }
+    .sec-2 .wrapper .filters .options .my-goals{
+        width: 26.5%;
+    }
+    .sec-2 .wrapper .filters .options .my-equipment{
+        width: 37.2%;
+        margin-left: 4.8%;
+    }
+    .sec-2 .wrapper .filters .options .my-level{
+        width: 26.5%;
+        margin-left: 4.8%;
+    }
+    .sec-2 .wrapper .category-title{
+        padding: 0 25px;
+     }
+     .sec-2 .wrapper .settings-button{
+        display: none;
+     }
+}
+@media (max-width: 1049px){
+    .sec-1 {
+        height: 510px;
+        min-height: 510px;
+    }
+    .sec-1 > .card{
+        background-position: center;
+    }
+    .sec-1 .arrow-right{
+        /* left: calc(50% + 40%); */
+        left: calc(50% + 337px);
+        bottom: 28px;
+    }
+    .sec-1 .arrow-left{
+        /* right: calc(50% + 40%); */
+        right: calc(50% + 337px);
+        bottom: 28px;
+    }
+    .sec-1 .card .content{
+        max-width: 750px;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+    .sec-1 .card .content .text-content{
+        width: 330px;
+    }
+    .sec-1 .card .content .text-content h1{
+        line-height: 38px;
+        font-size: 32px;
+    }
+    .sec-2 .wrapper{
+        max-width: 740px;
+        margin-top: 52px;
+    }
+    .sec-2 .wrapper .filters{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sec-2 .wrapper .filters .search-container{
+        width: 29%;
+    }
+    .sec-2 .wrapper .filters .search-container .input-search-container{
+        width: 67%;
+    }
+    .sec-2 .wrapper .mini-cards-container .mini-card{
+        margin: 10px 25px;
+    }
+    .sec-2 .wrapper .filters .options{
+        flex-direction: row;
+        position: relative;
+        width: 71%;
+        padding-left: 25px;
+    }
+    .sec-2 .wrapper .filters .options .my-goals{
+        width: 26.5%;
+    }
+    .sec-2 .wrapper .filters .options .my-equipment{
+        width: 37.2%;
+        margin-left: 4.8%;
+    }
+    .sec-2 .wrapper .filters .options .my-level{
+        width: 26.5%;
+        margin-left: 4.8%;
+    }
+    .sec-2 .wrapper .category-title{
+        padding: 0 25px;
+     }
+     .sec-2 .wrapper .settings-button{
+        display: none;
+     }
+}
+@media (max-width: 770px){
+    .sec-1 {
+        height: 495px;
+        min-height: 495px;
+    }
+    .sec-1 > .card{
+        background-position: center;
+    }
+    .sec-1 .arrow-right{
+        /* left: calc(50% + 40%); */
+        left: calc(50% + 147px);
+        bottom: 28px;
+    }
+    .sec-1 .arrow-left{
+        /* right: calc(50% + 40%); */
+        right: calc(50% + 147px);
+        bottom: 28px;
+    }
+    .sec-1 .card .content{
+        max-width: 320px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .sec-1 .card .content .text-content{
+        display: none;
+    }
+    .sec-1 .card .content .text-content h1{
+        line-height: 38px;
+        font-size: 32px;
+    }
+    .sec-1 .mini-card{
+        margin-top: 10px;
+    }
+    .sec-2 .wrapper{
+        max-width: 320px;
+        margin-top: 28px;
+    }
+    .sec-2 .wrapper .filters{
+        flex-direction: column-reverse;
+        justify-content: none;
+    }
+    .sec-2 .wrapper .filters .search-container{
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
+    .sec-2 .wrapper .filters .search-container .input-search-container{
+        width: 100%;
+    }
+
+    .sec-2 .wrapper .mini-cards-container .mini-card{
+        margin: 10px 0;
+    }
+    .sec-2 .wrapper .filters .options{
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        gap: 28px;
+        margin-top: 28px;
+        padding-left: 0;
+        display: none;
+    }
+
+    .sec-2 .wrapper .filters .options .my-goals{
+        width: 195px;
+    }
+    .sec-2 .wrapper .filters .options .my-equipment{
+        width: 285px;
+        margin-left: 0;
+    }
+    .sec-2 .wrapper .filters .options .my-level{
+        width: 195px;
+        margin-left: 0;
+    }
+    .sec-2 .wrapper .category-title{
+       padding: 0;
+    }
+    .sec-2 .wrapper .settings-button{
+        display: block;
+     }
+}

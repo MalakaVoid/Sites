@@ -1,0 +1,383 @@
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/Gotham-Font/GothamBold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/Gotham-Font/GothamBoldItalic.ttf") format("truetype"); 
+    font-style: italic; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond_black"; 
+    src: url("../fonts/Gotham-Font/Gotham-Black.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond_light"; 
+    src: url("../fonts/Gotham-Font/Gotham-Light.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@media (min-width: 950px){
+    header{
+        padding: 0px 40px;
+    }
+    header .nav .menu-btn, .menu-close-btn{
+        background-color: none;
+        display: none;
+    }
+    footer .main-container{
+        flex-direction: row;
+        gap: 40px;
+    }
+    footer .social-media{
+        margin-left: auto;
+    }
+    footer .footer-container-2 .info p{
+        margin-left: auto;
+    }
+    header .logo .logo-svg{
+        width: 45px;
+        height: 45px;
+    }
+}
+@media (max-width: 950px){
+    header{
+        padding: 0px 40px;
+    }
+    header .logo .l3{
+        display: none;
+    }
+    header .nav .menu-btn, .menu-close-btn{
+        background-color: none;
+        display: none;
+    }
+    footer .main-container{
+        flex-direction: row;
+        gap: 40px;
+        justify-content: center;
+    }
+    footer .social-media{
+        margin-left: 0;
+    }
+    footer .footer-container-2 .info p{
+        margin-left: 0;
+    }
+    footer .footer-container-2 .info{
+        justify-content: center;
+    }
+}
+@media (max-width: 840px){
+    header .logo .l2{
+        display: none;
+    }
+    header .logo .logo-svg{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (max-width: 710px){
+    header{
+        padding: 0px 20px;
+    }
+    header .nav .hide-mob{
+        display: none;
+    }
+    header .menu-btn{
+        display: block;
+    }
+    header .menu-close-btn{
+        display: none;
+    }
+    header .nav .menu-btn{
+        background-color: none;
+        display: block;
+    }
+}
+
+header{
+    font-family: "GothamCond_light";
+    font-weight: 600;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    box-sizing: border-box;
+    z-index: 110;
+}
+header .header-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+header .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    color: white;
+    letter-spacing: 0px;
+    cursor: pointer;
+    font-family: "GothamCond_light"
+}
+header .logo .logo-svg{
+    display: flex;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+}
+header .logo .l2{
+    font-weight: 600;
+}
+header .logo .l2 span{
+    font-family: "GothamCond";
+    letter-spacing: -1px;
+}
+header .logo .l3{
+    border-left: solid white 1px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+header .nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+header .nav a{
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+header .nav a:hover{
+    color: #165aaa;
+    transition: 0.3s;
+}
+header .nav .btn{
+    font-family: "GothamCond";
+    display: block;
+    line-height: 40px;
+    background-color: #5b4dff;
+    padding: 0 17px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+header .nav .btn:hover{
+    filter: brightness(106%);
+    color: white;
+    transition: 0.3s;
+}
+header .nav .menu-btn svg{
+    width: 25px;
+    height: 19px;
+    background-color: none;
+    fill: white;
+}
+header .nav .menu-btn:hover svg{
+    fill: #165aaa;
+}
+header .nav .menu-close-btn svg{
+    width: 25px;
+    height: 19px;
+    background-color: none;
+    fill: white;
+}
+header .nav .menu-close-btn:hover svg{
+    fill: #165aaa;
+}
+#mobile-menu{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 109;
+    font-family: "GothamCond";
+}
+#mobile-menu .mobile-menu-container{
+    width: 100vw;
+    height: 100%;
+    background-color: #269956;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding-top: 110px;
+}
+#mobile-menu .mobile-menu-container a{
+    color: #eae3d9;
+    font-size: 27px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#mobile-menu .mobile-menu-container a:hover{
+    color: white;
+    transition: 0.3s;
+}
+/* SCROLLED HEADER */
+#header.scrolled{
+    box-shadow: 0px 1px 2px 0px rgba(61, 61, 77, 0.1);
+    background-color: rgba(255, 255, 255, 0.97);
+    position: fixed;
+    transition: 0.3s;
+}
+#header.scrolled .logo{
+    color: #17171a;
+}
+#header.scrolled .logo .l3{
+    color: #26bf66;
+    border-left-color: #e6e6eb;
+}
+#header.scrolled .logo-svg svg path{
+    fill: #26bf66;
+}
+#header.scrolled .nav a{
+    color: #17171a;
+}
+#header.scrolled .nav a:hover{
+    color: #165aaa;
+}
+#header.scrolled .nav .btn{
+    color: white;
+}
+#header.scrolled .nav .menu-btn svg{
+    fill: #17171a;
+}
+#header.scrolled .nav .menu-btn:hover svg{
+    fill: #165aaa;
+}
+/* ------------- */
+
+
+footer{
+    display: block;
+    width: 100%;
+}
+footer .footer-container-1{
+    background-color: #26bf66;
+    display: flex;
+    flex-direction: column;
+    padding: 58px 0 31px 0;
+    width: 100%;
+}
+footer .main-container{
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    gap: 40px;
+    color: white;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+footer .logo{
+    width: 160px;
+    font-family: "GothamCond";
+    opacity: 1;
+}
+footer .logo .logo-svg{
+    color: white;
+    display: block;
+    width: 55px;
+    height: 55px;
+    opacity: 1;
+}
+footer .logo .logo-svg svg{
+    width: inherit;
+    height: inherit;
+    fill: white;
+}
+
+footer .workout{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+footer .company{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+footer .more{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+footer .main-container > div > h3{
+    color: white;
+    width: 160px;
+    font-family: "GothamCond";
+}
+footer .main-container > div > a{
+    cursor: pointer;
+    font-weight: 800;
+    opacity: 0.6;
+}
+footer .main-container > div > a:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+footer .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+footer .social-media a{
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+footer .social-media svg{
+    width: inherit;
+    height: inherit;
+    fill: #eae3d9;
+}
+footer .social-media a:hover svg{
+    fill: white;
+}
+footer .footer-container-2{
+    width: 100%;
+    background-color: #269956;
+    padding: 20px 0 15px 0;
+    color: white;
+}
+footer .footer-container-2 .info{
+    max-width: 1150px;
+    font-size: 13px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+footer .footer-container-2 .info a{
+    cursor: pointer;
+    text-align: center;
+}
+footer .footer-container-2 .info a:hover{
+    text-decoration: underline;
+}
+footer .footer-container-2 .info p{
+    color: #eae3d9;
+    text-align: center;
+}

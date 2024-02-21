@@ -1,0 +1,765 @@
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/Gotham-Font/GothamBold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond"; 
+    src: url("../fonts/Gotham-Font/GothamBoldItalic.ttf") format("truetype"); 
+    font-style: italic; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond_black"; 
+    src: url("../fonts/Gotham-Font/Gotham-Black.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GothamCond_light"; 
+    src: url("../fonts/Gotham-Font/Gotham-Light.otf") format("truetype"); 
+    font-style: normal;
+    font-weight: normal;
+} 
+body{
+    font-family: "GothamCond_light";
+    overflow-x: hidden;
+}
+.sec-1 {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.sec-1 > .card{
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    min-height: inherit;
+    height: inherit;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+}
+.sec-1 > div .background-content{
+    position: absolute;
+    opacity: 0.9;
+    width: inherit;
+    min-height: inherit;
+    z-index: 2;
+}
+.sec-1 .card-1{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/02/beginner-full-body-transformation-gym-training-plan.jpg);
+    left: 0%;
+}
+.sec-1 .card-1 .background-content{
+    background-color: #5c69f2;
+}
+.sec-1 .card-2{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/03/total-body-toning-gym-workout-plan.jpg);
+    /* left: 100%; */
+    display: none;
+}
+.sec-1 .card-2 .background-content{
+    background-color: #7a45e5;
+}
+.sec-1 .card-3{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/05/engage-intermediate-full-body-crafting-plan.jpg);
+    /* left: 100%; */
+    display: none;
+}
+.sec-1 .card-3 .background-content{
+    background-color: #716bb3;
+}
+.sec-1 .card-4{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2023/09/newbie-orientationbeat-gymtimidation.webp);
+    /* left: 100%; */
+    display: none;
+}
+.sec-1 .card-4 .background-content{
+    background-color: #ffaa00;
+}
+.sec-1 .card-5{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2022/11/glute-envy-lowerbody-sculpting-plan.jpg);
+    /* left: 100%; */
+    display: none;
+}
+.sec-1 .card-5 .background-content{
+    background-color: #f27349;
+}
+.sec-1 .card-6{
+    background-image: url(https://workoutlabs.com/fit/wp-content/uploads/2017/11/home-power-intermediate-weight-loss-toning-plan.jpg);
+    /* left: 100%; */
+    display: none;
+}
+.sec-1 .card-6 .background-content{
+    background-color: #3f4449;
+}
+.sec-1 .card .content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 70%; */
+    margin: 80px auto 0 auto;
+    flex-direction: row;
+    z-index: 10;
+}
+.sec-1 .arrow-right{
+    transition: ease all .25s;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    z-index: 3;
+    padding: 5px;
+}
+.sec-1 .arrow-right svg path,
+.sec-1 .arrow-left svg path{
+    fill: rgba(255, 255, 255, 0.6);
+}
+.sec-1 .arrow-right:hover svg path,
+.sec-1 .arrow-left:hover svg path{
+    fill: #fff;
+    transition: 0.25s;
+}
+.sec-1 .arrow-right svg{
+    width: inherit;
+    height: inherit;
+}
+.sec-1 .arrow-left{
+    transition: ease all .25s;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    z-index: 3;
+    padding: 5px;
+}
+.sec-1 .arrow-left svg{
+    width: inherit;
+    height: inherit;
+    transform: rotate(180deg);
+}
+.sec-1 .card .content .text-content{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.sec-1 .card .content .text-content h1{
+    font-family: "GothamCond_black";
+    color: white;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: -1px;
+}
+.sec-1 .card .content .text-content .desc{
+    margin-top: 17px;
+    color: white;
+    font-size: 17px;
+    line-height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.sec-1 .card .content .text-content .btn{
+    font-family: "GothamCond";
+    display: inline-flex;
+    margin-top: 17px;
+    padding: 0px 25px;
+    line-height: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #30BF6C;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+.sec-1 .card .content .text-content .btn:hover{
+    filter: brightness(106%);
+    transition: 0.3s;
+}
+.sec-1 .dots{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    justify-content: center;
+    gap: 10px;
+    opacity: 1;
+    z-index: 10;
+}
+.sec-1 .dots .owl-dot{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    transition: 0.25s;
+}
+.sec-1 .dots .active{
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.25s;
+}
+.sec-1 .dots .owl-dot:hover{
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.25s;
+}
+.mini-card{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 320px;
+    min-width: 320px;
+    min-height: 320px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.mini-card > img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+.mini-card .raiting{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    line-height: 18px;
+    transition: all 0.25s ease;
+}
+.mini-card .raiting .t{
+    font-size: 16px;
+    font-family: "GothamCond";
+}
+.mini-card .raiting .t img{
+    display: inline;
+    width: 16px;
+}
+.mini-card .raiting .b{
+    opacity: 0.75;
+    font-size: 12px;
+}
+.mini-card .title{
+    font-family: "GothamCond_black";
+    color: #fff;
+    font-size: 26px;
+    padding: 0 30px;
+    margin: 98px auto 0;
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+.mini-card .attention-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.25s ease;
+}
+.mini-card .attention-container .attention{
+    background-color: #30BF6C;
+    color: #fff;
+    font-size: 12px;
+    font-family: "GothamCond";
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 4px 9px;
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+.mini-card .attention-container .attention.red{
+    background-color: #ff5959;
+}
+.mini-card .attention-container .attention.blue{
+    background-color: #5c5ce6;
+}
+.mini-card .type{
+    font-family: "GothamCond";
+    position: absolute;
+    color: #fff;
+    opacity: 0.65;
+    font-size: 13px;
+    bottom: 25px;
+    left: 30px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+.mini-card .duration{
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    font-family: "GothamCond_black";
+    color: #fff;
+    opacity: 0.65;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    transition: all 0.25s ease;
+}
+.mini-card .duration .dur{
+    font-size: 28px;
+    display: block;
+    font-weight: 900;
+}
+.mini-card .duration .dur-type{
+    display: block;
+}
+.mini-card:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.mini-card:hover .title{
+    font-size: 19px;
+    margin-top: 25px;
+}
+.mini-card:hover .raiting{
+    display: none;
+}
+.mini-card:hover .attention-container{
+    display: none;
+}
+.mini-card:hover .type{
+    display: none;
+}
+.mini-card:hover .duration{
+    display: none;
+}
+.mini-card .desc{
+    /* margin-top: 4px; */
+    font-weight: 600;
+    opacity: 0;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 30px;
+    line-height: 22px;
+    /* letter-spacing: -0.5px; */
+    max-height: 136px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all 0.25s ease;
+}
+.mini-card:hover .desc{
+    opacity: 1;
+
+}
+.mini-card .stats-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+    transition: all 0.25s ease;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+}
+.mini-card .stats-container .stats{
+    /* font-family: "GothamCond"; */
+    font-weight: bold;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 5px;
+    line-height: 17px;
+}
+.mini-card .stats-container .stats span{
+    font-size: 15px;
+    color: #ffd600;
+}
+.mini-card .btn-container{
+    text-align: center;
+}
+.mini-card .btn{
+    font-family: "GothamCond";
+    display: inline-flex;
+    margin-top: 10px;
+    padding: 0px 25px;
+    line-height: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #30BF6C;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+.mini-card .btn:hover{
+    filter: brightness(106%);
+    transition: 0.3s;
+}
+.mini-card:hover .stats-container{
+    opacity: 1;
+}
+.sec-2{
+    display: block;
+    width: 100%;
+}
+.sec-2 .wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+.sec-2 .wrapper .filters .options{
+    box-sizing: border-box;
+    display: flex;
+    
+}
+.sec-2 .wrapper .filters .options .my-goals,
+.sec-2 .wrapper .filters .options .my-equipment,
+.sec-2 .wrapper .filters .options .my-level{
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+.sec-2 .wrapper .filters .options .my-goals .container,
+.sec-2 .wrapper .filters .options .my-equipment .container,
+.sec-2 .wrapper .filters .options .my-level .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: solid 1px #17171a30;
+    cursor: pointer;
+}
+
+.sec-2 .wrapper .filters .options .text{
+    line-height: 33px;
+    font-family: "GothamCond_black";
+    font-size: 22px;
+    color: #17171a;
+    margin-top: 4px;
+    width: 90%;
+}
+.sec-2  .filters .arrow-down{
+    width: 5px;
+    height: 5px;
+    transform: rotate(90deg);
+}
+.sec-2  .filters .arrow-down svg path{
+    fill: #17171a30;
+}
+.sec-2 .wrapper .filters .options .dropdown{
+    position: absolute;
+    display: none;
+    min-width: 110%;
+    /* min-width: 110%; */
+    top: 37px;
+    left: 0;
+    margin-left: -5%;
+    z-index: 10;
+    /* height: 232px; */
+    /* background-color: red; */
+}
+.sec-2 .wrapper .filters .options .dropdown .blank{
+    width: 100%;
+    height: 40px;
+}
+.sec-2 .wrapper .filters .options ul{
+    position: relative;
+
+    /* margin-top: 40px; */
+    min-width: 100%;
+    padding: 8px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 5px 8px 0px rgba(61, 61, 77, 0.2);
+    list-style-type: none;
+    /* height: 200px; */
+    /* max-width: 260px; */
+    /* transition: all 0.25 ease; */
+    box-sizing: border-box;
+    /* pointer-events: none; */
+}
+.sec-2 .wrapper .filters .options li{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    position: relative;
+    color: #17171a98;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "GothamCond";
+    box-sizing: border-box;
+}
+.sec-2 .wrapper .filters .options li .toggle-container{
+    width: 36px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 9px;
+}
+.sec-2 .wrapper .filters .options li input{
+    display: none;
+}
+.sec-2 .wrapper .filters .options li .toggle-back{
+    width: 36px;
+    height: 14px;
+    background-color: #c2c2cc;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -7px;
+    z-index: 1;
+    border-radius: 7px;
+    transition: 0.25s;
+}
+.sec-2 .wrapper .filters .options li .toggle-circle{
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.19);
+    transition: 0.25s;
+}
+.sec-2 .wrapper .filters .options li .toggle-checked .toggle-back{
+    transition: 0.25s;
+    background-color: #ace6c4;
+    opacity: 0.4;
+}
+.sec-2 .wrapper .filters .options li .toggle-checked .toggle-circle{
+    background-color: #30bf6c;
+    transition: 0.25s;
+    left: 48%;
+}
+.sec-2 .wrapper .filters .options li label{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: #30BF6C; */
+    z-index: 10;
+}
+.sec-2 .wrapper .filters .options li span{
+    display: block;
+    margin-left: 12px;
+}
+.sec-2 .wrapper .filters{
+    width: 100%;
+    display: flex;
+}
+.sec-2 .wrapper .filters .search-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.sec-2 .wrapper .filters .search-container .input-search-container{
+    height: 52px;
+    position: relative;
+}
+.sec-2 .wrapper .filters .search-container .input-search-container::after{
+    content: "";
+    position: absolute;
+    visibility: visible;
+    left: 0;
+    width: 100%;
+    background-color: #6045e6;
+    height: 2px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    transform: scale(0);
+    bottom: 15px;
+}
+.sec-2 .wrapper .filters .search-container svg{
+    width: 40px;
+    height: 40px;
+    fill: #919191;
+    margin-top: 4px;
+}
+.sec-2 .wrapper .filters .search-container input{
+    padding: 0;
+    position: relative;
+    line-height: 33px;
+    width: 100%;
+    height: 33px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #17171a;
+    border-bottom: 1px solid #e5e5e9;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-weight: 400;
+    /* font-family: "GothamCond"; */
+}
+.sec-2 .wrapper .filters .search-container input::placeholder{
+    color: #919191;
+    font-size: 18px;
+}
+
+.sec-2 .wrapper .filters .search-container .focused:after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+.sec-2 .wrapper .category-title{
+    width: 100%;
+    color: #17171a;
+    font-family: "GothamCond_black";
+    font-size: 32px;
+    margin-top: 50px;
+    letter-spacing: -0.5px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.sec-2 .wrapper .settings-button{
+    padding-left: 20px;
+    margin-top: 12px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+.sec-2 .wrapper .settings-button img{
+    width: inherit;
+    height: inherit;
+}
+.sec-2 .wrapper .category-title .amount{
+    color: #cfcfcf;
+    font-family: "GothamCond";
+    margin-left: 15px;
+    font-weight: 200;
+}
+.sec-2 .wrapper .mini-cards-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: 0.3s;
+}
+.sec-2 .wrapper .small-trains-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    box-sizing: border-box;
+    gap: 5px;
+}
+.sec-2 .wrapper .small-trains-container .small-card{
+    width: 100%;
+    max-width: 690px;
+    padding: 13px 20px;
+    box-sizing: border-box;
+    letter-spacing: -0.5px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.sec-2 .wrapper .small-trains-container .small-card.green{
+    background-color: #30bf6c;
+    box-shadow: 0px 3px 6px 0px rgb(48 191 108 / 20%);
+}
+.sec-2 .wrapper .small-trains-container .small-card.blue{
+    background-color: #5c5ce6;
+    box-shadow: 0px 3px 6px 0px rgb(92 92 230 / 20%);
+}
+.sec-2 .wrapper .small-trains-container .small-card:hover{
+    transform: scale(1.025);
+    transition: 0.25s;
+}
+.sec-2 .wrapper .small-trains-container .small-card .title{
+    font-family: "GothamCond_black";
+    font-size: 22px;
+    line-height: 22px;
+    color: #fff;
+    letter-spacing: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec-2 .wrapper .small-trains-container .small-card .title span{
+    font-size: 16px;
+    display: block;
+    color: #fff;
+    font-family: "GothamCond";
+    line-height: 22px;
+    text-align: right;
+}
+.sec-2 .wrapper .small-trains-container .small-card .desc{
+    margin-top: 6px;
+    font-family: "GothamCond";
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0;
+
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.5;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sec-2 .wrapper .small-trains-container .small-card .title span{
+    font-size: 16px;
+    display: block;
+    font-family: "GothamCond";
+    text-align: right;
+}
+
+
+
+
+
+
+/* USELESS */
+body .as123-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 500px;
+    padding-bottom: 200px;
+}
+body .as123{
+    font-family: "GothamCond_black";
+    font-size: 64px;
+    color: black;
+}
+body .as123:hover{
+    color: #30BF6C;
+    transition: 0.3s;
+}
