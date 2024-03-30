@@ -28,5 +28,5 @@
 ### BGCLUB
 <img src="https://github.com/MalakaVoid/Sites/assets/90262550/6627a9b2-a4ec-4f28-b832-37e4ad2b4e5f" />
 <img src="https://github.com/MalakaVoid/Sites/assets/90262550/a6248a73-bb24-44bd-923a-26f5ebb41c16" />
-<img src="https://github.com/MalakaVoid/Sites/assets/90262550/8380ded7-2219-4b41-a903-1b275cd60aa8: />
+<img src="https://github.com/MalakaVoid/Sites/assets/90262550/8380ded7-2219-4b41-a903-1b275cd60aa8" />
 <img src="https://github.com/MalakaVoid/Sites/assets/90262550/6c38841a-65d0-45c7-8e59-c538f1123cad" />
