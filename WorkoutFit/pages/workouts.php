@@ -473,8 +473,7 @@
                 Training Plans <span class="amount">20</span>
             </div>
             <div class="mini-cards-container mini_card_week">
-                <?php include("../includes/workout_cards_ajax.php");?>
-                <!-- <a href="workout_card.php" class="mini-card mini-card-1">
+                <a href="workout_card.php" class="mini-card mini-card-1">
                     <img src="/assets/images/workout_cards/beginner-full-body-transformation-gym-training-plan.jpg">
                     <div class="raiting">
                         <span class="t">97%
@@ -657,7 +656,7 @@
                         <div class="stats">Started by <span>14</span> users this month</div>
                         <div class="btn-container"><div class="btn">VIEW</div></div>
                     </div>
-                </a> -->
+                </a>
             </div>
             <div class="category-title">
                 Workout Packs & Single Workouts <span class="amount">26</span>
@@ -788,10 +787,10 @@
         </div>
     </section>
 
-    <div class="as123-cont">
+    <!-- <div class="as123-cont">
         <a class="as123" href="https://www.leagueoflegends.com/ru-ru/">BECOME FAT</a>
         <img src="../assets/images/tmp/chipi-chipi-chapa-chapa.gif">
-    </div>
+    </div> -->
 
     <script src="../assets/scripts/workout_change_prev_card.js"></script>
     <script src="../assets/scripts/workout_options_click.js"></script>

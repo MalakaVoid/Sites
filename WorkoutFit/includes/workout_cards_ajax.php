@@ -1,20 +1,18 @@
 <?php
     include("database_connection.php");
-
-    if (!isset($_POST['a']) or $_POST['a'] == null){
+    var_dump($_POST["options"]);
+    if (!isset($_POST['options']) or $_POST['options'] == null){
         $query = "SELECT * FROM workout_cards;";
-    } 
-    elseif (isset($_POST['a']) and $_POST['a'] == 1){
-        $query = "SELECT * FROM workout_cards LIMIT 1;";
-    }
-    elseif (isset($_POST['a']) and $_POST['a'] == 2){
-        $query = "SELECT * FROM workout_cards LIMIT 2;";
     }
     else{
-        echo "NOTHING FOUND";
+        $a =1;
     }
 
     $result = mysqli_query($conn, $query);
+
+
+
+function create_elements($result){
     while ($card = mysqli_fetch_array($result)): ?>
 <a class="mini-card">
     <img src="../assets/images/workout_cards/<?php echo $card['img_src'];?>">
@@ -40,4 +38,6 @@
     </div>
 </a>
 
-<?php endwhile;?>
+<?php endwhile;
+}
+?>
