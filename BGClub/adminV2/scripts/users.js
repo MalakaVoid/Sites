@@ -40,7 +40,7 @@ $(document).ready(function(){
             let input = $(parent).find('input[name="id"]');
     
             let deleteUserId = $(input).val();
-            console.log(deleteUserId);
+            deleteUser(deleteUserId);
     
         });
     
@@ -61,10 +61,7 @@ $(document).ready(function(){
                 currentEditCard[input.name] = input.value;
             }
     
-            console.log(`Data to send:`);
-            console.log(currentEditCard);
-    
-            showMessage("Успешно изменено", currentEditCard, "success");
+            editUser(currentEditCard);
     
             clearPreviousCard(currentEditCard); // change to ajax response
     
@@ -75,7 +72,7 @@ $(document).ready(function(){
         message = $($('#message_template').html());
 
         $(message).find('.message__title').empty().text(messageTitle);
-        $(message).find('.message__description').empty().text(messageText);
+        $(message).find('.message__description').empty().append(messageText);
 
         switch (messageType) {
             case 'error':
@@ -110,9 +107,26 @@ $(document).ready(function(){
         .find('input')
         .attr('disabled', true);
 
-        console.log(currentEditCard);
+        // console.log(currentEditCard);
     }
 
+    // CREATE CARD
+    function createUserCard(userData){
+        card = $($("#card_template").html());
+        $(card).find('.card__title').empty().text(`USER ${userData.id}`);
+        $(card).find('input[name="id"]').val(userData.id);
+        $(card).find('input[name="login"]').val(userData.login);
+        $(card).find('input[name="password"]').val(userData.password);
+        $(card).find('input[name="name"]').val(userData.name);
+        $(card).find('input[name="surname"]').val(userData.surname);
+        $(card).find('input[name="email"]').val(userData.email);
+        $(card).find('input[name="admin"]').prop('checked', userData.admin);
+        $('.table_items').append(card);
+
+        cardHooks();
+    }
+
+// AJAX---------------------------------------------------------------------------
     // CREATION OF TABLE
     function getAllUsers(){
         $.ajax({
@@ -123,18 +137,21 @@ $(document).ready(function(){
             success: function (response) {
                 for (let user of response.data) {
 
-                    card = $($("#card_template").html());
-                    $(card).find('.card__title').empty().text(`USER ${user['user_id']}`);
-                    $(card).find('input[name="id"]').val(user['user_id']);
-                    $(card).find('input[name="login"]').val(user['login']);
-                    $(card).find('input[name="password"]').val(user['password']);
-                    $(card).find('input[name="name"]').val(user['first_name']);
-                    $(card).find('input[name="surname"]').val(user['last_name']);
-                    $(card).find('input[name="email"]').val(user['email']);
-                    $(card).find('input[name="admin"]').prop('checked', !!parseInt(user['is_admin']));
-                    $('.table_items').append(card);
+                    userData = {
+                        id: user['user_id'],
+                        login: user['login'],
+                        password: user['password'],
+                        name: user['first_name'],
+                        surname: user['last_name'],
+                        email: user['email'],
+                        admin:!!parseInt(user['is_admin'])
+                    }
+
+                    createUserCard(userData);
                 }
-                cardHooks();
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(textStatus, errorThrown);
             }
         });
     }
@@ -147,10 +164,145 @@ $(document).ready(function(){
             data: {type: 'ADD_USER', data: userData},
             success: function (response) {
                 console.log(response);
+                showMessage(
+                    "Добавление пользователя",
+                    response.message,
+                   response.status_code == 200?'success': 'error'
+                );
+                
+                if (response.status_code != 200){
+                    return;
+                }
+
+                let user = response.data;
+                let userData = {
+                    id: user['user_id'],
+                    login: user['login'],
+                    password: user['password'],
+                    name: user['first_name'],
+                    surname: user['last_name'],
+                    email: user['email'],
+                    admin:!!parseInt(user['is_admin'])
+                }
+
+                createUserCard(userData);
+                $('.table_items__card_add input[type="text"]').val("");
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(textStatus, errorThrown);
             }
         });
     }
 
+    function deleteUser(userId){
+
+        $.ajax({
+            type: "POST",
+            url: "/adminV2/handlers/users_handlers.php",
+            dataType: "json",
+            data: {type: 'DELETE_USER', data: userId},
+            success: function (response) {
+                if (response.status_code != 200){
+                    showMessage(
+                        "Удаление пользователя",
+                        response.message,
+                        response.status_code == 200?'success': 'error'
+                    );
+                    return;
+                }
+
+                let user = response.data;
+                let userData = {
+                    id: user['user_id'],
+                    login: user['login'],
+                    password: user['password'],
+                    name: user['first_name'],
+                    surname: user['last_name'],
+                    email: user['email'],
+                    admin:!!parseInt(user['is_admin'])
+                }
+
+                showMessage(
+                    "Удаление пользователя",
+
+                    `${response.message } <br>
+                    id: ${userData.id}<br>
+                    login: ${userData.login}<br>
+                    password: ${userData.password}<br>
+                    name: ${userData.name}<br>
+                    surname: ${userData.surname}<br>
+                    email: ${userData.email}<br>
+                    <span class="message__date">${response.date}</span>
+                    `,
+                    
+                    response.status_code == 200?'success': 'error'
+                );
+
+                $(`input[name="id"][value="${userData.id}"]`).parents('.table_items__card').remove();
+
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(textStatus, errorThrown);
+            }
+        });
+    }
+
+    function editUser(userData){
+
+        $.ajax({
+            type: "POST",
+            url: "/adminV2/handlers/users_handlers.php",
+            dataType: "json",
+            data: {type: 'EDIT_USER', data: userData},
+            success: function (response) {
+
+                console.log(response);
+                if (response.status_code != 200){
+                    showMessage(
+                        "Редактирование пользователя",
+                        response.message,
+                        response.status_code == 200?'success': 'error'
+                    );
+                    return;
+                }
+
+                let user = response.data;
+                let userData = {
+                    id: user['user_id'],
+                    login: user['login'],
+                    password: user['password'],
+                    name: user['first_name'],
+                    surname: user['last_name'],
+                    email: user['email'],
+                    admin:!!parseInt(user['is_admin'])
+                }
+
+                showMessage(
+                    "Редактирование пользователя",
+
+                    `${response.message } <br>
+                    id: ${userData.id}<br>
+                    login: ${userData.login}<br>
+                    password: ${userData.password}<br>
+                    name: ${userData.name}<br>
+                    surname: ${userData.surname}<br>
+                    email: ${userData.email}<br>
+                    <span class="message__date">${response.date}</span>
+                    `,
+                    
+                    response.status_code == 200?'success': 'error'
+                );
+
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(textStatus, errorThrown);
+            }
+        });
+
+    }
+// AJAX-END---------------------------------------------------------------------------
+
+// MAIN-CODE----------------------------------------------------------------
     // ADD NEW USER BUTTON PROCCESSING
     $('.table_items__card_add')
     .find('.card__button_add_user')
@@ -186,7 +338,8 @@ $(document).ready(function(){
             newUserData[input.name] = input.value;
         }
 
-        console.log(newUserData);
+        addNewUser(newUserData);
+
 
     });
 
@@ -206,4 +359,6 @@ $(document).ready(function(){
     getAllUsers();
     cardHooks();
 
+
+// MAIN-CODE-END----------------------------------------------------------------
 });
