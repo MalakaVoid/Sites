@@ -41,8 +41,56 @@ function cardHooks(){
         let parent = $(this).parents('.table_items__card');
         let input = $(parent).find('input[name="id"]');
 
-        let deleteUserId = $(input).val();
-        // deleteUser(deleteUserId);
+        let deleteProductId = $(input).val();
+        deleteProduct(deleteProductId);
+
+    });
+
+    // PREVIEW IMAGE
+    $('.table_items__card')
+    .find('input[name="image"]').unbind('change');
+
+    $('.table_items__card')
+    .find('input[name="image"]')
+    .change(function(){
+        let form = $(this).parents('form');
+        let file = $(form).find('input[name="image"]')[0].files[0];
+        $(form).find('.card__image_preview').find('img')[0].src = window.URL.createObjectURL(file);
+
+
+    });
+
+    // SAVE EDIT BUTTON PROCESSOR
+    $('.table_items__card')
+    .find('.card__button_save').unbind('click');
+    
+    $('.table_items__card')
+    .find('.card__button_save')
+    .click(function(){
+
+        let form = $(this).parents('form');
+        let formData = new FormData(form[0]);
+        let image = $(this).parents('form').find('input[name="image"]')[0].files[0];
+
+        if (image == undefined || image.name == ''){
+            let imagePath = $(this).parents('form').find('.card__image').find('img').prop('src');
+            formData.set('image', imagePath);
+        } else{
+            formData.set('image', image);
+        }
+
+        for (let [name, value] of formData.entries()) {
+            if (value == ''){
+                showMessage(
+                    "Изменение товара",
+                    "Заполните все поля!",
+                    "error"
+                );
+                return;
+            }
+        }
+
+        editProduct(formData);
 
     });
 }
@@ -50,15 +98,15 @@ function cardHooks(){
 function clearPreviousCard(dataCard){
     let card = $('.table_items__card_edit');
     $(card).find('.card__image').find('img').prop('src', dataCard.image);
-    $(card).find('input[name="image"]').val("");
-    $(card).find('input[name="title"]').val(dataCard.title);
-    $(card).find('input[name="description"]').val(dataCard.description);
-    $(card).find('input[name="price"]').val(dataCard.price);
-    $(card).find('input[name="category"]').val(dataCard.category);
+    $(card).find('[name="image"]').val("");
+    $(card).find('[name="title"]').val(dataCard.title);
+    $(card).find('[name="description"]').val(dataCard.description);
+    $(card).find('[name="price"]').val(dataCard.price);
+    $(card).find('[name="category"]').val(dataCard.category);
 
     $(card)
     .removeClass("table_items__card_edit")
-    .find('input')
+    .find('[name]')
     .attr('disabled', true);
 
     // console.log(currentEditCard);
@@ -75,7 +123,7 @@ function createProductCard(productData){
     $(card).find('[name="price"]').val(productData.price);
     $(card).find('[name="category"]').val(productData.category);
     $('.table_items').append(card);
-    console.log(productData);
+    // console.log(productData);
 
     cardHooks();
 }
@@ -140,7 +188,125 @@ function addNewProduct(productData){
                 }
 
                 createProductCard(productData);
-                $('.table_items__card_add').find('[name]').val("");
+                $('.table_items__card_add').find('[name]').val('');
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log(textStatus, errorThrown);
+        }
+    });
+}
+
+function deleteProduct(productId){
+    console.log(productId);
+    $.ajax({
+        type: "POST",
+        url: "/adminV2/handlers/products_handlers.php",
+        dataType: "json",
+        data: {type: 'DELETE_PRODUCT', data: productId},
+        success: function (response) {
+            if (response.status_code != 200){
+                showMessage(
+                    "Удаление товара",
+                    response.message,
+                    response.status_code == 200?'success': 'error'
+                );
+                return;
+            }
+
+            let product = response.data;
+            let productData = {
+                id: product['item_id'],
+                image: product['img'],
+                title: product['title'],
+                description: product['description'],
+                price: product['price'],
+                category: product['category'],
+            }
+
+            showMessage(
+                "Удаление товара",
+
+                `${response.message } <br>
+                id: ${productData.id}<br>
+                image: ${productData.image}<br>
+                title: ${productData.title}<br>
+                description: ${productData.description}<br>
+                price: ${productData.price}<br>
+                category: ${productData.category}<br>
+                <span class="message__date">${response.date}</span>
+                `,
+                
+                response.status_code == 200?'success': 'error'
+            );
+
+            $(`input[name="id"][value="${productData.id}"]`).parents('.table_items__card').remove();
+
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log(textStatus, errorThrown);
+        }
+    });
+}
+
+function editProduct(productData){
+    productData.append('type', 'EDIT_PRODUCT');
+    $.ajax({
+        type: "POST",
+        url: "/adminV2/handlers/products_handlers.php",
+        dataType: "json",
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: productData,
+        success: function (response) {
+            
+            if (response.status_code != 200){
+                showMessage(
+                    "Изменение товара",
+                    response.message,
+                    response.status_code == 200?'success': 'error'
+                );
+                return;
+            }
+
+            let product = response.data;
+            let productData = {
+                id: product['item_id'],
+                image: product['img'],
+                title: product['title'],
+                description: product['description'],
+                price: product['price'],
+                category: product['category'],
+            }
+
+            showMessage(
+                "Изменение товара",
+
+                `${response.message } <br>
+                id: ${productData.id}<br>
+                image: ${productData.image}<br>
+                title: ${productData.title}<br>
+                description: ${productData.description}<br>
+                price: ${productData.price}<br>
+                category: ${productData.category}<br>
+                <span class="message__date">${response.date}</span>
+                `,
+                
+                response.status_code == 200?'success': 'error'
+            );
+            
+            let card = $(`input[name="id"][value="${productData.id}"]`).parents('form');
+            
+            $(card).find('.card__image').find('img').prop('src', productData.image);
+            $(card).find('[name="id"]').val(productData.id);
+            $(card).find('[name="title"]').val(productData.title);
+            $(card).find('[name="description"]').val(productData.description);
+            $(card).find('[name="price"]').val(productData.price);
+            $(card).find('[name="category"]').val(productData.category);
+            $(card)
+            .removeClass("table_items__card_edit")
+            .find('[name]')
+            .attr('disabled', true);
         },
         error: function(jqXHR, textStatus, errorThrown){
             console.log(textStatus, errorThrown);
@@ -186,6 +352,7 @@ let currentEditCard = {
 $(document).ready(function() {
     getAllProductCards();
     cardHooks();
+    
 
     $('.table_items__card_add')
     .find('.card__button_add_user')

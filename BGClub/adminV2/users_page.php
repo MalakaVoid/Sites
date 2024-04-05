@@ -87,5 +87,6 @@
       </script>
     <script src="./scripts/jq.js"></script>
     <script src="./scripts/users.js"></script>
+    <script src="./scripts/screenResize.js"></script>
 </body>
 </html>

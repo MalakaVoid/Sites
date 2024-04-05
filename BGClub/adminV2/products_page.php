@@ -1,16 +1,29 @@
+<?php
+    session_start();
+    if (isset($_SESSION["user"])){
+        if ($_SESSION["user"]['is_admin']==0){
+            header('Location: /');
+            exit;
+        }
+    }
+    else{
+        header('Location: ../authorization.php');
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main admin page</title>
+    <title>Products page</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- <?php
+    <?php
         include("header.php");
-    ?> -->
+    ?>
     <main>
         <div class="table_items table_items_prdoucts">
             <form class="table_items__card table_items__card_add">
@@ -29,7 +42,7 @@
                     <div class="card__name">Описание</div>
                     <div class="card__value"><input type="text" name="description" value=""></div>
                     <div class="card__name">Цена</div>
-                    <div class="card__value"><input type="text" name="price" value=""></div>
+                    <div class="card__value"><input type="number" name="price" value=""></div>
                     <div class="card__name">Категория</div>
                     <div class="card__value"><input type="text" name="category" value=""></div>
                 </div>
@@ -38,37 +51,9 @@
                 </div>
             </form>
 
-            <!-- <form class="table_items__card">
-                <h3 class="card__title">Товар #1</h3>
-                <div class="card__info">
-                    <input type="hidden" name="id" disabled value="1" />
-                    <div class="card__name">Картинка</div>
-                    <label class="card__image">
-                        <input type='file' class='img-file' disabled name='image'>
-                        <div class='card__image_preview'>
-                            <img src='../images/products/1.png'>
-                        </div>
-                        <div class="card__button card__image_button">Изменить</div>
-                    </label>
-                    <div class="card__name">Название</div>
-                    <div class="card__value"><input disabled type="text" name="title" value="ДРУГ ЛЕСНИКА"></div>
-                    <div class="card__name">Описание</div>
-                    <div class="card__value"><textarea disabled name="description" rows="8">Бургер с сочной котлетой из мраморной говядины, сыром Чеддер, криспи луком, спелыми помидорами, маринованными опятами, листьями салата латук с соусом ранч с приятным чесночным вкусом</textarea></div>
-                    <div class="card__name">Цена</div>
-                    <div class="card__value"><input disabled type="number" name="price" value="600"></div>
-                    <div class="card__name">Категория</div>
-                    <div class="card__value"><input disabled type="text" name="category" value="Бургеры"></div>
-                </div>
-                <div class="card__buttons">
-                    <button type="button" class="card__button card__button_save">СОХРАНИТЬ</button>
-                    <button type="button" class="card__button card__button_edit"><img src="./images/edit.png"></button>
-                    <button type="button" class="card__button card__button_delete"><img src="./images/bin.png"></button>
-                </div>
-            </form> -->
-
         </div>
         <div class="messages">
-
+            
         </div>
     </main>
 
@@ -109,5 +94,6 @@
       </script>
     <script src="./scripts/jq.js"></script>
     <script src="./scripts/products.js"></script>
+    <script src="./scripts/screenResize.js"></script>
 </body>
 </html>

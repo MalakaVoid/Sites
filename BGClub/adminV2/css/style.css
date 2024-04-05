@@ -71,11 +71,27 @@ header .menu.active{
 /* NOTIFICATION MESSAGES */
 
 .messages{
-    flex-basis: 25%;
+    height: calc(100% - 100px);
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    overflow-y: scroll;
+
+    padding-right: 10px;
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+.messages::-webkit-scrollbar{
+    width: 5px;
+    background-color: black;
+}
+.messages::-webkit-scrollbar-thumb{
+    background-color: white;
+}
+
 .messages__message{
     display: none;
     width: 100%;
