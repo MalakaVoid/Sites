@@ -32,58 +32,50 @@
         return $response;
     }
 
-    function get_user_by_login($link, $login){
-        $query = "SELECT * FROM users WHERE login = '$login'";
+    function getProductByTitle($link, $title){
+        $query = "SELECT item_id, title, description, is_visible, price, sale, img, c.name as category FROM items as i INNER JOIN category as c ON i.category = c.category_id WHERE title = '{$title}'";
         $result = mysqli_query($link, $query);
-        $user = mysqli_fetch_array($result);
-        return $user;
+        $product = mysqli_fetch_array($result);
+        return $product;
     }
 
-    function get_user_by_user_id($link, $user_id){
-        $query = "SELECT * FROM users WHERE user_id = '$user_id'";
-        $result = mysqli_query($link, $query);
-        $user = mysqli_fetch_array($result);
-        return $user;
-    }
+    function add_product($link, $response){
+        $title = $_POST['title'];
+        $description = $_POST['description'];
+        $price = $_POST['price'];
+        $category = $_POST['category'];
+        $sale = 0;
+        $is_visible = 0;
+        $file = $_FILES["image"];
 
-    function is_login_exist($link, $login){
-        $query = "SELECT * FROM users WHERE login = '$login'";
-        $result = mysqli_query($link, $query);
-        return (mysqli_num_rows($result) > 0);
-    }
+        $getMime = explode('.', $file['name']);
+        $mime = strtolower(end($getMime));
+        if ($mime == 'png') {
+            $target_dir = "../../images/products/";
+            $file = $_FILES["image"];
 
-    function add_user($link, $response, $user_data){
-        $login = $user_data['login'];
-        $password = $user_data['password'];
-        $first_name = $user_data['name'];
-        $last_name = $user_data['surname'];
-        $email = $user_data['email'];
-        if ($user_data['is_admin']){
-            $is_admin = 1;
-        } else{
-            $is_admin = 0;
-        }
+            $name_f = mt_rand(0, 10000) . $file['name'];
+            copy($file['tmp_name'], $target_dir . $name_f);
+            
+            $img =  "/images/products/".$name_f;
 
-        if (is_login_exist($link, $login)){
-            $response["status_code"] = 400;
-            $response["message"] = "Login already exists";
-            $response["data"] = null;
-
-            return $response;
-        }
-
-        $query = "INSERT INTO users (`login`, `password`, `first_name`, `last_name`, `email`, is_admin) 
-                VALUES ('{$login}', '{$password}', '{$first_name}', '{$last_name}', '{$email}', {$is_admin})";
-        $result_query = mysqli_query($link, $query);
-
-        if ($result_query){
-            $response["status_code"] = 200;
-            $response["message"] = "Пользователь {$login} успешно добавлен.";
-            $response["data"] = get_user_by_login($link, $login);
+            $query = "INSERT INTO items (title, description, price, category, sale, img, is_visible)
+                    VALUES ('{$title}', '{$description}', {$price}, {$category}, {$sale}, '{$img}', {$is_visible})";
+            $result_query = mysqli_query($link, $query);
+            if ($result_query){
+                $response["status_code"] = 200;
+                $response["message"] = "Товар успешно добавлен";
+                $response["data"] = getProductByTitle($link, $title);
+            }
+            else{
+                $response["status_code"] = 500;
+                $response["message"] = "Произошла ошибка при добавлении товара";
+                $response["data"] = null;
+            }
         }
         else{
-            $response["status_code"] = 500;
-            $response["message"] = "Database error";
+            $response["status_code"] = 400;
+            $response["message"] = "Необходимо изображение в формате PNG";
             $response["data"] = null;
         }
 
@@ -140,15 +132,14 @@
         
     }
 
-
     if ($_POST['type'] == 'GET_PRODUCTS'){
         $response = getProducts($link, $response);
     }
 
-    if ($_POST['type'] == 'ADD_USER'){
-        $response = add_user($link, $response, $_POST['data']);
+    if ($_POST['type'] == 'ADD_PRODUCT'){
+        $response = add_product($link, $response);
     }
-
+    
     if ($_POST['type'] == 'DELETE_USER'){
         $response = delete_user($link, $response, $_POST['data']);
     }
@@ -156,8 +147,6 @@
     if ($_POST['type'] == 'EDIT_USER'){
         $response = edit_user($link, $response, $_POST['data']);
     }
-
-
 
     echo json_encode($response);
 

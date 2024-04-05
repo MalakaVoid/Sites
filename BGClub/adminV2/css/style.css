@@ -191,7 +191,7 @@ header .menu.active{
 }
 .card__value > textarea,
 .card__value > textarea:disabled{
-    max-width: 100%;
+    resize: vertical;
     width: 100%;
     padding: 4px 10px;
     box-sizing: border-box;

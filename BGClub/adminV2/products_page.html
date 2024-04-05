@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php
+    <!-- <?php
         include("header.php");
-    ?>
+    ?> -->
     <main>
         <div class="table_items table_items_prdoucts">
-            <div class="table_items__card table_items__card_add">
+            <form class="table_items__card table_items__card_add">
                 <h3 class="card__title">ДОБАВИТЬ</h3>
                 <div class="card__info">
                     <div class="card__name">Картинка</div>
@@ -25,18 +25,18 @@
                         <div class="card__button card__image_button">Изменить</div>
                     </label>
                     <div class="card__name">Название</div>
-                    <div class="card__value"><input  type="text" name="login" value=""></div>
+                    <div class="card__value"><input  type="text" name="title" value=""></div>
                     <div class="card__name">Описание</div>
-                    <div class="card__value"><input type="text" name="password" value=""></div>
+                    <div class="card__value"><input type="text" name="description" value=""></div>
                     <div class="card__name">Цена</div>
-                    <div class="card__value"><input type="text" name="name" value=""></div>
+                    <div class="card__value"><input type="text" name="price" value=""></div>
                     <div class="card__name">Категория</div>
-                    <div class="card__value"><input type="text" name="surname" value=""></div>
+                    <div class="card__value"><input type="text" name="category" value=""></div>
                 </div>
                 <div class="card__buttons">
-                    <button class="card__button card__button_add_user">ДОБАВИТЬ</button>
+                    <button type="button" class="card__button card__button_add_user">ДОБАВИТЬ</button>
                 </div>
-            </div>
+            </form>
 
             <!-- <form class="table_items__card">
                 <h3 class="card__title">Товар #1</h3>

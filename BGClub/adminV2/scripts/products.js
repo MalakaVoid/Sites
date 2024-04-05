@@ -7,9 +7,6 @@ function cardHooks(){
     .find('.card__button_edit')
     .click(function(){
 
-        // console.log($(this).parents('.table_items__card'));
-        console.log('clicked');
-
         let isDoubleClick = $(this).parents('.table_items__card').hasClass("table_items__card_edit");
         clearPreviousCard(currentEditCard);
 
@@ -78,10 +75,11 @@ function createProductCard(productData){
     $(card).find('[name="price"]').val(productData.price);
     $(card).find('[name="category"]').val(productData.category);
     $('.table_items').append(card);
+    console.log(productData);
 
     cardHooks();
 }
-
+// AJAX ----------------------------------------------------------------
 function getAllProductCards(){
     $.ajax({
         type: "POST",
@@ -108,6 +106,48 @@ function getAllProductCards(){
         }
     });
 }
+
+function addNewProduct(productData){
+    productData.append('type', 'ADD_PRODUCT');
+    $.ajax({
+        type: "POST",
+        url: "/adminV2/handlers/products_handlers.php",
+        dataType: "json",
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: productData,
+        success: function (response) {
+            console.log(response);
+                showMessage(
+                    "Добавление товара",
+                    response.message,
+                   response.status_code == 200?'success': 'error'
+                );
+                
+                if (response.status_code != 200){
+                    return;
+                }
+
+                let product = response.data;
+                let productData = {
+                    id: product['item_id'],
+                    image: product['img'],
+                    title: product['title'],
+                    description: product['description'],
+                    price: product['price'],
+                    category: product['category'],
+                }
+
+                createProductCard(productData);
+                $('.table_items__card_add').find('[name]').val("");
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log(textStatus, errorThrown);
+        }
+    });
+}
+// AJAX-END----------------------------------------------------------------
 
 function showMessage(messageTitle, messageText, messageType){
     message = $($('#message_template').html());
@@ -146,5 +186,40 @@ let currentEditCard = {
 $(document).ready(function() {
     getAllProductCards();
     cardHooks();
+
+    $('.table_items__card_add')
+    .find('.card__button_add_user')
+    .click(function(){
+
+        let form = $(this).parents('form');
+        let formData = new FormData(form[0]);
+        formData.append('image', $(this).parents('form').find('input[name="image"]')[0].files[0]);
+
+        for (let [name, value] of formData.entries()) {
+            if (name === 'image'){
+                if (value.name == "") {
+                    showMessage(
+                        "Добавление товара",
+                        "Выберите изображение!",
+                        "error"
+                    );
+                    return;
+                }
+                continue;
+            }
+            if (value == ''){
+                showMessage(
+                    "Добавление товара",
+                    "Заполните все поля!",
+                    "error"
+                );
+                return;
+            }
+        }
+
+        // console.log(productData); //ADD NEW DATA AJAX FUNC
+        addNewProduct(formData);
+
+    });
 
 });
