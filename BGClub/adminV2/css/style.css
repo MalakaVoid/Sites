@@ -10,17 +10,63 @@ body{
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--bg-black);
 }
-input{
+input,
+button{
     font-family: 'Courier New', Courier, monospace;
 }
 
 main{
-    padding: 0 30px;
+    padding: 130px 30px;
     box-sizing: border-box;
     display: flex;
     gap: 20px;
-    padding-top: 130px;
 }
+
+/* HEADER */
+#header{
+	position: fixed;
+	width: 100vw;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	display: block;
+	border-bottom: solid 1px #0B0C10;
+}
+
+header .container-sizer{
+	width: 100%;
+	display: block;
+
+	background-color: #0B0C10;
+}
+header .container-header{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100px;
+}
+
+header .menu{
+	display: block;
+	min-width: 100px;
+	font-size: 24px;
+	text-decoration: none;
+	color: #C5C6C7;
+	text-align: center;
+	padding: 0px 20px 0px 20px;
+	font-weight: bold;
+	font-family: 'Montserrat',Arial,sans-serif;	
+	line-height: 50px;
+}
+
+header .menu:hover{
+	border-bottom: #C3073F 3px solid;
+}
+header .menu.active{
+	border-bottom: #6F2232 3px solid;
+}
+/* HEADER END */
 
 /* NOTIFICATION MESSAGES */
 
@@ -71,8 +117,13 @@ main{
     margin-bottom: auto !important;
     display: grid;
     /* grid-template-columns: repeat(4, minmax(300px, 1fr)); */
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 20px;
+}
+.table_items_users{
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+.table_items_prdoucts{
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .table_items__card{
@@ -126,7 +177,7 @@ main{
     color: var(--main-white);
     text-align: center;
 }
-.card__value > input{
+.card__value > input {
     width: 100%;
     padding: 4px 10px;
     text-align: center;
@@ -134,6 +185,19 @@ main{
     border-radius: 10px;
     color: white;
     font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: var(--bg-black);
+}
+.card__value > textarea,
+.card__value > textarea:disabled{
+    max-width: 100%;
+    width: 100%;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
     outline: none;
     border: none;
     background-color: var(--bg-black);
@@ -156,6 +220,7 @@ main{
     color: var(--main-white);
     border: var(--main-red) 1px solid;
     border-radius: 5px;
+    outline: none;
     background-color: #1A1A1D;
     box-sizing: border-box;
 }
@@ -176,18 +241,52 @@ main{
     background-color: var(--main-red);
     transition: 0.25s;
 }
+.card__image{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    min-height: 50px;
+}
+.card__image input{
+    display: none;
+}
+.card__image_preview{
+    width: 100%;
+    /* overflow: hidden; */
+}
+.card__image_preview img{
+    width: 100%;
+    /* overflow: hidden; */
+}
+.card__image_button{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 16px;
+    padding: 5px 10px;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
 
 /* EDIT CARD */
 .table_items__card_edit .card__value input,
-.table_items__card_add .card__value input{
+.table_items__card_edit .card__value textarea,
+.table_items__card_add .card__value input,
+.table_items__card_add .card__value textarea{
     background-color: black !important;
 
 }
 .table_items__card_edit .card__button_save{
-    display: block;
+    display: flex;
 }
 .table_items__card_edit .card__button_edit{
     background-color: #C3073F;
+}
+.table_items__card_edit .card__image_button,
+.table_items__card_add .card__image_button{
+    display: flex;
 }
 
 /* TABLE STYLES END */

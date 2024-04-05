@@ -3,6 +3,9 @@ $(document).ready(function(){
     function cardHooks(){
         // CARD BUTTON EDIT PROCESSOR
         $('.table_items__card')
+        .find('.card__button_edit').unbind('click');
+
+        $('.table_items__card')
         .find('.card__button_edit')
         .click(function(){
             let isDoubleClick = $(this).parents('.table_items__card').hasClass("table_items__card_edit");
@@ -33,6 +36,9 @@ $(document).ready(function(){
     
         // DELETE BUTTON PROCESSOR 
         $('.table_items__card')
+        .find('.card__button_delete').unbind('click');
+
+        $('.table_items__card')
         .find('.card__button_delete')
         .click(function(){
     
@@ -46,6 +52,9 @@ $(document).ready(function(){
     
     
         // SAVE EDIT BUTTON PROCESSOR
+        $('.table_items__card')
+        .find('.card__button_save').unbind('click');
+        
         $('.table_items__card')
         .find('.card__button_save')
         .click(function(){
@@ -137,7 +146,7 @@ $(document).ready(function(){
             success: function (response) {
                 for (let user of response.data) {
 
-                    userData = {
+                    let userData = {
                         id: user['user_id'],
                         login: user['login'],
                         password: user['password'],

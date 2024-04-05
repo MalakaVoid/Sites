@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main admin page</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <?php
+        include("header.php");
+    ?>
+    <main>
+        <div class="table_items table_items_prdoucts">
+            <div class="table_items__card table_items__card_add">
+                <h3 class="card__title">ДОБАВИТЬ</h3>
+                <div class="card__info">
+                    <div class="card__name">Картинка</div>
+                    <label class="card__image">
+                        <input type='file' class='img-file' name='image'>
+                        <div class='card__image_preview'>
+                            <img src=''>
+                        </div>
+                        <div class="card__button card__image_button">Изменить</div>
+                    </label>
+                    <div class="card__name">Название</div>
+                    <div class="card__value"><input  type="text" name="login" value=""></div>
+                    <div class="card__name">Описание</div>
+                    <div class="card__value"><input type="text" name="password" value=""></div>
+                    <div class="card__name">Цена</div>
+                    <div class="card__value"><input type="text" name="name" value=""></div>
+                    <div class="card__name">Категория</div>
+                    <div class="card__value"><input type="text" name="surname" value=""></div>
+                </div>
+                <div class="card__buttons">
+                    <button class="card__button card__button_add_user">ДОБАВИТЬ</button>
+                </div>
+            </div>
+
+            <!-- <form class="table_items__card">
+                <h3 class="card__title">Товар #1</h3>
+                <div class="card__info">
+                    <input type="hidden" name="id" disabled value="1" />
+                    <div class="card__name">Картинка</div>
+                    <label class="card__image">
+                        <input type='file' class='img-file' disabled name='image'>
+                        <div class='card__image_preview'>
+                            <img src='../images/products/1.png'>
+                        </div>
+                        <div class="card__button card__image_button">Изменить</div>
+                    </label>
+                    <div class="card__name">Название</div>
+                    <div class="card__value"><input disabled type="text" name="title" value="ДРУГ ЛЕСНИКА"></div>
+                    <div class="card__name">Описание</div>
+                    <div class="card__value"><textarea disabled name="description" rows="8">Бургер с сочной котлетой из мраморной говядины, сыром Чеддер, криспи луком, спелыми помидорами, маринованными опятами, листьями салата латук с соусом ранч с приятным чесночным вкусом</textarea></div>
+                    <div class="card__name">Цена</div>
+                    <div class="card__value"><input disabled type="number" name="price" value="600"></div>
+                    <div class="card__name">Категория</div>
+                    <div class="card__value"><input disabled type="text" name="category" value="Бургеры"></div>
+                </div>
+                <div class="card__buttons">
+                    <button type="button" class="card__button card__button_save">СОХРАНИТЬ</button>
+                    <button type="button" class="card__button card__button_edit"><img src="./images/edit.png"></button>
+                    <button type="button" class="card__button card__button_delete"><img src="./images/bin.png"></button>
+                </div>
+            </form> -->
+
+        </div>
+        <div class="messages">
+
+        </div>
+    </main>
+
+    <script id="card_template" type="text/x-custom-template">
+        <form class="table_items__card">
+            <h3 class="card__title"></h3>
+            <div class="card__info">
+                <input type="hidden" name="id" disabled value="" />
+                <div class="card__name">Картинка</div>
+                <label class="card__image">
+                    <input type='file' class='img-file' disabled name='image'>
+                    <div class='card__image_preview'>
+                        <img src=''>
+                    </div>
+                    <div class="card__button card__image_button">Изменить</div>
+                </label>
+                <div class="card__name">Название</div>
+                <div class="card__value"><input disabled type="text" name="title" value=""></div>
+                <div class="card__name">Описание</div>
+                <div class="card__value"><textarea disabled name="description" rows="8"></textarea></div>
+                <div class="card__name">Цена</div>
+                <div class="card__value"><input disabled type="number" name="price" value=""></div>
+                <div class="card__name">Категория</div>
+                <div class="card__value"><input disabled type="text" name="category" value=""></div>
+            </div>
+            <div class="card__buttons">
+                <button type="button" class="card__button card__button_save">СОХРАНИТЬ</button>
+                <button type="button" class="card__button card__button_edit"><img src="./images/edit.png"></button>
+                <button type="button" class="card__button card__button_delete"><img src="./images/bin.png"></button>
+            </div>
+        </form>
+      </script>
+      <script id="message_template" type="text/x-custom-template">
+        <div class="messages__message">
+            <h3 class="message__title"></h3>
+            <p class="message__description"></p>
+        </div>
+      </script>
+    <script src="./scripts/jq.js"></script>
+    <script src="./scripts/products.js"></script>
+</body>
+</html>
