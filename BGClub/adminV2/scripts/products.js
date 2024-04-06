@@ -22,6 +22,17 @@ function cardHooks(){
             currentEditCard[input.name] = input.value;
         }
         currentEditCard.image = imagePath;
+        if ($(parent_card).find('[name="sale"]').prop('checked')) {
+            currentEditCard.sale = 1;
+        } else{
+            currentEditCard.sale = 0;
+        }
+
+        if ($(parent_card).find('[name="visible"]').prop('checked')) {
+            currentEditCard.visible = 0;
+        } else{
+            currentEditCard.visible = 1;
+        }
 
         $(parent_card)
         .toggleClass("table_items__card_edit")
@@ -80,6 +91,7 @@ function cardHooks(){
         }
 
         for (let [name, value] of formData.entries()) {
+            console.log(name, value);
             if (value == ''){
                 showMessage(
                     "Изменение товара",
@@ -103,6 +115,8 @@ function clearPreviousCard(dataCard){
     $(card).find('[name="description"]').val(dataCard.description);
     $(card).find('[name="price"]').val(dataCard.price);
     $(card).find('[name="category"]').val(dataCard.category);
+    $(card).find('[name="sale"]').prop('checked', dataCard.sale == 1);
+    $(card).find('[name="visible"]').prop('checked', dataCard.visible == 0);
 
     $(card)
     .removeClass("table_items__card_edit")
@@ -122,6 +136,9 @@ function createProductCard(productData){
     $(card).find('[name="description"]').val(productData.description);
     $(card).find('[name="price"]').val(productData.price);
     $(card).find('[name="category"]').val(productData.category);
+    $(card).find('[name="sale"]').prop('checked', productData.sale == 1);
+    $(card).find('[name="visible"]').prop('checked', productData.visible == 0);
+
     $('.table_items').append(card);
     // console.log(productData);
 
@@ -144,6 +161,8 @@ function getAllProductCards(){
                     description: product['description'],
                     price: product['price'],
                     category: product['category'],
+                    sale: product['sale'],
+                    visible: product['is_visible']
                 }
 
                 createProductCard(productData);
@@ -185,10 +204,14 @@ function addNewProduct(productData){
                     description: product['description'],
                     price: product['price'],
                     category: product['category'],
+                    sale: product['sale'],
+                    visible: product['is_visible']
                 }
 
                 createProductCard(productData);
                 $('.table_items__card_add').find('[name]').val('');
+                $('.table_items__card_add').find('.card__image').find('img').prop('src', '');
+                $('.table_items__card_add').find('[type="checkbox"]').prop('checked', false);
         },
         error: function(jqXHR, textStatus, errorThrown){
             console.log(textStatus, errorThrown);
@@ -221,6 +244,8 @@ function deleteProduct(productId){
                 description: product['description'],
                 price: product['price'],
                 category: product['category'],
+                sale: product['sale'],
+                visible: product['is_visible']
             }
 
             showMessage(
@@ -233,6 +258,8 @@ function deleteProduct(productId){
                 description: ${productData.description}<br>
                 price: ${productData.price}<br>
                 category: ${productData.category}<br>
+                sale: ${!!productData.sale}<br>
+                visible: ${!productData.visible}<br>
                 <span class="message__date">${response.date}</span>
                 `,
                 
@@ -277,6 +304,8 @@ function editProduct(productData){
                 description: product['description'],
                 price: product['price'],
                 category: product['category'],
+                sale: product['sale'],
+                visible: product['is_visible']
             }
 
             showMessage(
@@ -289,6 +318,8 @@ function editProduct(productData){
                 description: ${productData.description}<br>
                 price: ${productData.price}<br>
                 category: ${productData.category}<br>
+                sale: ${!!parseInt(productData.sale)}<br>
+                visible: ${!parseInt(productData.visible)}<br>
                 <span class="message__date">${response.date}</span>
                 `,
                 
@@ -303,6 +334,8 @@ function editProduct(productData){
             $(card).find('[name="description"]').val(productData.description);
             $(card).find('[name="price"]').val(productData.price);
             $(card).find('[name="category"]').val(productData.category);
+            $(card).find('[name="sale"]').prop('checked', productData.sale == 1);
+            $(card).find('[name="visible"]').prop('checked', productData.visible == 0);
             $(card)
             .removeClass("table_items__card_edit")
             .find('[name]')
@@ -346,7 +379,9 @@ let currentEditCard = {
     title: null,
     description: null,
     price: null,
-    category: null
+    category: null,
+    sale: null,
+    visible: null
 };
 
 $(document).ready(function() {

@@ -13,6 +13,10 @@ body{
 input,
 button{
     font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+textarea{
+    box-sizing: border-box;
 }
 
 main{
@@ -141,6 +145,9 @@ header .menu.active{
 .table_items_prdoucts{
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
+.table_items_orders{
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+}
 
 .table_items__card{
     padding: 25px;
@@ -184,6 +191,9 @@ header .menu.active{
     grid-template-columns: 30% 70%;
     row-gap: 10px;
     column-gap: 10px;
+}
+.table_items_orders .card__info{
+    grid-template-columns: 30% 70%;
 }
 
 .card__name{

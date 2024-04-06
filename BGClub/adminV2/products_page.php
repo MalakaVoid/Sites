@@ -40,11 +40,15 @@
                     <div class="card__name">Название</div>
                     <div class="card__value"><input  type="text" name="title" value=""></div>
                     <div class="card__name">Описание</div>
-                    <div class="card__value"><input type="text" name="description" value=""></div>
+                    <div class="card__value"><textarea name="description" rows="5"></textarea></div>
                     <div class="card__name">Цена</div>
                     <div class="card__value"><input type="number" name="price" value=""></div>
                     <div class="card__name">Категория</div>
                     <div class="card__value"><input type="text" name="category" value=""></div>
+                    <div class="card__name">Скидка</div>
+                    <div class="card__value"><input type="checkbox" name="sale" ></div>
+                    <div class="card__name">Видимость</div>
+                    <div class="card__value"><input type="checkbox" name="visible" ></div>
                 </div>
                 <div class="card__buttons">
                     <button type="button" class="card__button card__button_add_user">ДОБАВИТЬ</button>
@@ -78,6 +82,10 @@
                 <div class="card__value"><input disabled type="number" name="price" value=""></div>
                 <div class="card__name">Категория</div>
                 <div class="card__value"><input disabled type="text" name="category" value=""></div>
+                <div class="card__name">Скидка</div>
+                <div class="card__value"><input type="checkbox" disabled name="sale" ></div>
+                <div class="card__name">Видимость</div>
+                <div class="card__value"><input type="checkbox" disabled name="visible" ></div>
             </div>
             <div class="card__buttons">
                 <button type="button" class="card__button card__button_save">СОХРАНИТЬ</button>

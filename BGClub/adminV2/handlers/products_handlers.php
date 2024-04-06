@@ -68,7 +68,14 @@
         $price = $_POST['price'];
         $category_name = $_POST['category'];
         $sale = 0;
-        $is_visible = 0;
+        if (isset($_POST['sale'])){
+            $sale = 1;
+        }
+
+        $is_visible = 1;
+        if (isset($_POST['visible'])){
+            $is_visible = 0;
+        }
         $file = $_FILES["image"];
 
         $category = create_category($link, $category_name)['category_id'];
@@ -141,7 +148,14 @@
         $price = $_POST['price'];
         $category_name = $_POST['category'];
         $sale = 0;
-        $is_visible = 0;
+        if (isset($_POST['sale'])){
+            $sale = 1;
+        }
+
+        $is_visible = 1;
+        if (isset($_POST['visible'])){
+            $is_visible = 0;
+        }
 
         $category = create_category($link, $category_name)['category_id'];
 
