@@ -10,7 +10,7 @@
     session_start();
     if (isset($_SESSION['user'])) {
         if ($_SESSION['user']['is_admin']==1){
-            $menu_items['Администратор'] = '/admin/start_page.php';
+            $menu_items['Администратор'] = '/adminV2/main_page.php';
         }
     }
 
