@@ -296,46 +296,58 @@ function editProduct(productData){
                 return;
             }
 
-            let product = response.data;
-            let productData = {
-                id: product['item_id'],
-                image: product['img'],
-                title: product['title'],
-                description: product['description'],
-                price: product['price'],
-                category: product['category'],
-                sale: product['sale'],
-                visible: product['is_visible']
+            let prevProduct = response.data.prev_product;
+            let newProduct = response.data.new_product;
+            let prevProductData = {
+                id: prevProduct['item_id'],
+                image: prevProduct['img'],
+                title: prevProduct['title'],
+                description: prevProduct['description'],
+                price: prevProduct['price'],
+                category: prevProduct['category'],
+                sale: prevProduct['sale'],
+                visible: prevProduct['is_visible']
+            }
+
+            let newProductData = {
+                id: newProduct['item_id'],
+                image: newProduct['img'],
+                title: newProduct['title'],
+                description: newProduct['description'],
+                price: newProduct['price'],
+                category: newProduct['category'],
+                sale: newProduct['sale'],
+                visible: newProduct['is_visible']
             }
 
             showMessage(
                 "Изменение товара",
 
                 `${response.message } <br>
-                id: ${productData.id}<br>
-                image: ${productData.image}<br>
-                title: ${productData.title}<br>
-                description: ${productData.description}<br>
-                price: ${productData.price}<br>
-                category: ${productData.category}<br>
-                sale: ${!!parseInt(productData.sale)}<br>
-                visible: ${!parseInt(productData.visible)}<br>
+                id: ${newProductData.id}<br>
+                image: ${prevProductData.image} -> ${newProductData.image}<br>
+                title: ${prevProductData.title} -> ${newProductData.title}<br>
+                description: ${prevProductData.description} -> ${newProductData.description}<br>
+                price: ${prevProductData.price} -> ${newProductData.price}<br>
+                category: ${prevProductData.category} -> ${newProductData.category}<br>
+                sale: ${!!parseInt(prevProductData.sale)} -> ${!!parseInt(newProductData.sale)}<br>
+                visible: ${!parseInt(prevProductData.visible)} -> ${!parseInt(newProductData.visible)}<br>
                 <span class="message__date">${response.date}</span>
                 `,
                 
                 response.status_code == 200?'success': 'error'
             );
             
-            let card = $(`input[name="id"][value="${productData.id}"]`).parents('form');
+            let card = $(`input[name="id"][value="${newProductData.id}"]`).parents('form');
             
-            $(card).find('.card__image').find('img').prop('src', productData.image);
-            $(card).find('[name="id"]').val(productData.id);
-            $(card).find('[name="title"]').val(productData.title);
-            $(card).find('[name="description"]').val(productData.description);
-            $(card).find('[name="price"]').val(productData.price);
-            $(card).find('[name="category"]').val(productData.category);
-            $(card).find('[name="sale"]').prop('checked', productData.sale == 1);
-            $(card).find('[name="visible"]').prop('checked', productData.visible == 0);
+            $(card).find('.card__image').find('img').prop('src', newProductData.image);
+            $(card).find('[name="id"]').val(newProductData.id);
+            $(card).find('[name="title"]').val(newProductData.title);
+            $(card).find('[name="description"]').val(newProductData.description);
+            $(card).find('[name="price"]').val(newProductData.price);
+            $(card).find('[name="category"]').val(newProductData.category);
+            $(card).find('[name="sale"]').prop('checked', newProductData.sale == 1);
+            $(card).find('[name="visible"]').prop('checked', newProductData.visible == 0);
             $(card)
             .removeClass("table_items__card_edit")
             .find('[name]')

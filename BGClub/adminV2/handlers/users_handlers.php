@@ -123,13 +123,15 @@
             $is_admin = 0;
         }
         
+        $response["data"]['prev_user'] = get_user_by_user_id($link, $user_id);
+        
         $query = "UPDATE users SET login='{$login}', password = '{$password}', first_name='{$first_name}', last_name='{$last_name}', email='{$email}', is_admin={$is_admin} WHERE user_id={$user_id}";
         $result = mysqli_query($link, $query);
 
         if ($result){
+            $response["data"]['new_user'] = get_user_by_user_id($link, $user_id);
             $response["status_code"] = 200;
             $response["message"] = "Запись успешно изменена.";
-            $response["data"] = get_user_by_user_id($link, $user_id);
         } else{
             $response["status_code"] = 500;
             $response["message"] = "Database error";

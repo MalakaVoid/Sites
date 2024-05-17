@@ -157,15 +157,17 @@
             $is_visible = 0;
         }
 
+        $response["data"]['prev_product'] = get_product_by_title($link, $title);
+
         $category = create_category($link, $category_name)['category_id'];
 
         if (isset($_POST['image'])){
             $query = "UPDATE items SET is_visible = {$is_visible}, title='{$title}', description = '{$description}', price={$price}, category={$category}, sale={$sale} WHERE item_id={$id}";
             $result_query = mysqli_query($link, $query);
             if ($result_query){
+                $response["data"]['new_product'] = get_product_by_title($link, $title);
                 $response["status_code"] = 200;
                 $response["message"] = "Товар успешно изменен";
-                $response["data"] = get_product_by_title($link, $title);
             }
             else{
                 $response["status_code"] = 500;

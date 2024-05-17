@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    margin: 0 auto;
+
+    max-width: 400px;
+    width: 100%;
+}
+
+form > select{
+    padding: 5px 10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+form > select option:first-child{
+    display: none !important;
+}
+
+form > button {
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+}
+form > button:hover{
+    background-color: black;
+    color: white;
+}
+
+.result,
+.errors{
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}

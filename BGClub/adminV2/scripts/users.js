@@ -275,27 +275,38 @@ $(document).ready(function(){
                     return;
                 }
 
-                let user = response.data;
-                let userData = {
-                    id: user['user_id'],
-                    login: user['login'],
-                    password: user['password'],
-                    name: user['first_name'],
-                    surname: user['last_name'],
-                    email: user['email'],
-                    admin:!!parseInt(user['is_admin'])
+                let prevUser = response.data.prev_user;
+                let newUser = response.data.new_user;
+                let prevUserData = {
+                    id: prevUser['user_id'],
+                    login: prevUser['login'],
+                    password: prevUser['password'],
+                    name: prevUser['first_name'],
+                    surname: prevUser['last_name'],
+                    email: prevUser['email'],
+                    admin:!!parseInt(prevUser['is_admin'])
+                }
+
+                let newUserData = {
+                    id: newUser['user_id'],
+                    login: newUser['login'],
+                    password:  newUser['password'],
+                    name: newUser['first_name'],
+                    surname: newUser['last_name'],
+                    email: newUser['email'],
+                    admin:!!parseInt(newUser['is_admin'])
                 }
 
                 showMessage(
                     "Редактирование пользователя",
 
                     `${response.message } <br>
-                    id: ${userData.id}<br>
-                    login: ${userData.login}<br>
-                    password: ${userData.password}<br>
-                    name: ${userData.name}<br>
-                    surname: ${userData.surname}<br>
-                    email: ${userData.email}<br>
+                    id: ${prevUserData.id} -> ${newUserData.id} <br>
+                    login: ${prevUserData.login} -> ${newUserData.login}<br>
+                    password: ${prevUserData.password} -> ${newUserData.password}<br>
+                    name: ${prevUserData.name} -> ${newUserData.name}<br>
+                    surname: ${prevUserData.surname} -> ${newUserData.surname}<br>
+                    email: ${prevUserData.email} -> ${newUserData.email}<br>
                     <span class="message__date">${response.date}</span>
                     `,
                     
