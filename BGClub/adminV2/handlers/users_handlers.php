@@ -58,7 +58,7 @@
         $first_name = $user_data['name'];
         $last_name = $user_data['surname'];
         $email = $user_data['email'];
-        if ($user_data['is_admin']){
+        if ($user_data['admin']){
             $is_admin = 1;
         } else{
             $is_admin = 0;
