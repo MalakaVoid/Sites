@@ -196,6 +196,7 @@ $(document).ready(function(){
 
                 createUserCard(userData);
                 $('.table_items__card_add input[type="text"]').val("");
+                $('.table_items__card_add input[type="checkbox"]').prop('checked', false);
             },
             error: function(jqXHR, textStatus, errorThrown){
                 console.log(textStatus, errorThrown);
